@@ -1,0 +1,91 @@
+    @font-face {
+        font-family: 'Melted Dl';
+        src: url(fonts/MeltedDl-XdLg.ttf);
+    }
+
+
+    body {
+        background-image: url(images/bgimg.PNG);
+    background-size: 100%;
+    }
+
+    .bgcol{
+        background-color: #c2f2d0;
+        padding: 20px;
+        border-radius: 40px;
+        width: 90%;
+        
+    }
+
+    #title{
+
+        margin: 2%;
+        font-family: 'Melted Dl';
+        color: #fa3c96;
+        font-size: 45px;
+    }
+
+    /* .bgcol2{
+        background-color: #c2f2d0;
+        border-radius: 40px;
+        width: 50%;
+    } */
+
+    li, a{
+        font-family: "Century Gothic";
+        font-weight: 500;
+        font-size: 20px;
+        color: #6b3e26;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+        background-color: #fdf5c9;
+
+    }
+
+    .logo{
+        cursor: pointer;
+        width: 40%;
+    }
+
+    .nav_links {
+        list-style: none;
+    }
+    .nav_links li {
+        display: inline-block;
+        padding: 0px 20px;
+        transition: all 0.3s ease 0s;
+    }
+
+
+    main{
+        min-height: 5vh;
+        /* background: linear-gradient(to right top, #0e4fb1, #3c4ec7, #6549d8, #903be5, #bb12eb); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .glass{
+        background: white;
+        min-height: 16vh;
+        width: 90%;
+        background: #6b3e26;
+        border-radius: 2rem;
+        z-index: 3;
+    
+    }
+
+    .content{
+        
+        margin: 2%;
+    }
+
+
