@@ -1,0 +1,9 @@
+body {
+    background-image: url(images/bgimg.PNG);
+   background-size: 100%;
+}
+
+table {
+    width: 100%;
+    border: 1px solid;
+  }
