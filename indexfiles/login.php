@@ -34,11 +34,11 @@
                     header ("location: main-admin.php");
                     exit();
                 } else {
-                    header("location: index.php?error=Incorrect Username of Password");
+                    header("location: index.php?error=Incorrect Username or Password");
                     exit();
                 }
            } else {
-            header("location: index.php?error=Incorrect Username of Password");
+            header("location: index.php?error=Incorrect Username or Password");
             exit();
            }
         }
