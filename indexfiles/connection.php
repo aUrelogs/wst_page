@@ -2,7 +2,7 @@
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
-     $databaseName = "websysproj";
+    $databaseName = "websysproj";
 
         //connection:
         $conn = new mysqli($host, $dbUsername, $dbPassword, $databaseName);
