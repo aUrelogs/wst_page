@@ -1,3 +1,12 @@
+<?php 
+
+    session_start();
+    if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +22,7 @@
         <img class="logo" src="images/logoname.png" alt="logo">
         <nav>
             <ul class ="nav_links">
-                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href = index.php>Log out</a></li>
+                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome <?php echo $_SESSION['username']; ?> | <a href = index.php>Log out</a></li>
             </ul>
         </nav>
     </header>
@@ -36,3 +45,12 @@
 
 </body>
 </html>
+
+<?php 
+
+    }else {
+        header ("location: index.php");
+        exit();
+    }
+
+?>
