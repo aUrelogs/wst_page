@@ -3,10 +3,6 @@ body {
    background-size: 100%;
 }
 
-/* img {
-    ima
-} */
-
 .bgcol{
     background-color: #c2f2d0;
     padding: 20px;
@@ -55,3 +51,21 @@ input::placeholder{
     cursor: pointer;
 }
 
+li {
+    font-family: "Century Gothic";
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b3e26;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    width: 150px;
+}
