@@ -58,7 +58,7 @@ input::placeholder{
     cursor: pointer;
 }
 
-li {
+li, a{
     font-family: "Century Gothic";
     font-weight: 500;
     font-size: 20px;
@@ -101,3 +101,4 @@ header{
     border: none;
     position: relative;
 }
+
