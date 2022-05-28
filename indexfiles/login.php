@@ -1,5 +1,5 @@
 <?php 
-
+    session_start();
 
     include ('connection.php');
 
@@ -19,7 +19,7 @@
             exit();
 
         } else if (empty($pass)){
-            header("location: index.php?error=Password isrequired");
+            header("location: index.php?error=Password is required");
             exit();
 
         } else {
@@ -29,7 +29,9 @@
            if (mysqli_num_rows($result) === 1) {
                 $row = mysqli_fetch_assoc($result);
                 if($row['username'] === $user && $row['password'] = $pass){
-                    header ("location: main-admin.html");
+                    $_SESSION['username'] = $row['username'];
+                    $_SESSION['id'] = $row['id'];
+                    header ("location: main-admin.php");
                     exit();
                 } else {
                     header("location: index.php?error=Incorrect Username of Password");
