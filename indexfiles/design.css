@@ -102,3 +102,10 @@ header{
     position: relative;
 }
 
+.error {
+    background: #eca0a0;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+}

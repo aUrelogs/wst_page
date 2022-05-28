@@ -1,3 +1,10 @@
+<?php 
+
+  
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,17 +34,22 @@
     <div class="box">
        <br><br><br><br>
         <div class="bgcol">
-            <form action="main-admin.html" method="POST">
+            <form action="login.php" method="POST">
              <br>
              <font face="Melted Font" size="50" color="#fa3c96"><center>ADMIN</center></font>
+             
+             <?php if(isset($_GET['error'])) { ?>
+                <p class = "error"><?php echo $_GET['error']; ?></p>
+            <?php } ?>
+
                 <table align="center">
                     <tr>
                         <td>
-                            <input type="text" name="username" placeholder="User Name" required>
+                            <input type="text" name="username" placeholder="User Name" >
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="password" placeholder="Password" required></td>
+                        <td><input type="password" name="password" placeholder="Password" ></td>
                     </tr>
                     <tr align="right">
                         <td><input class="login" type="submit" value="Log In"></td>
