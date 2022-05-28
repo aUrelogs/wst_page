@@ -12,8 +12,11 @@ body {
     background-color: #c2f2d0;
     padding: 20px;
     border-radius: 40px;
-    width: 25%;
    
+    width: 90%;
+    
+ 
+    
 }
 
 input {
@@ -87,3 +90,14 @@ header{
     transition: all 0.3s ease 0s;
 }
 
+.container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.box {
+    
+    border: none;
+    position: relative;
+}
