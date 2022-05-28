@@ -7,11 +7,20 @@ body {
     ima
 } */
 
+.bgcol{
+    background-color: #c2f2d0;
+    padding: 20px;
+    border-radius: 40px;
+    width: 25%;
+   
+    
+}
 
 input {
-    width: 250px;
+    width: 300px;
+    margin: 5px;
     height: 50px;
-    background-color: #c2f2d0;
+    background-color: #ddf5e4;
     border-style: none;
     border-radius: 30px;
     font-family: Arial, Helvetica, sans-serif;
@@ -43,5 +52,6 @@ input::placeholder{
     color: white;
     font-weight: bold;
     font-size: large;
+    cursor: pointer;
 }
 
