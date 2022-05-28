@@ -31,7 +31,7 @@
         <table align="center">
             <tr>
                 <th><a href=""><img src="images/report.png" width="60%"></a></th>
-                <th><a href=""><img src="images/warehouse.png" width="60%"></a></th>
+                <th><a href="Stocks/stocks.html"><img src="images/warehouse.png" width="60%"></a></th>
                 <th><a href="productmanager.html"><img src="images/edit.png" width="60%"></a></th>
             </tr>
             <tr align="center">
