@@ -13,7 +13,7 @@
         <img class="logo" src="images/logoname.png" alt="logo">
         <nav>
             <ul class ="nav_links">
-                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> | Admin Log In</li>
+                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> |<a href="index.php"> Admin Log In</a></li>
             </ul>
         </nav>
     </header>
