@@ -6,7 +6,7 @@
 
     body {
         background-image: url(images/bgimg.PNG);
-    background-size: 100%;
+        background-size: 100%;
     }
 
     header{
@@ -46,25 +46,23 @@
     
     }
 
-    input[type=text]{
-        
+    input[type=number]{
+        padding: 3px;
         width: 10%;
         border: 2px solid white;
         border-radius: 4px;
-        display: inline-block;
        
-        
     }
 
-    input[type=text]:focus{
-        background-color: lightpink;
-        
+    input[type=number]:focus{
+        background-color: lightcyan;
     }
 
     label{
         font-family: "Century Gothic";
         color: white;
         display: inline-block;
+        text-align: right;
     }
 
     input[type=submit] {
@@ -81,6 +79,7 @@
     input[type=submit]:hover {
         background-color: #45a049;
     }
+
 
         .logo{
             cursor: pointer;
