@@ -6,7 +6,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +31,7 @@
             <tr>
                 <th><a href=""><img src="images/report.png" width="60%"></a></th>
                 <th><a href="Stocks/stocks.html"><img src="images/warehouse.png" width="60%"></a></th>
-                <th><a href="productmanager.html"><img src="images/edit.png" width="60%"></a></th>
+                <th><a href="displayprod.php"><img src="images/edit.png" width="60%"></a></th>
             </tr>
             <tr align="center">
                 <td><font face="Century Gothic" size="20">SUMMARY REPORTS</font></td>
@@ -42,7 +41,6 @@
         </table>
     </div>
     
-
 </body>
 </html>
 
