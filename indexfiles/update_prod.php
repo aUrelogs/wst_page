@@ -40,10 +40,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-    <title>Product Manager</title>
+    <link rel="stylesheet" href="justanothercss.css">
+    <title>Product Manager | UPDATE</title>
   </head>
   <body>
     
+  <div class="bgcol container my-5">
     <div class="container my-5">
     <form method="post">
 
@@ -68,9 +70,12 @@
         </div>
 
         <button type="submit" class="btn btn-primary" name="submit">UPDATE</button>
-
+        <button type="submit" class="btn btn-danger" name="submit">CANCEL</button>
+       
+       
     </form>
     </div>
+  </div>
 
 
 

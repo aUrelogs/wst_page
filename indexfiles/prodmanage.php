@@ -18,10 +18,11 @@
                 die(mysqli_error($conn));
             }
     }
-
+    if(isset($_POST['cancel'])){
+            header ('location:displayprod.php');
+    }
  
 ?>
-
 
 
 <!doctype html>
@@ -32,13 +33,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="justanothercss.css">
     <title>Product Manager</title>
   </head>
   <body>
-    
+
+  <div class ="">
+<header>
+        <img class="logo" src="images/logoname.png" alt="logo">
+        <nav>
+            <ul class ="nav_links">
+                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href = index.php>Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+    <div class="bgcol container my-5">
     <div class="container my-5">
     <form method="post">
-
+    <font face="Century Gothic" size="50" color="#6b3e26">PRODUCT MANAGER</font>
         <div class="form-group">
             <label>Enter Product ID</label>
             <input type="number" class="form-control" placeholder="Product ID" name="productID"autocomplete="off">
@@ -60,11 +74,13 @@
         </div>
 
         <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+        <button type="submit" class="btn btn-danger" name="cancel">Cancel </button>
+        
 
     </form>
     </div>
-
-
+    </div>
+   
 
   </body>
 </html>

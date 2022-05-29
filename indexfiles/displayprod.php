@@ -12,14 +12,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!-- Bootstrap CSS -->
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+       <link rel="stylesheet" href="justanothercss.css">
     <title>Product Manager | DISPLAY </title>
 </head>
 <body>
-    
+
+<div class ="">
+<header>
+        <img class="logo" src="images/logoname.png" alt="logo">
+        <nav>
+            <ul class ="nav_links">
+                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href = index.php>Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+   
+    <div class = "bgcol container my-5">
     <div class="container">
-        <button class="btn btn-primary my-5"><a href="prodmanage.php" class="text-light">
-        ADD PRODUCT</a></button>
-        <table class="table">
+        <button class="btn btn-primary my-4"><a href="prodmanage.php" class="text-light">
+        ADD PRODUCT</a></button> <button class="btn btn-danger my-4"><a href="main-admin.php" class="text-light">
+        BACK TO MAIN</a></button>
+        <table class="table table-dark"">
             <thead>
                 <tr align="center">
                 <th scope="col">Product ID</th>
@@ -54,12 +68,10 @@
                             }
                         }
                 ?>
-
-              
-
-
             </tbody>
         </table>
     </div>
+    </div>
+    
 </body>
 </html>
