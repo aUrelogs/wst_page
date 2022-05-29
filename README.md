@@ -27,12 +27,12 @@ Update Section [CORE]
         o	Free delivery for first time shoppers
 
 		CRUD Customer:
--	DELETE ORDER
--	UPDATE/EDIT ORDER
--	ORDER DETAILS:
-        o	Time ordered
-        o	Product ID of item
-        o	Order ID of customer
+        -	DELETE ORDER
+        -	UPDATE/EDIT ORDER
+        -	ORDER DETAILS:
+            o	Time ordered
+            o	Product ID of item
+            o	Order ID of customer
         -	CUSTOMER DETAILS:
             o	Name
             o	Address
