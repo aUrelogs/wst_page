@@ -44,7 +44,16 @@
     <title>Product Manager | UPDATE</title>
   </head>
   <body>
-    
+
+<header>
+        <img class="logo" src="images/logoname.png" alt="logo">
+        <nav>
+            <ul class ="nav_links">
+                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href = index.php>Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
   <div class="bgcol container my-5">
     <div class="container my-5">
     <form method="post">
