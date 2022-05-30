@@ -28,6 +28,8 @@
         color: #fa3c96;
     }
 
+
+
     li, a{
         font-family: "Century Gothic";
         font-weight: 500;
@@ -48,7 +50,7 @@
 
     input[type=number]{
         padding: 3px;
-        width: 10%;
+        width: 20%;
         border: 2px solid white;
         border-radius: 4px;
        
@@ -66,7 +68,7 @@
     }
 
     input[type=submit] {
-        width: 10%;
+        width: 20%;
         background-color: #4CAF50;
         color: white;
         padding: 4px 2px;
@@ -80,6 +82,14 @@
         background-color: #45a049;
     }
 
+    table{
+        width: 100%;
+        
+    }
+
+    tr{
+        width: 50%;
+    }
 
         .logo{
             cursor: pointer;
@@ -106,7 +116,22 @@
         
         }
 
-        .product1{
+        .glass_one{
+            background: white;
+            min-height: 16vh;
+            width: 90%;
+            background: #6b3e26;
+            border-radius: 2rem;
+            z-index: 3;
+        
+        }
+
+        .product_one{
+            margin: 2%;
+
+        }
+
+        .product_two{
             margin: 2%;
 
         }
