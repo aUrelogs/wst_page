@@ -18,10 +18,11 @@
 <body>
     
     <header>
-        <img class="logo" src="images/logoname.png" alt="logo">
+    <img src="images/logo.png" class="logo" style="width: 100px;">
+        <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 250px;">
         <nav>
             <ul class ="nav_links">
-                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome <?php echo $_SESSION['username']; ?> | <a href = index.php>Log out</a></li>
+                <li><img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome <?php echo $_SESSION['username']; ?> | <a href = index.php>Log out</a></li>
             </ul>
         </nav>
     </header>
