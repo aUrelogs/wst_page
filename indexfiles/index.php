@@ -10,9 +10,11 @@
 <body>
 
     <header>
-        <img class="logo" src="images/logoname.png" alt="logo">
+    <img src="images/logo.png" class="logo" style="width: 100px;">
+        <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 300px;">
         <nav>
             <ul class ="nav_links">
+                <li></li>
                 <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> |<a href="index.php"> Admin Log In</a></li>
             </ul>
         </nav>
