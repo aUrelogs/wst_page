@@ -153,6 +153,15 @@
             z-index: 3;
         }
 
+        .glass_five{
+            background: white;
+            min-height: 16vh;
+            width: 90%;
+            background: #6b3e26;
+            border-radius: 2rem;
+            z-index: 3;
+        }
+
         .product_one{
             margin: 2%;
 
@@ -174,6 +183,11 @@
         }
 
         .product_five{
+            margin: 2%;
+
+        }
+
+        .product_six{
             margin: 2%;
 
         }
