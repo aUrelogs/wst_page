@@ -28,7 +28,11 @@
         color: #fa3c96;
     }
 
+    p{
+        font-family: "Century Gothic";
+    }
 
+  
 
     li, a{
         font-family: "Century Gothic";
@@ -64,7 +68,7 @@
         font-family: "Century Gothic";
         color: white;
         display: inline-block;
-        text-align: right;
+        text-align: left;
     }
 
     input[type=submit] {
@@ -91,9 +95,12 @@
         width: 50%;
     }
 
+ 
+
         .logo{
             cursor: pointer;
             width: 40%;
+
         }
 
         .nav_links {
@@ -198,6 +205,12 @@
                 font-family: 'Melted Dl';
                 color: #fa3c96;
                 font-size: 45px;
+            }
+
+            #current_stock{
+                font-family: "Century Gothic";
+                color: white;
+                text-align: left;
             }
 
             
