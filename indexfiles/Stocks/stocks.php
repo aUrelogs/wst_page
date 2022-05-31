@@ -2,24 +2,16 @@
 
     include 'connection.php';
 
-   
+    //selecting query
+    $sql = "SELECT * FROM `modify_stocks`";
 
+    $result = $conn->query($sql);
 
     
 
-
-
-   
-
-
+    
 
 ?>
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +26,6 @@
 <body>
 
     <header>
-      
         
         <img src="images/logo.png" class="logo" style="width: 100px;">
         <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 300px;">
@@ -56,58 +47,66 @@
 
            
 
-        <div class="product_one">
+            <div class="product_one">
 
-        <h3>ADDED PRODUCTS</h3>
+            <h3>ADDED PRODUCTS</h3>
 
-        <?php 
+                <?php 
 
-            $sql = "
-            SELECT 
+                    $sql = "
+                    SELECT 
 
-            *
+                    *
 
-            FROM 
-                `modify_stocks` as s
-            LEFT JOIN 
-                `modify_products` as p ON s.PRODUCT_ID = p.PRODUCT_ID
+                    FROM 
+                        `modify_stocks` as s
+                    LEFT JOIN 
+                        `modify_products` as p ON s.PRODUCT_ID = p.PRODUCT_ID
 
-            ";
+                    ";
 
-                $result = $conn->query($sql);
+                        $result = $conn->query($sql);
 
+                        
+
+                        if ($result->num_rows > 0) {
+
+                        // //output data of each row
+                            
+                        while($row = $result->fetch_assoc()) {
+
+                                // print_r($row);
+
+                                // echo "id:" . $row[""] . "<br>"; 
+                                echo "<u>PRODUCT NAME:</u>&nbsp;&nbsp;" . $row["PRODUCT_NAME"] . "<br>";
+                                echo "<u>PRODUCT DETAIL:</u>&nbsp;" . $row["PRODUCT_DETAIL"] . "<br>";
+                                echo "<u>QUANTITY:</u>&nbsp;&nbsp" . $row["PRODUCT_QYT"] . "<br>";
+
+                                }
+                                } else {
+                                        echo "0 results";
+                                    }
+                ?>
+
+                    <br>
+                    <br>
                 
+                <form action="" method="post">
 
-                if ($result->num_rows > 0) {
+                        <label for="ten_oz">10 oz:</label>
+                        <input type="number" name = "ten_oz" value="" placeholder="No. Stock">
 
-                // //output data of each row
-                    
-                while($row = $result->fetch_assoc()) {
 
-                        // print_r($row);
 
-                        // echo "id:" . $row["STUDENT_ID"] . "<br>"; 
-                        echo "PRODUCT NAME:&nbsp;" . $row["PRODUCT_NAME"] . "<br>";
-                        echo "PRODUCT DETAIL:&nbsp;" . $row["PRODUCT_DETAIL"] . "<br>";
-                        echo "QUANTITY:&nbsp;" . $row["PRODUCT_QYT"] . "<br>";
+                </form>
+            
                        
-                        
-                        
-
-                        }
-                        } else {
-                                echo "0 results";
-                            }
-           
-
-
-        ?>
-
-
-        </div>
 
 
 
+
+
+            </div>
             
 
         </section>
