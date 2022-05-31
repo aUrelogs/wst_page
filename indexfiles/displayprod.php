@@ -30,7 +30,8 @@
     <div class = "bgcol container my-5">
     <div class="container">
         <button class="btn btn-primary my-4"><a href="prodmanage.php" class="text-light">
-        ADD PRODUCT</a></button> <button class="btn btn-danger my-4"><a href="main-admin.php" class="text-light">
+        ADD PRODUCT</a></button> 
+        <button class="btn btn-danger my-4"><a href="main-admin.php" class="text-light">
         BACK TO MAIN</a></button>
         <table class="table table-dark"">
             <thead>
