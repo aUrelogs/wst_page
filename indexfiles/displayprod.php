@@ -62,7 +62,7 @@
                                 <td>
                                 <button class="btn btn-primary"><a href="update_prod.php?updateid='.$id.'" class="text-light">UPDATE</a></button>
                                 <button class="btn btn-danger"><a href="delete_prod.php?deleteid='.$id.'" class="text-light">DELETE</a></button>
-                                <button class="btn btn-success"><a href="Stocks/stocks.html?stocksid='.$productID.'" class="text-light">STOCKS</a></button>
+                                <button class="btn btn-success"><a href="Stocks/stocks.php?stocksid='.$productID.'" class="text-light">STOCKS</a></button>
                                 </td>
                                 </tr>';
                             }
