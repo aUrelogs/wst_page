@@ -114,7 +114,6 @@
         }
 
         .glass{
-            background: white;
             min-height: 16vh;
             width: 90%;
             background: #6b3e26;
@@ -123,81 +122,16 @@
         
         }
 
-        .glass_one{
-            background: white;
-            min-height: 16vh;
-            width: 90%;
-            background: #6b3e26;
-            border-radius: 2rem;
-            z-index: 3;
-        
-        }
 
-        .glass_two{
-            background: white;
-            min-height: 16vh;
-            width: 90%;
-            background: #6b3e26;
-            border-radius: 2rem;
-            z-index: 3;
-        }
-
-        .glass_three{
-            background: white;
-            min-height: 16vh;
-            width: 90%;
-            background: #6b3e26;
-            border-radius: 2rem;
-            z-index: 3;
-        }
-
-        .glass_four{
-            background: white;
-            min-height: 16vh;
-            width: 90%;
-            background: #6b3e26;
-            border-radius: 2rem;
-            z-index: 3;
-        }
-
-        .glass_five{
-            background: white;
-            min-height: 16vh;
-            width: 90%;
-            background: #6b3e26;
-            border-radius: 2rem;
-            z-index: 3;
-        }
 
         .product_one{
             margin: 2%;
+            font-family: "Century Gothic";
+            color: white;
 
         }
 
-        .product_two{
-            margin: 2%;
 
-        }
-
-        .product_three{
-            margin: 2%;
-
-        }
-
-        .product_four{
-            margin: 2%;
-
-        }
-
-        .product_five{
-            margin: 2%;
-
-        }
-
-        .product_six{
-            margin: 2%;
-
-        }
 
             #title{
 
