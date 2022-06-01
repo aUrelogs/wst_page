@@ -143,11 +143,9 @@
                             <tr>
             
                                 <td>
-                                    
-                                            <u>PRODUCT NAME:</u>&nbsp;&nbsp; $prodName[$sidx] <br>
-                                            <u>PRODUCT DETAIL:</u>&nbsp; $prodDet[$sidx] <br>
-                                            <u>QUANTITY:</u>&nbsp;&nbsp $proQTY[$sidx] <br>
-                                   
+                                        <u>PRODUCT NAME:</u>&nbsp;&nbsp; $prodName[$sidx] <br>
+                                        <u>PRODUCT DETAIL:</u>&nbsp; $prodDet[$sidx] <br>
+                                        <u>QUANTITY:</u>&nbsp;&nbsp $proQTY[$sidx] <br>
                                 </td>
             
                                 <td>
@@ -189,9 +187,6 @@
                 <br>
             
             ";
-
-                       
-
 
                 }
                     
