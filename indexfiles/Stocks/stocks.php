@@ -2,26 +2,74 @@
 
     include 'connection.php';
 
-    // selecting query
-    $sql = "SELECT * FROM `modify_stocks`";
+   
+    $sql = "
+    SELECT 
 
-    $result = $conn->query($sql);
+    *
 
-    $stockID = [];
-    $stockQTY = [];
+    FROM 
+        `modify_stocks` as s
+    LEFT JOIN 
+        `modify_products` as p ON s.PRODUCT_ID = p.PRODUCT_ID
+
+    ";
+
+        $result = $conn->query($sql);
+
+        
+        if ($result->num_rows > 0) {
+
+        $prodID = [];
+        $prodName = [];
+        $prodDet = [];
+        $proQTY = [];
+
+        // //output data of each row
+            
+        while($row = $result->fetch_assoc()) {
+
+                // print_r($row);
+
+              
+                
+
+                // echo "id:" . $row[""] . "<br>";
+                $prodID[] = $row["PRODUCT_ID"];
+                $prodName[] = $row["PRODUCT_NAME"];
+                $prodDet[] = $row["PRODUCT_DETAIL"];
+                $proQTY[] = $row["PRODUCT_QTY"]; 
+
+               
+                }
+                } else {
+                        echo "0 results";
+                    }
+
+
+   
+
+
+    // // selecting query
+    // $sql = "SELECT * FROM `modify_stocks`";
+
+    // $result = $conn->query($sql);
+
+    // $stockID = [];
+    // $stockQTY = [];
     
-    if($result->num_rows > 0){
+    // if($result->num_rows > 0){
 
-        $idx = 0;
-        while($row = $result->fetch_assoc()){
-            $stockID[$idx] = $row["id"];
-            $stockQTY[$idx] = $row["PRODUCT_QTY"];
+    //     $idx = 0;
+    //     while($row = $result->fetch_assoc()){
+    //         $stockID[$idx] = $row["id"];
+    //         $stockQTY[$idx] = $row["PRODUCT_QTY"];
 
-            $idx++;
-        }
-    } else {
-            echo "0 results";
-        }
+    //         $idx++;
+    //     }
+    // } else {
+    //         echo "0 results";
+    //     }
 
 
 
@@ -62,108 +110,103 @@
 
     <form action="save_stocks.php" method="post">
 
-    <main>
+        
+    
+        <?php
 
-        <section class="glass">
+               
+                for ($sidx = 0; $sidx <count($prodID); $sidx++){
 
-           
+                    echo "
+                    
+                    <main>
 
-            <div class="product_one">
-
-                
-            <table>
-                
-                <tr>
-                    <td>
-                        <h3>ADDED PRODUCT</h3>
-                    </td>
-                    <td>
-                        <h3>EDIT QUANTITY</h3>
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>
-                    <?php 
-
-                        $sql = "
-                        SELECT 
-
-                        *
-
-                        FROM 
-                            `modify_stocks` as s
-                        LEFT JOIN 
-                            `modify_products` as p ON s.PRODUCT_ID = p.PRODUCT_ID
-
-                        ";
-
-                            $result = $conn->query($sql);
-
+                    <section class='glass'>
+            
+                       
+            
+                        <div class='product_one'>
+            
                             
-
-                            if ($result->num_rows > 0) {
-
-                            // //output data of each row
-                                
-                            while($row = $result->fetch_assoc()) {
-
-                                    // print_r($row);
-
-                                    // echo "id:" . $row[""] . "<br>"; 
-                                    echo "<u>PRODUCT NAME:</u>&nbsp;&nbsp;" . $row["PRODUCT_NAME"] . "<br>";
-                                    echo "<u>PRODUCT DETAIL:</u>&nbsp;" . $row["PRODUCT_DETAIL"] . "<br>";
-                                    echo "<u>QUANTITY:</u>&nbsp;&nbsp" . $row["PRODUCT_QTY"] . "<br>";
-
-                                    }
-                                    } else {
-                                            echo "0 results";
-                                        }
-                        ?>
-                    </td>
-
-                    <td>
+                        <table>
+                            
+                            <tr>
+                                <td>
+                                    <h3>ADDED PRODUCT</h3>
+                                </td>
+                                <td>
+                                    <h3>EDIT QUANTITY</h3>
+                                </td>
+            
+                            </tr>
+            
+                            <tr>
+            
+                                <td>
+                                    
+                                            <u>PRODUCT NAME:</u>&nbsp;&nbsp; $prodName[$sidx] <br>
+                                            <u>PRODUCT DETAIL:</u>&nbsp; $prodDet[$sidx] <br>
+                                            <u>QUANTITY:</u>&nbsp;&nbsp $proQTY[$sidx] <br>
+                                   
+                                </td>
+            
+                                <td>
+                                    
+                                   
+                                                    
+                                   
+                                   
+            
+                                   
+            
+            
+            
+                                </td>
+            
+            
+            
+            
+                            
+                            </tr>
+            
+                        </table>
+            
+                       
+            
+                           
+                
+                               
+                            
+                           
+            
+                        </div>
                         
-                       
-                                        
-                       
-                       
-                        <input type="number" name = "" value="" placeholder="No. Stock">
-                        <input type="submit" value="UPDATE">
+            
+                    </section>
+            
+                </main>
+
+                <br>
+            
+            ";
 
                        
 
 
-
-
-                    </td>
-
-
-
-
-
-                
-                </tr>
-
-
-            </table>
-
-           
-
-               
-
-                   
-                
-               
-
-            </div>
+                }
+                    
+                    
             
 
-        </section>
 
-    </main>
+              
+
+
+
+
+        ?>
+
+
 
 
 
@@ -174,6 +217,8 @@
 
 
     </form>
+
+    
     
 
 </body>
