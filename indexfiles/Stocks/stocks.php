@@ -60,6 +60,8 @@
         <div id="title">Stocks Information</div>
     </div>
 
+    <form action="save_stocks.php" method="post">
+
     <main>
 
         <section class="glass">
@@ -126,14 +128,12 @@
                         
                        
                                         
-                        <!-- <form action="" method="post"> -->
-
+                       
                        
                         <input type="number" name = "" value="" placeholder="No. Stock">
                         <input type="submit" value="UPDATE">
 
-                        <!-- </form> -->
-
+                       
 
 
 
@@ -164,6 +164,17 @@
         </section>
 
     </main>
+
+
+
+
+
+
+
+
+
+    </form>
+    
 
 </body>
 </html>
