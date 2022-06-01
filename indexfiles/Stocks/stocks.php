@@ -2,10 +2,29 @@
 
     include 'connection.php';
 
-    //selecting query
-    // $sql = "SELECT * FROM `modify_stocks`";
+    // selecting query
+    $sql = "SELECT * FROM `modify_stocks`";
 
-    // $result = $conn->query($sql);
+    $result = $conn->query($sql);
+
+    $stockID = [];
+    $stockQTY = [];
+    
+    if($result->num_rows > 0){
+
+        $idx = 0;
+        while($row = $result->fetch_assoc()){
+            $stockID[$idx] = $row["id"];
+            $stockQTY[$idx] = $row["PRODUCT_QTY"];
+
+            $idx++;
+        }
+    } else {
+            echo "0 results";
+        }
+
+
+
 
     
 
@@ -94,7 +113,7 @@
                                     // echo "id:" . $row[""] . "<br>"; 
                                     echo "<u>PRODUCT NAME:</u>&nbsp;&nbsp;" . $row["PRODUCT_NAME"] . "<br>";
                                     echo "<u>PRODUCT DETAIL:</u>&nbsp;" . $row["PRODUCT_DETAIL"] . "<br>";
-                                    echo "<u>QUANTITY:</u>&nbsp;&nbsp" . $row["PRODUCT_QYT"] . "<br>";
+                                    echo "<u>QUANTITY:</u>&nbsp;&nbsp" . $row["PRODUCT_QTY"] . "<br>";
 
                                     }
                                     } else {
