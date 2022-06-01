@@ -3,9 +3,9 @@
     include 'connection.php';
 
     //selecting query
-    $sql = "SELECT * FROM `modify_stocks`";
+    // $sql = "SELECT * FROM `modify_stocks`";
 
-    $result = $conn->query($sql);
+    // $result = $conn->query($sql);
 
     
 
@@ -49,62 +49,95 @@
 
             <div class="product_one">
 
-            <h3>ADDED PRODUCTS</h3>
-
-                <?php 
-
-                    $sql = "
-                    SELECT 
-
-                    *
-
-                    FROM 
-                        `modify_stocks` as s
-                    LEFT JOIN 
-                        `modify_products` as p ON s.PRODUCT_ID = p.PRODUCT_ID
-
-                    ";
-
-                        $result = $conn->query($sql);
-
-                        
-
-                        if ($result->num_rows > 0) {
-
-                        // //output data of each row
-                            
-                        while($row = $result->fetch_assoc()) {
-
-                                // print_r($row);
-
-                                // echo "id:" . $row[""] . "<br>"; 
-                                echo "<u>PRODUCT NAME:</u>&nbsp;&nbsp;" . $row["PRODUCT_NAME"] . "<br>";
-                                echo "<u>PRODUCT DETAIL:</u>&nbsp;" . $row["PRODUCT_DETAIL"] . "<br>";
-                                echo "<u>QUANTITY:</u>&nbsp;&nbsp" . $row["PRODUCT_QYT"] . "<br>";
-
-                                }
-                                } else {
-                                        echo "0 results";
-                                    }
-                ?>
-
-                    <br>
-                    <br>
                 
-                <form action="" method="post">
+            <table>
+                
+                <tr>
+                    <td>
+                        <h3>ADDED PRODUCT</h3>
+                    </td>
+                    <td>
+                        <h3>EDIT QUANTITY</h3>
+                    </td>
 
-                        <label for="ten_oz">10 oz:</label>
-                        <input type="number" name = "ten_oz" value="" placeholder="No. Stock">
+                </tr>
 
+                <tr>
 
+                    <td>
+                    <?php 
 
-                </form>
-            
+                        $sql = "
+                        SELECT 
+
+                        *
+
+                        FROM 
+                            `modify_stocks` as s
+                        LEFT JOIN 
+                            `modify_products` as p ON s.PRODUCT_ID = p.PRODUCT_ID
+
+                        ";
+
+                            $result = $conn->query($sql);
+
+                            
+
+                            if ($result->num_rows > 0) {
+
+                            // //output data of each row
+                                
+                            while($row = $result->fetch_assoc()) {
+
+                                    // print_r($row);
+
+                                    // echo "id:" . $row[""] . "<br>"; 
+                                    echo "<u>PRODUCT NAME:</u>&nbsp;&nbsp;" . $row["PRODUCT_NAME"] . "<br>";
+                                    echo "<u>PRODUCT DETAIL:</u>&nbsp;" . $row["PRODUCT_DETAIL"] . "<br>";
+                                    echo "<u>QUANTITY:</u>&nbsp;&nbsp" . $row["PRODUCT_QYT"] . "<br>";
+
+                                    }
+                                    } else {
+                                            echo "0 results";
+                                        }
+                        ?>
+                    </td>
+
+                    <td>
+                        
                        
+                                        
+                        <!-- <form action="" method="post"> -->
+
+                       
+                        <input type="number" name = "" value="" placeholder="No. Stock">
+                        <input type="submit" value="UPDATE">
+
+                        <!-- </form> -->
 
 
 
 
+
+                    </td>
+
+
+
+
+
+                
+                </tr>
+
+
+            </table>
+
+           
+
+               
+
+                   
+                
+               
 
             </div>
             
