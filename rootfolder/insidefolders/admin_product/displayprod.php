@@ -51,7 +51,6 @@
                         if($result) {
                             while($row = mysqli_fetch_assoc($result)){
                                 $id = $row['id'];
-                                $productID = $row['PRODUCT_ID'];
                                 $productNAME = $row['PRODUCT_NAME'];
                                 $productPRICE = $row['PRODUCT_PRICE'];
                                 $productDESC = $row['PRODUCT_DETAIL'];
@@ -63,7 +62,7 @@
                                 <td>
                                 <button class="btn btn-primary"><a href="update_prod.php?updateid='.$id.'" class="text-light">UPDATE</a></button>
                                 <button class="btn btn-danger"><a href="delete_prod.php?deleteid='.$id.'" class="text-light">DELETE</a></button>
-                                <button class="btn btn-success"><a href="http://localhost/wst_page/rootfolder/insidefolders/admin_stocks/stocks.php?stocksid='.$productID.'" class="text-light">STOCKS</a></button>
+                                <button class="btn btn-success"><a href="http://localhost/wst_page/rootfolder/insidefolders/admin_stocks/stocks.php?stocksid='.$id.'" class="text-light">STOCKS</a></button>
                                 </td>
                                 </tr>';
                             }

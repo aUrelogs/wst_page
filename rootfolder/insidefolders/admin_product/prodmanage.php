@@ -8,7 +8,7 @@
         $productPRICE = $_POST['productPrice'];
         $productDESC = $_POST['productDesc'];
    
-        $sql = "INSERT INTO `modify_products` (PRODUCT_ID, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_DETAIL) 
+        $sql = "INSERT INTO `modify_products` (id, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_DETAIL) 
         VALUES('$productID', '$productNAME', '$productPRICE', '$productDESC')";
         $result = mysqli_query($conn, $sql);
 
@@ -34,7 +34,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="justanothercss.css">
-    <title>Product Manager</title>
+    <title>Product Manager | Add Product</title>
   </head>
   <body>
 
