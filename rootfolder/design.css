@@ -112,3 +112,22 @@ header{
     width: 95%;
     border-radius: 5px;
 }
+
+.btns {
+    width: 50%;
+    background-color: #6b3e26;
+    border-radius: 30px;
+    border-color: #6b3e26;
+    border-style: none;
+    font-family: Century Gothic;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+    margin: 5px;
+    height: 50px;
+    background-color: #ddf5e4;
+    border-style: none;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}

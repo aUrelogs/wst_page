@@ -11,11 +11,10 @@
 
     <header>
     <img src="images/logo.png" class="logo" style="width: 100px;">
-        <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 300px;">
+        <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 200px;">
 
             <ul class ="nav_links">
-                <li></li>
-                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> |<a href="index.php"> Admin Log In</a></li>
+                <li><a href="insidefolders/customer_pg_menu/menu.php">Customer Page</a>|<a href="index.php"> Admin Log In</a></li>
             </ul>
 
     </header>
@@ -46,7 +45,7 @@
                     <tr>
                         <td><input type="password" name="password" placeholder="Password" ></td>
                     </tr>
-                    <tr align="right">
+                    <tr align="left">
                         <td><input class="login" type="submit" value="Log In"></td>
                     </tr>
                 </table>

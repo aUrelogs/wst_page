@@ -5,7 +5,7 @@
     $sql = "SELECT * FROM `modify_products` WHERE id=$id";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
-        $productID = $row['PRODUCT_ID'];
+        $productID = $row['id'];
         $productNAME = $row['PRODUCT_NAME'];
         $productPRICE = $row['PRODUCT_PRICE'];
         $productDESC = $row['PRODUCT_DETAIL'];
@@ -17,7 +17,7 @@
         $productDESC = $_POST['productDesc'];
    
         $sql = "UPDATE `modify_products` 
-        SET id=$id, PRODUCT_ID=$productID, PRODUCT_NAME='$productNAME', PRODUCT_PRICE=$productPRICE, PRODUCT_DETAIL='$productDESC'
+        SET id=$id, id=$productID, PRODUCT_NAME='$productNAME', PRODUCT_PRICE=$productPRICE, PRODUCT_DETAIL='$productDESC'
         WHERE id = $id";
         $result = mysqli_query($conn, $sql);
             if($result){
@@ -50,7 +50,7 @@
         <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 250px;">
         <nav>
             <ul class ="nav_links">
-                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href="http://localhost/wst_page/rootfolder/index.php">Log Out</a></li>
+                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User |<a href="http://localhost/wst_page/rootfolder/index.php">Log Out</a></li>
             </ul>
         </nav>
     </header>

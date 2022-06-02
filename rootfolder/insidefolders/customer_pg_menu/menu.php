@@ -39,7 +39,7 @@
         <div><img src="images/logo.png" style="width: 100px;"><img src="images/logoname.png" alt="logo"></div>
         <nav>
             <ul class ="nav_links">
-                <li><font color="#fa3c96"> My Cart </font><img src="images/shoppingicon.png" class="logo" style="width: 25px;"><a href="websysproj/wst_page/indexfiles/index.php"> Admin Log In</a> <img src="images/userlogoo.png" class="logo" style="width: 20px;"></li>
+                <li><font color="#fa3c96"> My Cart </font><img src="images/shoppingicon.png" class="logo" style="width: 25px;"><a href="http://localhost/wst_page/rootfolder/index.php">|  Admin</a></li>
             </ul>
         </nav>
     </header>
