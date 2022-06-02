@@ -47,7 +47,7 @@
 <table align="center" style="width:100%">
     <tr>
         <td align="center"><div style="margin: 0px 0px 0px 19px;"><button class="button">CLASSIC</button></div></td>
-        <td align="center"><button class="button">RARE</button></td>
+        <td align="center"><button class="button">DELUXE</button></td>
         <td align="center"><button class="button">PACKAGES</button></td>
     </tr>
 </table>
