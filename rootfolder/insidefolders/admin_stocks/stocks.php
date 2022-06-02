@@ -66,12 +66,13 @@
         <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 300px;">
         <nav>
             <ul class ="nav_links">
-                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> | <a href="">Admin Log Out</a></li>
+                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> | <a href="http://localhost/wst_page/rootfolder/index.php">Admin Log Out</a></li>
             </ul>
         </nav>
     </header>
 
-
+    <button><a href="http://localhost/wst_page/rootfolder/main-admin.php" class="text-light">
+        BACK TO MAIN</a></button>
     <div class="name_of_page">
         <div id="title">Stocks Information</div>
     </div>
