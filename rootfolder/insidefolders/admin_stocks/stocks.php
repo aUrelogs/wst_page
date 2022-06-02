@@ -103,24 +103,43 @@
                                 <section class='glass'>
 
                                     <div id='products'>
-                                        <h3>Product Name: $prodName[$idx] &nbsp;</h3>
-                                        
-                                        Product Details: $prodDet[$idx] &nbsp; 
-                                        <br>
-                                        <br>
 
-                                        <div id='stocks'>
-                                            Available Stock: $stocksQTY[$idx] &nbsp; 
-                                            <br>
-                                            <br>
-                                        </div>
-                                       
-                                        <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a>
+                                    <h3>Product Name: $prodName[$idx] &nbsp;</h3> 
+                                    
+                                    <table>
+
+                                        <tr>
+                                        <td>
+                                        <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
                                         <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button2'>PRODUCTS</button></a>
                                         &nbsp;
             
-                                        <br>
-   
+                                      
+                                    </td>
+                                            <td>
+                                                Product Details: $prodDet[$idx] &nbsp; 
+                                                <br>
+                                                <br>
+        
+                                                <div id='stocks'>
+                                                    Available Stock: $stocksQTY[$idx] &nbsp; 
+                                                    <br>
+                                                    <br>
+                                                </div>
+                                            </td>
+                                 
+                                        </tr>
+
+
+
+                                      
+
+
+
+
+
+
+                                    </table>
    
    
                                    </section>
