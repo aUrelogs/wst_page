@@ -21,7 +21,7 @@
         `modify_stocks` as s
 
     LEFT JOIN 
-        `modify_products` as p ON s.PRODUCT_ID = p.PRODUCT_ID
+        `modify_products` as p ON s.id = p.id
 
     ";
 
