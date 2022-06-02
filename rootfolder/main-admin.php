@@ -36,8 +36,8 @@
             </tr>
             <tr align="center">
                 <td><a href="SummaryR/summaryreports.html"><font face="Century Gothic" size="20">SUMMARY REPORTS</a></font></td>
-                <td><a href="Stocks/stocks.php"><font face="Century Gothic" size="20">STOCKS / STORAGE</font></td>
-                <td><a href="displayprod.php"><font face="Century Gothic" size="20">PRODUCT MANAGER</font></td>
+                <td><a href="/admin_stocks/stocks.php"><font face="Century Gothic" size="20">STOCKS / STORAGE</font></td>
+                <td><a href=.../displayprod.php"><font face="Century Gothic" size="20">PRODUCT MANAGER</font></td>
             </tr>
         </table>
     </div>
