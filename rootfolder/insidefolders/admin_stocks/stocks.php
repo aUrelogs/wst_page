@@ -70,12 +70,18 @@
         </nav>
     </header>
 
-    <button><a href="http://localhost/wst_page/rootfolder/main-admin.php" class="text-light">
-        BACK TO MAIN</a></button>
     <div class="name_of_page">
         <div id="title">Stocks Information</div>
     </div>
 
+   <main>
+   <a href='http://localhost/wst_page/rootfolder/main-admin.php'><button class='button1'>BACK TO MAIN</a></button>
+  
+   </main>
+
+    <br>
+   
+    
 
 
     <?php
@@ -92,6 +98,8 @@
                         
                             <main>
 
+                          
+
                                 <section class='glass'>
 
                                     <div id='products'>
@@ -99,7 +107,8 @@
                                         Product Name: $prodName[$idx] &nbsp; <br>
                                         Product Details: $prodDet[$idx] &nbsp; <br>
                                         Available Stock: $stocksQTY[$idx] &nbsp; <br>
-                                        <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button'>EDIT</button></a>
+                                        <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a>
+                                        <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button2'>PRODUCTS</button></a>
                                         &nbsp;
             
                                         <br>
@@ -126,13 +135,7 @@
                         
                         
                         ";
-
-
                 }
-
-
-            
-
 
             }
 

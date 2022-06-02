@@ -71,8 +71,8 @@
         text-align: left;
     }
 
-    .button {
-        background-color: #4CAF50; /* Green */
+    .button1{
+        background-color: #4CAF50;
         border: none;
         color: white;
         padding: 6px 16px;
@@ -85,17 +85,47 @@
         cursor: pointer;
       }
     
-      .button {
+    .button1{
         background-color: transparent; 
         color: white; 
         border: 2px solid #008CBA;
         border-radius: 5px;
       }
+
       
-      .button:hover {
+    .button1:hover {
         background-color: #008CBA;
         color: white;
       }
+    
+
+
+    .button2{
+        background-color: #4CAF50; 
+        border: none;
+        color: white;
+        padding: 6px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+    
+    .button2{
+        background-color: transparent; 
+        color: black; 
+        border: 2px solid #008CBA;
+        border-radius: 5px;
+      }
+      
+    .button2:hover {
+        background-color: #008CBA;
+        color: white;
+      }
+    
     
 
     table{
