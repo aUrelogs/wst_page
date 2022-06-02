@@ -54,6 +54,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="design_stocks.css">
+  
     <title> Stocks Status</title>
 
 </head>
@@ -98,7 +99,7 @@
                                         $prodName[$idx] &nbsp; <br>
                                         $prodDet[$idx] &nbsp; <br>
                                         $stocksQTY[$idx] &nbsp; <br>
-                                        <a href='edit_stock.php? id=$stocksIDs[$idx]'><button>EDIT</button></a>
+                                        <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn'>EDIT</button></a>
                                         &nbsp;
             
                                         <br>
