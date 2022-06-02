@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Melted Font';
+    src: url(fonts/MeltedDl-XdLg.ttf);
+}
+
+body {
+    background-image: url(images/bgimg.PNG);
+   background-size: 100%;
+}
+
+.bgcol{
+    background-color: #c2f2d0;
+    padding: 20px;
+    border-radius: 50px;
+    width: 90%;
+    
+}
+
+.bgcol2{
+    background-color: #c2f2d0;
+    border-radius: 40px;
+    width: 50%;
+}
+
+input {
+    width: 300px;
+    margin: 5px;
+    height: 50px;
+    background-color: #ddf5e4;
+    border-style: none;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=text], [type=password]{
+    font-size: large;
+    font-family: "Century Gothic";
+    font-weight: bolder;
+    color: black;
+    padding-left: 20px;
+}
+
+input::placeholder{
+    font-size: large;
+    font-family: "Century Gothic";
+    font-weight: bolder;
+    color: #6b3e26;
+ 
+}
+
+.login {
+    width: 50%;
+    background-color: #6b3e26;
+    border-radius: 30px;
+    border-color: #6b3e26;
+    border-style: none;
+    font-family: Century Gothic;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}
+
+li, a{
+    font-family: "Century Gothic";
+    font-weight: 500;
+    font-size: 20px;
+    color: #6b3e26;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #fdf5c9;
+
+}
+
+.logo{
+    cursor: pointer;
+    width: 40%;
+}
+
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+    transition: all 0.3s ease 0s;
+}
+
+.container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.box {
+    
+    border: none;
+    position: relative;
+}
+
+.error {
+    background: #eeafaf;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+}
