@@ -75,7 +75,7 @@
         background-color: #4CAF50;
         border: none;
         color: white;
-        padding: 6px 16px;
+        padding: 14px 25px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -87,21 +87,21 @@
     
     .button1{
         background-color: transparent; 
-        color: white; 
-        border: 2px solid #008CBA;
+        color: black; 
+        border: 2px solid #ba3500;
         border-radius: 5px;
       }
 
       
     .button1:hover {
-        background-color: #008CBA;
+        background-color: #ba3500;
         color: white;
       }
     
 
 
     .button2{
-        background-color: #4CAF50; 
+       
         border: none;
         color: white;
         padding: 6px 16px;

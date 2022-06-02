@@ -75,7 +75,7 @@
     </div>
 
    <main>
-   <a href='http://localhost/wst_page/rootfolder/main-admin.php'><button class='button1'>BACK TO MAIN</a></button>
+   <a href='http://localhost/wst_page/rootfolder/main-admin.php'><button class='button1'>BACK TO MAIN</button></a>
   
    </main>
 
@@ -103,8 +103,8 @@
                                 <section class='glass'>
 
                                     <div id='products'>
-
-                                        Product Name: $prodName[$idx] &nbsp; <br>
+                                        <h3>Product Name: $prodName[$idx] &nbsp; <br></h3>
+                                        
                                         Product Details: $prodDet[$idx] &nbsp; <br>
                                         Available Stock: $stocksQTY[$idx] &nbsp; <br>
                                         <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a>
