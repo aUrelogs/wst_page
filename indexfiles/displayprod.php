@@ -36,6 +36,7 @@
         <table class="table table-dark"">
             <thead>
                 <tr align="center">
+                <th scope="col">DB Product ID</th>
                 <th scope="col">Product ID</th>
                 <th scope="col">Product Name</th>
                 <th scope="col">Product Price</th>
@@ -56,7 +57,8 @@
                                 $productPRICE = $row['PRODUCT_PRICE'];
                                 $productDESC = $row['PRODUCT_DETAIL'];
                                 echo '<tr align="center">
-                                <th scope="row">'.$productID.'</th>
+                                <th scope="row">'.$id.'</th>
+                                <td>'.$productID.'</td>
                                 <td>'.$productNAME.'</td>
                                 <td>'."₱ ".$productPRICE.'</td>
                                 <td>'.$productDESC.'</td>
