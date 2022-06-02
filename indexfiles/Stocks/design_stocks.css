@@ -71,7 +71,7 @@
         text-align: left;
     }
 
-    input[type=submit] {
+    input[type=button] {
         width: 20%;
         background-color: #4CAF50;
         color: white;
@@ -82,7 +82,7 @@
         cursor: pointer;
     }
       
-    input[type=submit]:hover {
+    input[type=button]:hover {
         background-color: #45a049;
     }
 
@@ -120,7 +120,7 @@
         
         }
 
-        .product_one{
+        #products{
             margin: 2%;
             font-family: "Century Gothic";
             color: white;

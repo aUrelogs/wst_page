@@ -87,11 +87,43 @@
                     die();
 
                 }else{
-                                echo  $stocksIDs[$idx] . "&nbsp;" . $stocksQTY[$idx] . "&nbsp;" . $prodName[$idx] . "\n";
-                echo "<a href='edit_stock.php? id=$stocksIDs[$idx]'><button type = 'button'>EDIT</button></a>";
-                echo "&nbsp;";
+                        echo"
+                        
+                            <main>
 
-                echo "<br>";
+                                <section class='glass'>
+
+                                    <div id='products'>
+
+                                        $prodName[$idx] &nbsp; <br>
+                                        $stocksQTY[$idx] &nbsp; <br>
+                                        <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type = 'button'>EDIT</button></a>
+                                        &nbsp;
+            
+                                        <br>
+   
+   
+   
+                                   </section>
+   
+   
+   
+   
+                               </main>
+   
+                               <br>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    </div>
+                        
+                        
+                        
+                        
+                        ";
 
 
                 }
