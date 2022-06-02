@@ -49,7 +49,7 @@
 
     <input type="hidden" name="stock_id" value="<?php echo $id; ?>" />
 
-    <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?>"/>
+    <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?> " min="0"/>
 
     <br>
             <br>

@@ -79,26 +79,34 @@
 
     <?php
 
-    for($idx=0; $idx < count($stocksIDs); $idx++){
 
-    // echo"<input type='checkbox'  name=' stock_id[$idx] ' value = ' $stocksQTY[$idx]  ' >";
-    echo  $stocksIDs[$idx] . "&nbsp;" . $stocksQTY[$idx] . "&nbsp;" . $prodName[$idx] . "\n";
-    echo "<a href='edit_stock.php? id=$stocksIDs[$idx]'><button type = 'button'>EDIT</button></a>";
-    echo "&nbsp;";
+            for($idx=0; $idx < count($stocksIDs); $idx++){
 
-    echo "<br>";
+                            
+                if(empty($prodName[$idx])){
+                    die();
 
+                }else{
+                                echo  $stocksIDs[$idx] . "&nbsp;" . $stocksQTY[$idx] . "&nbsp;" . $prodName[$idx] . "\n";
+                echo "<a href='edit_stock.php? id=$stocksIDs[$idx]'><button type = 'button'>EDIT</button></a>";
+                echo "&nbsp;";
 
-    }
-
-    ?>
-
-
+                echo "<br>";
 
 
+                }
 
 
-    </form>
+            
+
+
+            }
+
+            ?>
+
+
+
+
 
    
 
