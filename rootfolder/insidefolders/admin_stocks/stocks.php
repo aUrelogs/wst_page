@@ -96,10 +96,10 @@
 
                                     <div id='products'>
 
-                                        $prodName[$idx] &nbsp; <br>
-                                        $prodDet[$idx] &nbsp; <br>
-                                        $stocksQTY[$idx] &nbsp; <br>
-                                        <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn'>EDIT</button></a>
+                                        Product Name: $prodName[$idx] &nbsp; <br>
+                                        Product Details: $prodDet[$idx] &nbsp; <br>
+                                        Available Stock: $stocksQTY[$idx] &nbsp; <br>
+                                        <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button'>EDIT</button></a>
                                         &nbsp;
             
                                         <br>
