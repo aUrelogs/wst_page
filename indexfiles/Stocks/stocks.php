@@ -2,81 +2,48 @@
 
     include 'connection.php';
 
-   
+   //-------------------------------------------------------------------------//
     $sql = "
-    SELECT 
-
+    SELECT
     *
-
     FROM 
         `modify_stocks` as s
     LEFT JOIN 
         `modify_products` as p ON s.PRODUCT_ID = p.PRODUCT_ID
 
     ";
+    //------------------------------------------------------------------------//
 
-        $result = $conn->query($sql);
+    $result = $conn->query($sql);
 
-        
-        if ($result->num_rows > 0) {
+    $stocksIDs = [];
+    $stocksQTY = [];
 
-        $prodID = [];
-        $prodName = [];
-        $prodDet = [];
-        $proQTY = [];
+    if($result->num_rows > 0){
 
-        // //output data of each row
-            
-        while($row = $result->fetch_assoc()) {
+        $idx = 0;
 
-                // print_r($row);
+        while($row = $result->fetch_assoc()){
 
-              
-                
+            $stocksIDs[$idx] = $row["id"];
+            $stocksQTY[$idx] = $row["PRODUCT_QTY"];
+            $prodIDs[$idx] = $row["PRODUCT_ID"];
+            $prodName[$idx] = $row["PRODUCT_NAME"];
+            $prodDet[$idx] = $row["PRODUCT_DETAIL"];
 
-                // echo "id:" . $row[""] . "<br>";
-                $prodID[] = $row["PRODUCT_ID"];
-                $prodName[] = $row["PRODUCT_NAME"];
-                $prodDet[] = $row["PRODUCT_DETAIL"];
-                $proQTY[] = $row["PRODUCT_QTY"]; 
+            $idx++;
 
-               
-                }
-                } else {
-                        echo "0 results";
-                    }
-
-
-   
-
-
-    // // selecting query
-    // $sql = "SELECT * FROM `modify_stocks`";
-
-    // $result = $conn->query($sql);
-
-    // $stockID = [];
-    // $stockQTY = [];
-    
-    // if($result->num_rows > 0){
-
-    //     $idx = 0;
-    //     while($row = $result->fetch_assoc()){
-    //         $stockID[$idx] = $row["id"];
-    //         $stockQTY[$idx] = $row["PRODUCT_QTY"];
-
-    //         $idx++;
-    //     }
-    // } else {
-    //         echo "0 results";
-    //     }
+        }
+    }else{
+        echo "0 result";
+    }
 
 
 
 
-    
 
-    
+
+
 
 ?>
 
@@ -108,103 +75,23 @@
         <div id="title">Stocks Information</div>
     </div>
 
-    <form action="save_stocks.php" method="post">
-
-        
-    
-        <?php
-
-               
-                for ($sidx = 0; $sidx <count($prodID); $sidx++){
-
-                    echo "
-                    
-                    <main>
-
-                    <section class='glass'>
-            
-                       
-            
-                        <div class='product_one'>
-            
-                            
-                        <table>
-                            
-                            <tr>
-                                <td>
-                                    <h3>ADDED PRODUCT</h3>
-                                </td>
-                                <td>
-                                    <h3>EDIT QUANTITY</h3>
-                                </td>
-            
-                            </tr>
-            
-                            <tr>
-            
-                                <td>
-                                        <u>PRODUCT NAME:</u>&nbsp;&nbsp; $prodName[$sidx] <br>
-                                        <u>PRODUCT DETAIL:</u>&nbsp; $prodDet[$sidx] <br>
-                                        <u>QUANTITY:</u>&nbsp;&nbsp $proQTY[$sidx] <br>
-                                </td>
-            
-                                <td>
-                                    
-                                   
-                                                    
-                                   
-                                   
-            
-                                   
-            
-            
-            
-                                </td>
-            
-            
-            
-            
-                            
-                            </tr>
-            
-                        </table>
-            
-                       
-            
-                           
-                
-                               
-                            
-                           
-            
-                        </div>
-                        
-            
-                    </section>
-            
-                </main>
-
-                <br>
-            
-            ";
-
-                }
-                    
-                    
-            
 
 
-              
+    <?php
+
+    for($idx=0; $idx < count($stocksIDs); $idx++){
+
+    // echo"<input type='checkbox'  name=' stock_id[$idx] ' value = ' $stocksQTY[$idx]  ' >";
+    echo  $stocksIDs[$idx] . "&nbsp;" . $stocksQTY[$idx] . "&nbsp;" . $prodName[$idx] . "\n";
+    echo "<a href='edit_stock.php? id=$stocksIDs[$idx]'><button type = 'button'>EDIT</button></a>";
+    echo "&nbsp;";
+
+    echo "<br>";
 
 
+    }
 
-
-        ?>
-
-
-
-
-
+    ?>
 
 
 
@@ -212,6 +99,13 @@
 
 
     </form>
+
+   
+
+
+
+
+
 
     
     
