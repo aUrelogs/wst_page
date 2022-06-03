@@ -7,16 +7,14 @@
     <link rel="stylesheet" type="text/css" href="design.css">
     <title> Admin Portal</title>
 </head>
-<body>
-
-    <header>
-    <img src="images/logo.png" class="logo" style="width: 100px;">
-        <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 200px;">
-
+<body style="margin: 0">
+    <header >
+        <div><img src="images/logo.png" style="width: 100px;"><img src="images/logoname.png" alt="logo"></div>
+        <nav>
             <ul class ="nav_links">
-                <li><a href="insidefolders/customer_pg_menu/menu.php">Customer Page</a>|<a href="index.php"> Admin Log In</a></li>
+                <li><a href="http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/menu.php"><font color="#fa3c96"> Customer Page </font><img src="images/shoppingicon.png" class="logo" style="width: 25px;"></a><a href="http://localhost/wst_page/rootfolder/index.php">|  Admin Log In</a></li>
             </ul>
-
+        </nav>
     </header>
 <br><br><br><br>
 
@@ -45,7 +43,7 @@
                     <tr>
                         <td><input type="password" name="password" placeholder="Password" ></td>
                     </tr>
-                    <tr align="left">
+                    <tr align="right">
                         <td><input class="login" type="submit" value="Log In"></td>
                     </tr>
                 </table>

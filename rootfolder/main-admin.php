@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="design.css">
     <title>What's The Scoop? - ADMIN</title>
 </head>
-<body>
+<body style="margin: 0">
     
     <header>
     <img src="images/logo.png" class="logo" style="width: 100px;">
