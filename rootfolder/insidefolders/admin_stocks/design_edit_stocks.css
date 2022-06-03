@@ -53,10 +53,11 @@ main{
 }
 
 input[type=number]{
-    padding: 3px;
-    width: 20%;
+    padding: 20px;
+    width: 50%;
     border: 2px solid white;
     border-radius: 4px;
+    
    
 }
 
@@ -80,25 +81,13 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    float: right;
+   
   }
   
   input[type=submit]:hover {
     background-color: #45a049;
   }
 
-
-
-
-
-table{
-    width: 70%;
-    
-}
-
-tr{
-    width: 50%;
-}
 
     .logo{
         cursor: pointer;
@@ -127,34 +116,15 @@ tr{
 
     #products{
         margin: 2%;
+        margin-left: 25%;
         font-family: "Century Gothic";
         color: white;
-
+        
     }
 
 
 
-        #title{
-
-            margin: 2%;
-            font-family: 'Melted Dl';
-            color: #fa3c96;
-            font-size: 45px;
-        }
-
-        #current_stock{
-            font-family: "Century Gothic";
-            color: white;
-            text-align: left;
-        }
-
-        #stocks{
-       
-            font-family: "Century Gothic";
-            color: orange;
-
-        }
-
+    
 
 
 

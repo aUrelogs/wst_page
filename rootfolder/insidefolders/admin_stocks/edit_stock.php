@@ -76,21 +76,26 @@
     <br>
 
     <main>
-
         
-            <form action="save_stocks.php" method="post">
+            <div class="glass">
 
-                <input type="hidden" name="stock_id" value="<?php echo $id; ?>" />
+                <div id="products">
 
-                <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?> " min="0"/>
+                    <form action="save_stocks.php" method="post">
 
-                <br>
-                <br>
+                        <input type="hidden" name="stock_id" value="<?php echo $id; ?>" />
 
-                <input type= "submit" value="Submit">
+                        <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?> " min="0"/>
 
-            </form>
+                      
 
+                        <input type= "submit" value="Submit">
+
+                    </form>
+
+                </div>
+
+            </div>
     </main>
 
 </body>
