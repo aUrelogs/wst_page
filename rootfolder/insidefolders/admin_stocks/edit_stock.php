@@ -58,7 +58,7 @@
         <title>Edit Quantity</title>
 
 </head>
-<body>
+<body style="margin: 0px">
 
     <header>
 
