@@ -90,7 +90,7 @@
                     
                     <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?> " placeholder = "Type Quantity" min="0"/>
 
-                    <input type= "submit" value="Submit">
+                    <input type= "submit" value="SUBMIT">
 
                     <br>
 
