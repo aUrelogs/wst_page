@@ -118,8 +118,14 @@
 
             </div>
 
+            <div class="main1">
+                <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_stocks/stocks.php'><button class='btn1'>CANCEL</button></a>
+            </div>
+
+            <br>
+
         </div>
-        
+
     </main>
 
 </body>

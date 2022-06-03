@@ -54,8 +54,6 @@
         width: 50%;
         border: 2px solid darkgray;
         border-radius: 4px;
-        
-    
     }
 
     input[type=number]:focus{
@@ -84,6 +82,32 @@
         background-color: orange;
     }
 
+    .btn1{
+        border: none;
+        color: white;
+        padding: 7px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .btn1{
+        background-color: transparent; 
+        color: black; 
+        border: 2px solid #dc3444;
+        border-radius: 5px;
+    }
+
+       
+    .btn1:hover {
+        background-color: #dc3444;
+        color: white;
+    }
+
     .logo{
         cursor: pointer;
         width: 40%;
@@ -105,6 +129,12 @@
         background: #c2f2d0;
         border-radius: 2rem;
         z-index: 3;    
+    }
+
+    .main1{
+        min-height: 5vh;
+        display: flex;
+        margin-left: 43%;
     }
     
     #title{
