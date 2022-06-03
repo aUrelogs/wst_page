@@ -32,8 +32,6 @@
         font-family: "Century Gothic";
     }
 
-  
-
     li, a{
         font-family: "Century Gothic";
         font-weight: 500;
@@ -50,6 +48,15 @@
         align-items: center;
         justify-content: center;
     
+    }
+
+    table{
+        width: 70%;
+        
+    }
+
+    tr{
+        width: 50%;
     }
 
     input[type=number]{
@@ -83,23 +90,21 @@
         margin: 4px 2px;
         transition-duration: 0.4s;
         cursor: pointer;
-      }
+    }
     
     .button1{
         background-color: transparent; 
         color: black; 
         border: 2px solid #ba3500;
         border-radius: 5px;
-      }
+    }
 
       
     .button1:hover {
         background-color: #ba3500;
         color: white;
-      }
+    }
     
-
-
     .button2{
        
         border: none;
@@ -112,21 +117,21 @@
         margin: 4px 2px;
         transition-duration: 0.4s;
         cursor: pointer;
-      }
+    }
     
     .button2{
         background-color: transparent; 
         color: white; 
         border: 2px solid #008CBA;
         border-radius: 5px;
-      }
+    }
       
     .button2:hover {
         background-color: #008CBA;
         color: white;
-      }
+    }
     
-      .button3{
+    .button3{
        
         border: none;
         color: white;
@@ -138,85 +143,67 @@
         margin: 4px 2px;
         transition-duration: 0.4s;
         cursor: pointer;
-      }
+    }
     
     .button3{
         background-color: transparent; 
         color: white; 
         border: 2px solid green;
         border-radius: 5px;
-      }
+    }
       
     .button3:hover {
         background-color: green;
         color: white;
-      }
+    }
     
-    
-
-    table{
-        width: 70%;
-        
+    .logo{
+        cursor: pointer;
+        width: 40%;
     }
 
-    tr{
-        width: 50%;
+    .nav_links {
+        list-style: none;
+    }
+        
+    .nav_links li {
+        display: inline-block;
+        padding: 0px 20px;
+        transition: all 0.3s ease 0s;
     }
 
-        .logo{
-            cursor: pointer;
-            width: 40%;
+    .glass{
+        min-height: 16vh;
+        width: 90%;
+        background: #6b3e26;
+        border-radius: 2rem;
+        z-index: 3;        
+    }
 
-        }
+    #products{
+        margin: 2%;
+        font-family: "Century Gothic";
+        color: white;
+    }
 
-        .nav_links {
-            list-style: none;
-        }
-        
-        .nav_links li {
-            display: inline-block;
-            padding: 0px 20px;
-            transition: all 0.3s ease 0s;
-        }
+    #title{
+        margin: 2%;
+        font-family: 'Melted Dl';
+        color: #fa3c96;
+        font-size: 45px;
+    }
 
-        .glass{
-            min-height: 16vh;
-            width: 90%;
-            background: #6b3e26;
-            border-radius: 2rem;
-            z-index: 3;
-        
-        }
+    #current_stock{
+        font-family: "Century Gothic";
+        color: white;
+        text-align: left;
+    }
 
-        #products{
-            margin: 2%;
-            font-family: "Century Gothic";
-            color: white;
-
-        }
-
-
-
-            #title{
-
-                margin: 2%;
-                font-family: 'Melted Dl';
-                color: #fa3c96;
-                font-size: 45px;
-            }
-
-            #current_stock{
-                font-family: "Century Gothic";
-                color: white;
-                text-align: left;
-            }
-
-            #stocks{
-           
-                font-family: "Century Gothic";
-                color: orange;
+    #stocks{       
+        font-family: "Century Gothic";
+        color: orange;
     
-            }
+    }
 
 
 
