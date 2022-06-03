@@ -45,20 +45,77 @@
 
 ?>
 
-<form action="save_stocks.php" method="post">
 
-    <input type="hidden" name="stock_id" value="<?php echo $id; ?>" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="design_edit_stocks.css">
+  
+    <title> Edit Quantity</title>
 
-    <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?> " min="0"/>
+    
+
+
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.png" class="logo" style="width: 100px;">
+        <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 250px;">
+        <nav>
+            <ul class ="nav_links">
+                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href="http://localhost/wst_page/rootfolder/index.php">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <br>
-            <br>
+    <br>
 
-        <input type= "submit" value="Submit">
+    <main>
+
+        
+            <form action="save_stocks.php" method="post">
+
+                <input type="hidden" name="stock_id" value="<?php echo $id; ?>" />
+
+                <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?> " min="0"/>
+
+                <br>
+                <br>
+
+                <input type= "submit" value="Submit">
+
+            </form>
+
+    </main>
+
+</body>
+</html>
 
 
 
 
 
 
-</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
