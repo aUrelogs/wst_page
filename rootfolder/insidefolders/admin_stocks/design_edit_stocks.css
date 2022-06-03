@@ -55,7 +55,7 @@ main{
 input[type=number]{
     padding: 20px;
     width: 50%;
-    border: 2px solid white;
+    border: 2px solid darkgray;
     border-radius: 4px;
     
    
@@ -63,6 +63,7 @@ input[type=number]{
 
 input[type=number]:focus{
     background-color: lightcyan;
+   
 }
 
 label{
@@ -75,8 +76,8 @@ label{
 
 
 input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
+    background-color: lightyellow;
+    color: darkblue;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -85,7 +86,7 @@ input[type=submit] {
   }
   
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: orange;
   }
 
 
@@ -108,10 +109,19 @@ input[type=submit] {
     .glass{
         min-height: 16vh;
         width: 90%;
-        background: #6b3e26;
+        background: #c2f2d0;
         border-radius: 2rem;
         z-index: 3;
     
+    }
+
+    
+    #title{
+
+        margin: 2%;
+        font-family: 'Melted Dl';
+        color: #fa3c96;
+        font-size: 45px;
     }
 
     #products{
@@ -121,6 +131,13 @@ input[type=submit] {
         color: white;
         
     }
+
+    #current{
+        font-family: "Century Gothic";
+        color: black;
+        
+    }
+
 
 
 

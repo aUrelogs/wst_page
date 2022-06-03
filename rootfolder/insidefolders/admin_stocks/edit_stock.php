@@ -72,8 +72,11 @@
         </nav>
     </header>
 
-    <br>
-    <br>
+    <div class="name_of_page">
+        <div id="title">Modify Quantity</div>
+    </div>
+
+    
 
     <main>
         
@@ -85,11 +88,37 @@
 
                         <input type="hidden" name="stock_id" value="<?php echo $id; ?>" />
 
-                        <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?> " min="0"/>
+                        <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?> " placeholder = "Type Quantity" min="0"/>
+
+                        <input type= "submit" value="Submit">
+
+
+                        <br>
+
+                       <div id="current">
+
+                       <br>
+
+                            <?php
+
+                                echo "Current:" . "&nbsp;" . $productQuant;
+                            
+                                if($productQuant == 0 ){
+                                    echo "&nbsp;No stock";
+                                } elseif($productQuant == 1){
+                                    echo "&nbsp;Piece";
+                                }else{
+                                    echo "&nbsp;Pieces";
+                                }
+                               
+                            ?>
+
+
+                       </div>
 
                       
 
-                        <input type= "submit" value="Submit">
+                      
 
                     </form>
 
