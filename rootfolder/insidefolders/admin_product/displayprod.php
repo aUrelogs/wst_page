@@ -29,10 +29,10 @@
    
     <div class = "bgcol container my-5">
     <div class="container">
-        <button class="btn btn-primary my-4"><a href="prodmanage.php" class="text-light">
-        ADD PRODUCT</a></button> 
-        <button class="btn btn-danger my-4"><a href="http://localhost/wst_page/rootfolder/main-admin.php" class="text-light">
-        BACK TO MAIN</a></button>
+        <a href="prodmanage.php" class="text-light"><button class="btn btn-primary my-4">
+        ADD PRODUCT</button></a>
+        <a href="http://localhost/wst_page/rootfolder/main-admin.php" class="text-light"><button class="btn btn-danger my-4">
+        BACK TO MAIN</button></a>
         <table class="table table-dark">
             <thead>
                 <tr align="center">
@@ -60,9 +60,9 @@
                                 <td>'."₱ ".$productPRICE.'</td>
                                 <td>'.$productDESC.'</td>
                                 <td>
-                                <button class="btn btn-primary"><a href="update_prod.php?updateid='.$id.'" class="text-light">UPDATE</a></button>
-                                <button class="btn btn-danger"><a href="delete_prod.php?deleteid='.$id.'" class="text-light">DELETE</a></button>
-                                <button class="btn btn-success"><a href="http://localhost/wst_page/rootfolder/insidefolders/admin_stocks/stocks.php?stocksid='.$id.'" class="text-light">STOCKS</a></button>
+                                <a href="update_prod.php?updateid='.$id.'" class="text-light"><button class="btn btn-primary">UPDATE</button></a>
+                                <a href="delete_prod.php?deleteid='.$id.'" class="text-light"><button class="btn btn-danger">DELETE</button></a>
+                                <a href="http://localhost/wst_page/rootfolder/insidefolders/admin_stocks/stocks.php?stocksid='.$id.'" class="text-light"><button class="btn btn-success">STOCKS</button></a>
                                 </td>
                                 </tr>';
                             }
