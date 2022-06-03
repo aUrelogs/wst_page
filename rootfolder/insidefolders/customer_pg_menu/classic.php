@@ -8,7 +8,7 @@
     <title>Classic Menu</title>
 </head>
 <style>
-.AddtoCartbutton {
+.classicbutton {
   background-color: #fa3c96;
   border-color: #fa3c96;
   border-radius: 40px;
@@ -16,7 +16,7 @@
   padding: 8px 15px;
   text-align: center;
   font-size: 15px;
-  margin: 4px 2px;
+  margin: 0px 2px;
   cursor: pointer;
 }
 .inputcones {
@@ -35,44 +35,45 @@
         </nav>
     </header>
     <br>
-<font face="Melted Font" size="6" color="#fa3c96"><center> CLASSIC MENU</center></font>
+<font face="Melted Font" size="6" color="#fa3c96"><center>CLASSIC MENU</center></font>
 <table align="center">
     <tr>
         <td><div style="margin: 0px 80px 0px 0px;">
             <img src="images/placeholderpic.png" alt="logo"></div>
         </td>
         <td>
-            <font face="Century Gothic" size="5" color="#fa3c96"><b>SMALL CONTAINER ICE CREAM</b></font>
+            <font face="Century Gothic" size="5" color="#fa3c96"><b>SMALL CONTAINER ICE CREAM</b></font>&nbsp;&nbsp;
+            <a href="bread.php"><button class="classicbutton">Bread Ice Cream Menu</button></a>
             <br><br>
             <font face="Century Gothic">
             <b>Price per ounce(oz):</b><br>
-            <input type="radio" id="classic_10oz" name="classic_10oz" value="10oz" style="height:13px; width:20px;">
+            <input type="radio" id="classic_10oz" name="classicsizes" value="10oz" style="height:13px; width:20px;">
             <label for="classic_10oz">10 oz | P40</label><br>
-            <input type="radio" id="classic_16oz" name="classic_16oz" value="16oz" style="height:13px; width:20px;">
+            <input type="radio" id="classic_16oz" name="classicsizes" value="16oz" style="height:13px; width:20px;">
             <label for="classic_16oz">16 oz | P60</label><br>
-            <input type="radio" id="classic_26oz" name="classic_26oz" value="26oz" style="height:13px; width:20px;">
+            <input type="radio" id="classic_26oz" name="classicsizes" value="26oz" style="height:13px; width:20px;">
             <label for="classic_26oz">26 oz | P70</label><br>
-            <input type="radio" id="classic_32oz" name="classic_32oz" value="32oz" style="height:13px; width:20px;">
+            <input type="radio" id="classic_32oz" name="classicsizes" value="32oz" style="height:13px; width:20px;">
             <label for="classic_32oz">32 oz | P80</label><br>
             </font>
         </td>
     </tr>
     <tr>
-        <td align="center"><div style="margin: 0px 80px 0px 0px;"><button class="AddtoCartbutton">Add to Cart</button></div></td>
+        <td align="center"><div style="margin: 0px 80px 0px 0px;"><button class="classicbutton">Add to Cart</button></div></td>
         <td>
             <font face="Century Gothic">
             <b>Flavors:</b><br>
-            <input type="radio" id="Avocado_Machiatto" name="Avocado_Machiatto" value="Avocado Machiatto" style="height:13px; width:20px;">
+            <input type="radio" id="Avocado_Machiatto" name="classicflavor" value="Avocado Machiatto" style="height:13px; width:20px;">
             <label for="Avocado_Machiatto">Avocado Machiatto</label>
-            <input type="radio" id="Macapuno_Caramel" name="Macapuno_Caramel" value="Macapuno Caramel" style="height:13px; width:20px;">
+            <input type="radio" id="Macapuno_Caramel" name="classicflavor" value="Macapuno Caramel" style="height:13px; width:20px;">
             <label for="Macapuno_Caramel">Macapuno Caramel</label>
-            <input type="radio" id="Mango_Dark" name="Mango_Dark" value="Mango Dark Chocolate" style="height:13px; width:20px;">
+            <input type="radio" id="Mango_Dark" name="classicflavor" value="Mango Dark Chocolate" style="height:13px; width:20px;">
             <label for="Mango_Dark">Mango Dark Chocolate</label> <br>
-            <input type="radio" id="Mango_Salted" name="Mango_Salted" value="Mango Salted Caramel" style="height:13px; width:20px;">
+            <input type="radio" id="Mango_Salted" name="classicflavor" value="Mango Salted Caramel" style="height:13px; width:20px;">
             <label for="Mango_Salted">Mango Salted Caramel</label>
-            <input type="radio" id="Ube_Caramelized" name="Ube_Caramelized" value="Ube Caramelized Sugar" style="height:13px; width:20px;">
+            <input type="radio" id="Ube_Caramelized" name="classicflavor" value="Ube Caramelized Sugar" style="height:13px; width:20px;">
             <label for="Ube_Caramelized">Ube Caramelized Sugar</label>
-            <input type="radio" id="Ube_Keso" name="Ube_Keso" value="Ube Keso" style="height:13px; width:20px;">
+            <input type="radio" id="Ube_Keso" name="classicflavor" value="Ube Keso" style="height:13px; width:20px;">
             <label for="Ube_Keso">Ube Keso</label>
             </font>
         </td>
@@ -84,9 +85,9 @@
             <font face="Century Gothic">
             <b>Additions:</b><br>
             <input type="radio" id="Sprinkles" name="Sprinkles" value="Sprinkles" style="height:13px; width:20px;">
-            <label for="Sprinkles">Sprinkles</label>
+            <label for="Sprinkles">Sprinkles | P30</label>
             <input type="radio" id="Marshmallows" name="Marshmallows" value="Marshmallows" style="height:13px; width:20px;">
-            <label for="Marshmallows">Marshmallows |</label>
+            <label for="Marshmallows">Marshmallows | P30 ||</label>
             <label for="cones">Ice Cream Cones:</label>
             <input type="number" id="Cones" name="Cones" min="0" max="50" value="0" class="inputcones" style="height:20px; width:100px;">
             <br>
@@ -109,7 +110,7 @@
         </td>
     </tr>
     <tr>
-         <td align="center"><div style="margin: 0px 80px 0px 0px;"><a href="menu.php"><button class="AddtoCartbutton">Back to Menu</button></a></div></td>
+         <td align="center"><div style="margin: 0px 80px 0px 0px;"><a href="menu.php"><button class="classicbutton">Back to Menu</button></a></div></td>
     </tr>
 </table>
 </body>

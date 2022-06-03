@@ -47,14 +47,23 @@
 <font face="Melted Font" size="50" color="#fa3c96"><center>MENU</center></font>
 <table align="center" style="width:100%">
     <tr>
-        <td align="center"><div style="margin: 0px 0px 0px 19px;"><a href="classic.php"><button class="button">CLASSIC</button></a></div></td>
-        <td align="center"><button class="button">DELUXE</button></td>
-        <td align="center"><button class="button">PACKAGES</button></td>
+        <td align="center"><div style="margin: 0px 0px 0px 25px;"><img src="images/placeholderpic.png"></div></td>
+        <td align="center"><div style="margin: 0px 5px 0px 0px;"><img src="images/placeholderpic.png"></div></td>
+        <td align="center"><div style="margin: 0px 20px 0px 0px;"><img src="images/placeholderpic.png"></div></td>
     </tr>
 </table>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<table align="center" style="width:100%">
+    <tr>
+        <font face="Century Gothic">
+        <td align="center"><div style="margin: 0px 0px 0px 19px;"><a href="classic.php"><button class="button"><b>CLASSIC</b></button></a></div></td>
+        <td align="center"><a href="deluxe.php"><button class="button"><b>DELUXE</b></button></a></td>
+        <td align="center"><a href="packages.php"><button class="button"><b>PACKAGES</b></button></a></td>
+        </font>
+    </tr>
+</table>
+<br><br><br><br><br>
 <div align="center">
-<button class="orderbutton">ORDER</button>
+<font face="Century Gothic"><button class="orderbutton"><b>ORDER</b></button></font>
 </div>
 </body>
 </html>
