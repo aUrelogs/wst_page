@@ -58,7 +58,7 @@
     <title> Stocks Status</title>
 
 </head>
-<body>
+<body style="margin: 0px">
 
     <header>
         
