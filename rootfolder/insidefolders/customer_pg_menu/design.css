@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
     font-family: 'Melted Font';
     src: url(fonts/MeltedDl-XdLg.ttf);
 }
@@ -11,7 +11,7 @@ body {
 .bgcol{
     background-color: #c2f2d0;
     padding: 20px;
-    border-radius: 40px;
+    border-radius: 50px;
     width: 90%;
     
 }
@@ -111,4 +111,4 @@ header{
     padding: 10px;
     width: 95%;
     border-radius: 5px;
-} */
+}

@@ -21,7 +21,7 @@
         <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 250px;">
         <nav>
             <ul class ="nav_links">
-                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href = index.php>Log out</a></li>
+                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href="http://localhost/wst_page/rootfolder/index.php">Log Out</a></li>
             </ul>
         </nav>
     </header>
@@ -29,11 +29,11 @@
    
     <div class = "bgcol container my-5">
     <div class="container">
-        <button class="btn btn-primary my-4"><a href="prodmanage.php" class="text-light">
-        ADD PRODUCT</a></button> 
-        <button class="btn btn-danger my-4"><a href="main-admin.php" class="text-light">
-        BACK TO MAIN</a></button>
-        <table class="table table-dark"">
+        <a href="prodmanage.php" class="text-light"><button class="btn btn-primary my-4">
+        ADD PRODUCT</button></a>
+        <a href="http://localhost/wst_page/rootfolder/main-admin.php" class="text-light"><button class="btn btn-danger my-4">
+        BACK TO MAIN</button></a>
+        <table class="table table-dark">
             <thead>
                 <tr align="center">
                 <th scope="col">Product ID</th>
@@ -51,19 +51,18 @@
                         if($result) {
                             while($row = mysqli_fetch_assoc($result)){
                                 $id = $row['id'];
-                                $productID = $row['PRODUCT_ID'];
                                 $productNAME = $row['PRODUCT_NAME'];
                                 $productPRICE = $row['PRODUCT_PRICE'];
                                 $productDESC = $row['PRODUCT_DETAIL'];
                                 echo '<tr align="center">
-                                <th scope="row">'.$productID.'</th>
+                                <th scope="row">'.$id.'</th>
                                 <td>'.$productNAME.'</td>
                                 <td>'."₱ ".$productPRICE.'</td>
                                 <td>'.$productDESC.'</td>
                                 <td>
-                                <button class="btn btn-primary"><a href="update_prod.php?updateid='.$id.'" class="text-light">UPDATE</a></button>
-                                <button class="btn btn-danger"><a href="delete_prod.php?deleteid='.$id.'" class="text-light">DELETE</a></button>
-                                <button class="btn btn-success"><a href="Stocks/stocks.php?stocksid='.$productID.'" class="text-light">STOCKS</a></button>
+                                <a href="update_prod.php?updateid='.$id.'" class="text-light"><button class="btn btn-primary">UPDATE</button></a>
+                                <a href="delete_prod.php?deleteid='.$id.'" class="text-light"><button class="btn btn-danger">DELETE</button></a>
+                                <a href="http://localhost/wst_page/rootfolder/insidefolders/admin_stocks/stocks.php?stocksid='.$id.'" class="text-light"><button class="btn btn-success">STOCKS</button></a>
                                 </td>
                                 </tr>';
                             }
