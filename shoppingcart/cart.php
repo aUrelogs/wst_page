@@ -58,10 +58,38 @@
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
       </head>  
+
+<style>
+
+body {
+    background-image: url(bgimg.PNG);
+   background-size: 100%;
+}
+
+.bgcol{
+    background-color: #c2f2d0;
+    padding: 20px;
+    border-radius: 40px;
+    width: 90%;
+    
+}
+
+.bgcol2{
+    background-color: #c2f2d0;
+    border-radius: 40px;
+    width: 50%;
+}
+
+
+
+</style>
+
+
+
       <body>  
            <br />  
            <div class="container" style="width:700px;">  
-                <h3 align="center">WHAT'S THE SCOOP?</h3><br />  
+                <h3 align="center"> <img src="logoname.png"></h3><br />  
                 <?php  
                 $query = "SELECT * FROM tbl_product ORDER BY id ASC";  
                 $result = mysqli_query($connect, $query);  
