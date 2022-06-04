@@ -44,14 +44,14 @@
         <td>
             <font face="Century Gothic">
             <b>Flavors (P50 Each):</b><br>
-            <input type="radio" id="Avocado_Machiatto" name="classicflavor" value="Avocado Machiatto" style="height:13px; width:20px;">
-            <label for="Avocado_Machiatto">Pandesal Ice Cream</label><br>
-            <input type="radio" id="Macapuno_Caramel" name="classicflavor" value="Macapuno Caramel" style="height:13px; width:20px;">
-            <label for="Macapuno_Caramel">Strawberry Pandesal</label><br>
-            <input type="radio" id="Mango_Dark" name="classicflavor" value="Mango Dark Chocolate" style="height:13px; width:20px;">
-            <label for="Mango_Dark">Ube Pandesal</label><br>
-            <input type="radio" id="Mango_Salted" name="classicflavor" value="Mango Salted Caramel" style="height:13px; width:20px;">
-            <label for="Mango_Salted">Mochi</label><br><br>
+            <input type="radio" id="Pandesal_Ice" name="bread" value="Pandesal Ice Cream" style="height:13px; width:20px;">
+            <label for="Pandesal_Ice">Pandesal Ice Cream</label><br>
+            <input type="radio" id="Strawberry_Pandesal" name="bread" value="Strawberry Pandesal" style="height:13px; width:20px;">
+            <label for="Strawberry_Pandesal">Strawberry Pandesal</label><br>
+            <input type="radio" id="Ube_Pandesal" name="bread" value="Ube Pandesal" style="height:13px; width:20px;">
+            <label for="Ube_Pandesal">Ube Pandesal</label><br>
+            <input type="radio" id="Mochi" name="bread" value="Mochi" style="height:13px; width:20px;">
+            <label for="Mochi">Mochi</label><br><br>
             <b>Additions:</b><br>
             <input type="radio" id="Sprinkles" name="Sprinkles" value="Sprinkles" style="height:13px; width:20px;">
             <label for="Sprinkles">Sprinkles | P30</label>
