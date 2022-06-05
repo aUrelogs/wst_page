@@ -24,6 +24,13 @@
     border-style: none;
     border-radius: 4px;
 }
+body {
+   background-image: url(images/bgimg2.png);
+   background-size: 100%;
+}
+.img {
+  border: 5px ridge #fa3c96;
+}
 </style>
 <body style="margin: 0">
     <header >
@@ -39,7 +46,7 @@
 <table align="center">
     <tr>
         <td><div style="margin: 0px 80px 0px 0px;">
-            <img src="images/placeholderpic.png" alt="logo"></div>
+        <img src="images/90_s Kid Mix.png" alt="ice cream" style="width:200px;height:200px;" class="img"></div>
         </td>
         <td>
             <font face="Century Gothic" size="5" color="#fa3c96"><b>TUBE AND LID CONTAINER ICE CREAM</b></font>
@@ -100,9 +107,7 @@
                     <input type="number" id="Quantity" name="Quantity" min="0" max="50" value="0" class="inputcones" style="height:20px; width:100px;">
                     </div></td>
                     <td>
-                    <b>Shipping Details:</b><br>
-                    Shipping To: Placeholder Location<br>
-                    Shipping Fee: Placeholder Location<br>
+                    <b>Stock Quantity:</b><br>
                     </td>
                 </tr>
                 
@@ -114,5 +119,34 @@
          <td align="center"><div style="margin: 0px 80px 0px 0px;"><a href="menu.php"><button class="AddtoCartbutton">Back to Menu</button></a></div></td>
     </tr>
 </table>
+<br><br>
+<table align="center" style="width:100%">
+    <tr>
+        <td align="center"><img src="images/90_s Kid Mix.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+        <td align="center"><img src="images/Brown Sugar Milk Tea.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+        <td align="center"><img src="images/Campfire Smores.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+        <td align="center"><img src="images/Coco Butternut.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+    </tr>
+    <tr>
+        <td align="center"><font face="Century Gothic"><b>90's Kids Mix 1L</b> </font></td>
+        <td align="center"><font face="Century Gothic"><b>Brown Sugar Milk Tea</b></font></td>
+        <td align="center"><font face="Century Gothic"><b>Campfire Smores</b></font></td>
+        <td align="center"><font face="Century Gothic"><b>Choco Butternut</b></font></td>
+    </tr>
+    <tr><td>&nbsp;</td></tr>
+</table>
+<table align="center" style="width:100%">
+    <tr>
+        <td align="center"><img src="images/Cookie Cheesecake.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+        <td align="center"><img src="images/Mango Graham.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+        <td align="center"><img src="images/Milk _ Cookies.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+    </tr>
+    <tr>
+        <td align="center"><font face="Century Gothic"><b>Cookie Cheesecake</b></font></td>
+        <td align="center"><font face="Century Gothic"><b>Mango Graham</b></font></td>
+        <td align="center"><font face="Century Gothic"><b>Milk & Cookies</b></font></td>
+    </tr>
+</table>
+<br><br><br><br>
 </body>
 </html>

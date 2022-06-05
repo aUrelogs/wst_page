@@ -24,6 +24,13 @@
     border-style: none;
     border-radius: 4px;
 }
+body {
+   background-image: url(images/bgimg2.png);
+   background-size: 100%;
+}
+.img {
+  border: 5px ridge #fa3c96;
+}
 </style>
 <body style="margin: 0">
     <header >
@@ -39,7 +46,7 @@
 <table align="center">
     <tr>
         <td><div style="margin: 0px 80px 0px 0px;">
-            <img src="images/placeholderpic.png" alt="logo"></div>
+        <img src="images/Combo1.png" alt="ice cream" style="width:200px;height:200px;" class="img"></div>
         </td>
         <td>
             <font face="Century Gothic">
@@ -80,9 +87,7 @@
                     <input type="number" id="Quantity" name="Quantity" min="0" max="50" value="0" class="inputcones" style="height:20px; width:100px;">
                     </div></td>
                     <td>
-                    <b>Shipping Details:</b><br>
-                    Shipping To: Placeholder Location<br>
-                    Shipping Fee: Placeholder Location<br>
+                    <b>Stock Quantity:</b><br>
                     </td>
                 </tr>
             </table>
@@ -94,5 +99,30 @@
         <div style="margin: 70px 80px 0px 0px;"><a href="menu.php"><button class="classicbutton">Back to Menu</button></a></div></td>
     </tr>
 </table>
+<br><br>
+<table align="center" style="width:100%">
+    <tr>
+        <td align="center"><img src="images/Combo1.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+        <td align="center"><img src="images/Combo2.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+        <td align="center"><img src="images/Combo3.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+    </tr>
+    <tr>
+        <td align="center"><font face="Century Gothic"><b>90's Kids Mix 1L + Pandesal Ice Cream</b> </font></td>
+        <td align="center"><font face="Century Gothic"><b>Brown Sugar Milk Tea 1L + Mochi</b></font></td>
+        <td align="center"><font face="Century Gothic"><b>Campfire Smores 1L + Strawberry Pandesal</b></font></td>
+    </tr>
+    <tr><td>&nbsp;</td></tr>
+    <tr>
+        <td align="center"><img src="images/Combo4.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+        <td align="center"><img src="images/Combo5.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+        <td align="center"><img src="images/Combo6.png" alt="ice cream" style="width:200px;height:200px;" class="img"></td>
+    </tr>
+    <tr>
+        <td align="center"><font face="Century Gothic"><b>Choco Butternut 1L + Strawberry Pandesal</b></font></td>
+        <td align="center"><font face="Century Gothic"><b>Ube Caramelized Sugar 26oz + Ube Pandesal</b></font></td>
+        <td align="center"><font face="Century Gothic"><b>Mango Dark Chocolate 26oz + Mochi</b></font></td>
+    </tr>
+</table>
+<br><br><br><br>
 </body>
 </html>
