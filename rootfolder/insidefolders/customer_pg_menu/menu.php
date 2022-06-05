@@ -47,7 +47,7 @@
 <font face="Melted Font" size="50" color="#fa3c96"><center>MENU</center></font>
 <table align="center" style="width:100%">
     <tr>
-        <td align="center"><div style="margin: 0px 0px 0px 25px;"><img src="images/placeholderpic.png"></div></td>
+        <td align="center"><div style="margin: 0px 0px 0px 25px; "><img src="images/Mango Salted Caramel.png" width="210px" style="border-style: dashed;"></div></td>
         <td align="center"><div style="margin: 0px 5px 0px 0px;"><img src="images/placeholderpic.png"></div></td>
         <td align="center"><div style="margin: 0px 20px 0px 0px;"><img src="images/placeholderpic.png"></div></td>
     </tr>
