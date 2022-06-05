@@ -40,11 +40,6 @@ Update Section [CORE]
             o	Type of Transaction used (online/cash on delivery)
 
 
-
-
-
-
-
 Main Webpage Interface of administrator [CORE]
 -	Log in webpage of admin (username & password) system
 
