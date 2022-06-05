@@ -31,7 +31,9 @@
     margin: 4px 2px;
     cursor: pointer;
     }
-
+    .img {
+    border: 5px ridge #fa3c96;
+    }
 
     </style>
 <body style="margin: 0">
@@ -39,7 +41,7 @@
         <div><img src="images/logo.png" style="width: 100px;"><img src="images/logoname.png" alt="logo"></div>
         <nav>
             <ul class ="nav_links">
-                <li><a href="http://localhost/wst_page/rootfolder/insidefolders/shoppingcart/cart.php"><font color="#fa3c96"> My Cart </font></a><img src="images/shoppingicon.png" class="logo" style="width: 25px;"><a href="http://localhost/wst_page/rootfolder/index.php">|  Admin</a></li>
+                <li><font color="#fa3c96"> My Cart </font><img src="images/shoppingicon.png" class="logo" style="width: 25px;"><a href="http://localhost/wst_page/rootfolder/index.php">|  Admin</a></li>
             </ul>
         </nav>
     </header>
@@ -47,9 +49,9 @@
 <font face="Melted Font" size="50" color="#fa3c96"><center>MENU</center></font>
 <table align="center" style="width:100%">
     <tr>
-        <td align="center"><div style="margin: 0px 0px 0px 25px; "><img src="images/Mango Salted Caramel.png" width="210px" style="border-style: dashed;"></div></td>
-        <td align="center"><div style="margin: 0px 5px 0px 0px;"><img src="images/placeholderpic.png"></div></td>
-        <td align="center"><div style="margin: 0px 20px 0px 0px;"><img src="images/placeholderpic.png"></div></td>
+        <td align="center"><div style="margin: 0px 0px 0px 25px;"><img src="images/Ube Keso.png" alt="ice cream" style="width:200px;height:200px;" class="img"></div></div></td>
+        <td align="center"><div style="margin: 0px 5px 0px 0px;"><img src="images/Coco Butternut.png" alt="ice cream" style="width:200px;height:200px;" class="img"></div></td>
+        <td align="center"><div style="margin: 0px 20px 0px 0px;"><img src="images/Combo3.png" alt="ice cream" style="width:200px;height:200px;" class="img"></div></td>
     </tr>
 </table>
 <table align="center" style="width:100%">
