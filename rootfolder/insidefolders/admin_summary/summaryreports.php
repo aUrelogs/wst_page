@@ -49,7 +49,50 @@
             <tbody>
                 <?php 
                 
+                    
                     $sql = "SELECT * FROM `modify_products`";
+                    $result = mysqli_query($conn, $sql);
+                        if($result) {
+                            while($row = mysqli_fetch_assoc($result)){
+                                $id = $row['id'];
+                                $productNAME = $row['PRODUCT_NAME'];
+                                $productPRICE = $row['PRODUCT_PRICE'];
+                                $productDESC = $row['PRODUCT_DETAIL'];
+                                $total = $row['PRODUCT_PRICE'] * 0; //SAMPLE LANG FOR TOTALISATION
+
+                                echo '<tr align="center">
+                                <th scope="row">'.$id.'</th>
+                                <td>'.$productNAME.'</td>
+                                <td>'."₱ ".$productPRICE.'</td>
+                                <td>'."₱ "."None".'</td>
+                                <td>'."₱ ".$total.'</td>
+                                </tr>';
+                            }
+                        }
+                ?>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+    <div class = "bgcol container my-5">
+    <div class="container">
+    
+        <h3>TOP 5 MOST PURCHASED PRODUCT</h3>
+        <table class="table table-dark">
+            <thead>
+                <tr align="center">
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Price</th>
+                <th scope="col">Product Quantity</th>
+                <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                
+                    $sql = "SELECT * FROM `modify_products` LIMIT 5";
                     $result = mysqli_query($conn, $sql);
                         if($result) {
                             while($row = mysqli_fetch_assoc($result)){
@@ -72,7 +115,47 @@
         </table>
     </div>
     </div>
+
+    <div class = "bgcol container my-5">
+    <div class="container">
     
+        <h3>TOP 5 LEAST PURCHASED PRODUCT</h3>
+        <table class="table table-dark">
+            <thead>
+                <tr align="center">
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Price</th>
+                <th scope="col">Product Quantity</th>
+                <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                
+                    $sql = "SELECT * FROM `modify_products` LIMIT 5 ";
+                    $result = mysqli_query($conn, $sql);
+                        if($result) {
+                            while($row = mysqli_fetch_assoc($result)){
+                                $id = $row['id'];
+                                $productNAME = $row['PRODUCT_NAME'];
+                                $productPRICE = $row['PRODUCT_PRICE'];
+                                $productDESC = $row['PRODUCT_DETAIL'];
+
+                                echo '<tr align="center">
+                                <th scope="row">'.$id.'</th>
+                                <td>'.$productNAME.'</td>
+                                <td>'."₱ ".$productPRICE.'</td>
+                                <td>
+                                </td>
+                                </tr>';
+                            }
+                        }
+                ?>
+            </tbody>
+        </table>
+    </div>
+    </div>
 
 
 
