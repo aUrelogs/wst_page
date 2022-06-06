@@ -67,7 +67,7 @@
 
         <nav>
             <ul class ="nav_links">
-                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href="http://localhost/wst_page/rootfolder/index.php">Log Out</a></li>
+                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> | <a href="http://localhost/wst_page/rootfolder/index.php">Admin Log Out</a></li>
             </ul>
 
         </nav>

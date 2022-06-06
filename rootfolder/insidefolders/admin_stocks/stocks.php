@@ -88,7 +88,7 @@
         for($idx=0; $idx < count($stocksIDs); $idx++){
                             
             if(empty($prodName[$idx])){
-                    
+
                 die();
 
             }else{
