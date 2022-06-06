@@ -28,7 +28,7 @@
 
             $stocksIDs[$idx] = $row["id"];
             $stocksQTY[$idx] = $row["PRODUCT_QTY"];
-            // $prodName[$idx] = $row["PRODUCT_NAME"];
+            $prodName[$idx] = $row["PRODUCT_NAME"];
             $prodDet[$idx] = $row["PRODUCT_DETAIL"];
 
             $idx++;
