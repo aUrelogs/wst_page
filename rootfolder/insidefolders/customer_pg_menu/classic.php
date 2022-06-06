@@ -1,8 +1,8 @@
 <?php
 
-    include 'connection.php';
+    include ('connection.php');
 
-
+   
 ?>
 
 
@@ -60,20 +60,35 @@ body {
         <img src="images/Mango Salted Caramel.png" alt="ice cream" style="width:200px;height:200px;" class="img"></div>
         </td>
         <td>
-            <font face="Century Gothic" size="5" color="#fa3c96"><b>SMALL CONTAINER ICE CREAM</b></font>&nbsp;&nbsp;
+        <font face="Century Gothic" size="5" color="#fa3c96"><b>SMALL CONTAINER ICE CREAM</b></font>&nbsp;&nbsp;
             <a href="bread.php"><button class="classicbutton">Bread Ice Cream Menu</button></a>
             <br><br>
             <font face="Century Gothic">
             <b>Price per ounce(oz):</b><br>
+        </font>
+            <?php 
+          
+           
+              $sql = "SELECT * FROM `modify_products`";
+              $result = mysqli_query($conn, $sql);
+          
+              if($result) {
+                  while($row = mysqli_fetch_assoc($result)){
+              
+                      $productNAME = $row['PRODUCT_NAME'];
+                      $productPRICE = $row['PRODUCT_PRICE'];
+                      $productDESC = $row['PRODUCT_DETAIL'];
+            
+            echo '
+            <font face="Century Gothic">
             <input type="radio" id="classic_10oz" name="classicsizes" value="10oz" style="height:13px; width:20px;">
-            <label for="classic_10oz">10 oz | P40</label><br>
-            <input type="radio" id="classic_16oz" name="classicsizes" value="16oz" style="height:13px; width:20px;">
-            <label for="classic_16oz">16 oz | P60</label><br>
-            <input type="radio" id="classic_26oz" name="classicsizes" value="26oz" style="height:13px; width:20px;">
-            <label for="classic_26oz">26 oz | P70</label><br>
-            <input type="radio" id="classic_32oz" name="classicsizes" value="32oz" style="height:13px; width:20px;">
-            <label for="classic_32oz">32 oz | P80</label><br>
-            </font>
+            <label for="classic_10oz">'.$productNAME. ' | '.'Php. '.$productPRICE.'</label><br>
+           
+            </font>';
+        }
+    }
+
+            ?>
         </td>
     </tr>
     <tr>
@@ -105,8 +120,9 @@ body {
             <input type="radio" id="Sprinkles" name="Sprinkles" value="Sprinkles" style="height:13px; width:20px;">
             <label for="Sprinkles">Sprinkles | P30</label>
             <input type="radio" id="Marshmallows" name="Marshmallows" value="Marshmallows" style="height:13px; width:20px;">
-            <label for="Marshmallows">Marshmallows | P30 ||</label>
-            <label for="cones">Ice Cream Cones:</label>
+            <label for="Marshmallows">Marshmallows | P30 </label>
+            <input type="radio" id="Marshmallows" name="Marshmallows" value="Marshmallows" style="height:13px; width:20px;">
+            <label for="cones">Ice Cream Cones  | P50 :</label>
             <input type="number" id="Cones" name="Cones" min="0" max="50" value="0" class="inputcones" style="height:20px; width:100px;">
             <br>
             <br>

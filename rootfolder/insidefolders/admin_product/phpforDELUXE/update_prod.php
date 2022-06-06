@@ -1,6 +1,14 @@
 <?php 
-
+    //classic for bread
     include ('connection.php');
+    $id =$_GET['updateid'];
+    $sql = "SELECT * FROM `deluxe_table` WHERE id=$id";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+        $productID = $row['id'];
+        $productNAME = $row['PRODUCT_NAME'];
+        $productPRICE = $row['PRODUCT_PRICE'];
+        $productDESC = $row['PRODUCT_DETAIL'];
 
     if(isset($_POST['submit'])){
         $productID = $_POST['productID'];
@@ -8,21 +16,20 @@
         $productPRICE = $_POST['productPrice'];
         $productDESC = $_POST['productDesc'];
    
-        $sql = "INSERT INTO `classic_table` (id, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_DETAIL) 
-        VALUES('$productID', '$productNAME', '$productPRICE', '$productDESC')";
+        $sql = "UPDATE `deluxe_table` 
+        SET id=$id, id=$productID, PRODUCT_NAME='$productNAME', PRODUCT_PRICE=$productPRICE, PRODUCT_DETAIL='$productDESC'
+        WHERE id = $id";
         $result = mysqli_query($conn, $sql);
-
             if($result){
-                header ('location:displayprod.php');
+                header ('location: http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php');
             } else {
                 die(mysqli_error($conn));
             }
     }
-    if(isset($_POST['cancel'])){
-            header ('location:displayprod.php');
-    }
+
  
 ?>
+
 
 
 <!doctype html>
@@ -34,11 +41,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="justanothercss.css">
-    <title>Product Manager | Add Product</title>
+    <title>Product Manager | UPDATE</title>
   </head>
   <body>
 
-  <div class ="">
 <header>
 <img src="images/logo.png" class="logo" style="width: 100px;">
         <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 250px;">
@@ -49,39 +55,39 @@
         </nav>
     </header>
 </div>
-
-    <div class="bgcol container my-5">
+  <div class="bgcol container my-5">
     <div class="container my-5">
     <form method="post">
-    <font face="Century Gothic" size="50" color="#6b3e26">PRODUCT MANAGER</font>
+
         <div class="form-group">
             <label>Enter Product ID</label>
-            <input type="number" class="form-control" placeholder="Product ID" name="productID"autocomplete="off">
+            <input type="number" class="form-control" placeholder="Product ID" name="productID"autocomplete="off" value=<?php echo $productID; ?>>
         </div>
 
         <div class="form-group">
             <label>Enter Product Name</label>
-            <input type="text" class="form-control" placeholder="Product Name" name="productName">
+            <input type="text" class="form-control" placeholder="Product Name" name="productName" value=<?php echo $productNAME; ?>>
         </div>
 
         <div class="form-group">
             <label>Enter Product Price</label>
-            <input type="number" class="form-control" placeholder="Product Price" name="productPrice">
+            <input type="number" class="form-control" placeholder="Product Price" name="productPrice" value=<?php echo $productPRICE; ?>>
         </div>
 
         <div class="form-group">
             <label>Enter Product Description</label>
-            <input type="text" class="form-control" placeholder="Product Description" name="productDesc">
+            <input type="text" class="form-control" placeholder="Product Description" name ="productDesc" value=<?php echo $productDESC; ?>>
         </div>
 
-        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-        <button type="submit" class="btn btn-danger" name="cancel">Cancel </button>
-        
-
+        <button type="submit" class="btn btn-primary" name="submit">UPDATE</button>
+        <button type="submit" class="btn btn-danger" name="submit">CANCEL</button>
+       
+       
     </form>
     </div>
-    </div>
-   
+  </div>
+
+
 
   </body>
 </html>

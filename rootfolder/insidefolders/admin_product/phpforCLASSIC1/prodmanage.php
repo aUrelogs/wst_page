@@ -1,5 +1,6 @@
 <?php 
 
+    //classic for bread
     include ('connection.php');
 
     if(isset($_POST['submit'])){
@@ -8,18 +9,18 @@
         $productPRICE = $_POST['productPrice'];
         $productDESC = $_POST['productDesc'];
    
-        $sql = "INSERT INTO `classic_table` (id, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_DETAIL) 
+        $sql = "INSERT INTO `classic_bread` (id, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_DETAIL) 
         VALUES('$productID', '$productNAME', '$productPRICE', '$productDESC')";
         $result = mysqli_query($conn, $sql);
 
             if($result){
-                header ('location:displayprod.php');
+                header ('location:http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php');
             } else {
                 die(mysqli_error($conn));
             }
     }
     if(isset($_POST['cancel'])){
-            header ('location:displayprod.php');
+        header ('location:http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php');
     }
  
 ?>
