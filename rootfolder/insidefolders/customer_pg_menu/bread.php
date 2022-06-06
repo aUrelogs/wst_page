@@ -61,19 +61,32 @@ body {
         <td>
             <font face="Century Gothic">
             <b>Flavors (P50 Each):</b><br>
-            <input type="radio" id="Cheese_Pandesal" name="bread" value="Cheese Pandesal" style="height:13px; width:20px;">
-            <label for="Cheese Pandesal">Cheese Pandesal</label><br>
-            <input type="radio" id="Strawberry_Pandesal" name="bread" value="Strawberry Pandesal" style="height:13px; width:20px;">
-            <label for="Strawberry_Pandesal">Strawberry Pandesal</label><br>
-            <input type="radio" id="Ube_Pandesal" name="bread" value="Ube Pandesal" style="height:13px; width:20px;">
-            <label for="Ube_Pandesal">Ube Pandesal</label><br>
-            <input type="radio" id="Mochi" name="bread" value="Mochi" style="height:13px; width:20px;">
-            <label for="Mochi">Assorted Mochi</label><br><br>
+            <?php 
+              $sql = "SELECT * FROM `classic_bread`";
+              $result = mysqli_query($conn, $sql);
+
+              if($result) {
+                  while($row = mysqli_fetch_assoc($result)){
+              
+                      $productNAME = $row['PRODUCT_NAME'];
+                      $productPRICE = $row['PRODUCT_PRICE'];
+                      $productDESC = $row['PRODUCT_DETAIL'];
+            
+            echo '
+            <font face="Century Gothic">
+            <input type="radio" id="classic_10oz" name="classicsizes" value="10oz" style="height:13px; width:20px;">
+            <label for="classic_10oz">'.$productNAME. '</label><br>
+           
+            </font>';
+        } 
+    } 
+
+            ?><br>
             <b>Additions:</b><br>
             <input type="radio" id="Sprinkles" name="Sprinkles" value="Sprinkles" style="height:13px; width:20px;">
-            <label for="Sprinkles">Sprinkles | P30</label>
+            <label for="Sprinkles">Sprinkles | P30</label><br>
             <input type="radio" id="Marshmallows" name="Marshmallows" value="Marshmallows" style="height:13px; width:20px;">
-            <label for="Marshmallows">Marshmallows | P30 ||</label>
+            <label for="Marshmallows">Marshmallows | P30 </label>
             <br>
             </font>
         </td>

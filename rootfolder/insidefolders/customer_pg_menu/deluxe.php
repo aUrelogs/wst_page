@@ -64,15 +64,27 @@ body {
             <br><br>
             <font face="Century Gothic">
             <b>Price per milliliter/Liter(mL/L):</b><br>
-            <input type="radio" id="deluxe_430" name="deluxesizes" value="430mL" style="height:13px; width:20px;">
-            <label for="deluxe_430">430 mL | P100</label><br>
-            <input type="radio" id="deluxe_1L" name="deluxesizes" value="1L" style="height:13px; width:20px;">
-            <label for="deluxe_1L">1 L | P240</label><br>
-            <input type="radio" id="deluxe_2L" name="deluxesizes" value="2L" style="height:13px; width:20px;">
-            <label for="deluxe_2L">2 L | P300</label><br>
-            <input type="radio" id="deluxe_3.8L" name="deluxesizes" value="3.8L" style="height:13px; width:20px;">
-            <label for="deluxe_3.8L">3.8 L | P480</label><br>
-            </font>
+            <?php 
+              $sql = "SELECT * FROM `deluxe_table`";
+              $result = mysqli_query($conn, $sql);
+
+              if($result) {
+                  while($row = mysqli_fetch_assoc($result)){
+              
+                      $productNAME = $row['PRODUCT_NAME'];
+                      $productPRICE = $row['PRODUCT_PRICE'];
+                      $productDESC = $row['PRODUCT_DETAIL'];
+            
+            echo '
+            <font face="Century Gothic">
+            <input type="radio" id="classic_10oz" name="classicsizes" value="10oz" style="height:13px; width:20px;">
+            <label for="classic_10oz">'.$productNAME.' | ₱ '.$productPRICE.'</label><br>
+           
+            </font>';
+        } 
+    } 
+
+            ?><br>
         </td>
     </tr>
     <tr>

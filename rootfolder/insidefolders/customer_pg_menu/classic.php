@@ -67,11 +67,9 @@ body {
             <b>Price per ounce(oz):</b><br>
         </font>
             <?php 
-          
-           
-              $sql = "SELECT * FROM `modify_products`";
+              $sql = "SELECT * FROM `classic_table`";
               $result = mysqli_query($conn, $sql);
-          
+
               if($result) {
                   while($row = mysqli_fetch_assoc($result)){
               
@@ -82,11 +80,11 @@ body {
             echo '
             <font face="Century Gothic">
             <input type="radio" id="classic_10oz" name="classicsizes" value="10oz" style="height:13px; width:20px;">
-            <label for="classic_10oz">'.$productNAME. ' | '.'Php. '.$productPRICE.'</label><br>
+            <label for="classic_10oz">'.$productNAME. ' | '.'₱ '.$productPRICE.'</label><br>
            
             </font>';
-        }
-    }
+        } 
+    } 
 
             ?>
         </td>

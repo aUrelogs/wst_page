@@ -68,18 +68,27 @@ body {
             <font face="Century Gothic">
                 <br>
             <font face="Century Gothic" size="5" color="#fa3c96"><b>COMBO PACKAGES</b></font><br>
-            <input type="radio" id="KMPIC" name="packages" value="90's Kids Mix + Pandesal Ice Cream" style="height:13px; width:20px;">
-            <label for="KMPIC">90's Kids Mix 1L + Pandesal Ice Cream</label><br>
-            <input type="radio" id="BSMTM" name="packages" value="Brown Sugar Milk Tea + Mochi" style="height:13px; width:20px;">
-            <label for="BSMTM">Brown Sugar Milk Tea 1L + Mochi</label><br>
-            <input type="radio" id="CSSP" name="packages" value="Campfire Smores + Strawberry Pandesal" style="height:13px; width:20px;">
-            <label for="CSSP">Campfire Smores 1L + Strawberry Pandesal</label><br>
-            <input type="radio" id="CBSP" name="packages" value="Choco Butternut + Strawberry Pandesal" style="height:13px; width:20px;">
-            <label for="CBSP">Choco Butternut 1L + Strawberry Pandesal</label><br>
-            <input type="radio" id="UCSUP" name="packages" value="Ube Caramelized Sugar + Ube Pandesal" style="height:13px; width:20px;">
-            <label for="UCSUP">Ube Caramelized Sugar 26oz + Ube Pandesal</label><br>
-            <input type="radio" id="MDCM" name="packages" value="Mango Dark Chocolate + Mochi" style="height:13px; width:20px;">
-            <label for="MDCM">Mango Dark Chocolate 26oz + Mochi</label><br><br>
+            <?php 
+              $sql = "SELECT * FROM `packages_table`";
+              $result = mysqli_query($conn, $sql);
+
+              if($result) {
+                  while($row = mysqli_fetch_assoc($result)){
+              
+                      $productNAME = $row['PRODUCT_NAME'];
+                      $productPRICE = $row['PRODUCT_PRICE'];
+                      $productDESC = $row['PRODUCT_DETAIL'];
+            
+            echo '
+            <font face="Century Gothic">
+            <input type="radio" id="classic_10oz" name="classicsizes" value="10oz" style="height:13px; width:20px;">
+            <label for="classic_10oz">'.$productNAME.' | ₱ '.$productPRICE.'</label><br>
+           
+            </font>'; 
+              }
+         }
+            ?><br>
+
             <b>Additions:</b><br>
             <input type="radio" id="Sprinkles" name="Sprinkles" value="Sprinkles" style="height:13px; width:20px;">
             <label for="Sprinkles">Sprinkles | P30</label>
