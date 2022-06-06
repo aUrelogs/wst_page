@@ -17,15 +17,15 @@
     SELECT
     *
     FROM 
-        `classic_bread_stocks` as s
+        `classic_stocks` as s
 
     LEFT JOIN 
-        `classic_bread` as p ON s.id = p.id
+        `classic_table` as p ON s.id = p.id
 
     ";
     //-------------------------------------------------------------------------//
 
-    $sql = "SELECT * FROM `classic_bread_stocks` WHERE `id` = $id;";
+    $sql = "SELECT * FROM `classic_stocks` WHERE `id` = $id;";
 
     $result = $conn->query($sql);
 
