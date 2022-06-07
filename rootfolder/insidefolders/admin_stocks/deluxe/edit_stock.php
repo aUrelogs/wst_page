@@ -5,7 +5,7 @@
     $id = "-1";
 
     if(!isset($_GET['id'])){
-        header('Location: stocks.php');
+        header('Location: http://localhost/wst_page/rootfolder/insidefolders/admin_stocks/stocks.php');
         exit();
     }
 
@@ -17,15 +17,15 @@
     SELECT
     *
     FROM 
-        `classic_stocks_bread` as b
+        `deluxe_table_stocks` as d
 
     LEFT JOIN 
-        `classic_bread` as c ON b.id = c.id
+        `deluxe_table` as e ON d.id = e.id
 
     ";
     //-------------------------------------------------------------------------//
 
-    $sql = "SELECT * FROM `classic_stocks_bread` WHERE `id` = $id;";
+    $sql = "SELECT * FROM `deluxe_table_stocks` WHERE `id` = $id;";
 
     $result = $conn->query($sql);
 
