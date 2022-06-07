@@ -129,57 +129,56 @@ body {
                     <b>Stock Quantity:</b><br>
                     <?php
 
-$sql = "
-SELECT
-*
-FROM 
-    `classic_stocks` as s
-LEFT JOIN 
-    `classic_table` as p ON s.id = p.id
+                        $sql = "
+                        SELECT
+                        *
+                        FROM 
+                            `classic_stocks` as s
+                        LEFT JOIN 
+                            `classic_table` as p ON s.id = p.id
 
-";
-
-
-
-$result = $conn->query($sql);
-
-$stocksIDs = [];
-$stocksQTY = [];
-
-if($result->num_rows > 0){
-
-    $idx = 0;
-
-    while($row = $result->fetch_assoc()){
-
-        $stocksIDs[$idx] = $row["id"];
-        $stocksQTY[$idx] = $row["PRODUCT_QTY"];
-        $prodName[$idx] = $row["PRODUCT_NAME"];
-        $prodPrice[$idx] = $row["PRODUCT_PRICE"];
-
-        $idx++;
-
-    }
-}else{
-    echo "0 result";
-}
-
-for($idx=0; $idx < count($stocksIDs); $idx++){
-                            
-    if(empty($prodName[$idx])){
-
-        // die();
-
-    }else{
-
-       echo  $prodName[$idx] .":". "&nbsp" . $prodPrice[$idx] . "<br>";
-
-
-    }}
+                        ";
 
 
 
-                    
+                        $result = $conn->query($sql);
+
+                        $stocksIDs = [];
+                        $stocksQTY = [];
+
+                        if($result->num_rows > 0){
+
+                            $idx = 0;
+
+                            while($row = $result->fetch_assoc()){
+
+                                $stocksIDs[$idx] = $row["id"];
+                                $stocksQTY[$idx] = $row["PRODUCT_QTY"];
+                                $prodName[$idx] = $row["PRODUCT_NAME"];
+                                $prodPrice[$idx] = $row["PRODUCT_PRICE"];
+
+                                $idx++;
+
+                            }
+                        }else{
+                            echo "0 result";
+                        }
+
+                        for($idx=0; $idx < count($stocksIDs); $idx++){
+                                                    
+                            if(empty($prodName[$idx])){
+
+                                // die();
+
+                            }else{
+
+                            echo  $prodName[$idx] .":". "&nbsp" .  $stocksQTY[$idx]. "<br>";
+
+
+                            }
+                        }
+
+
                     ?>
 
                     </td>
