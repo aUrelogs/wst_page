@@ -15,18 +15,30 @@
 </head>
 <body>
 
-<div class ="">
+
 <header>
         <img src="images/logo.png" class="logo" style="width: 100px;">
         <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 250px;">
         <nav>
             <ul class ="nav_links">
-                <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href="http://localhost/wst_page/rootfolder/index.php">Log Out</a></li>
+                <li style=" padding-top: 20px;"> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href="http://localhost/wst_page/rootfolder/index.php">Log Out</a></li>
             </ul>
         </nav>
     </header>
-</div>
-   
+
+<br>
+<header  style="border-style: solid;">
+        <p align="center" >
+            <ul class ="nav_links" style="padding-top: 9px;">
+                <li>Classic Ice Cream Table</a></li>
+                <li>Classic Ice Cream - Bread</li>
+                <li>Deluxe Table</li>
+                <li>Package Table</li>
+            </ul>
+        </p>
+    </header>
+
+
     <div class = "bgcol container my-5">
     <div class="container">
     <h1>CLASSIC ICE CREAM TABLE</h1>
