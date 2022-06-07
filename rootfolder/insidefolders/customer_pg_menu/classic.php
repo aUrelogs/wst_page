@@ -155,7 +155,6 @@ body {
                                 $stocksIDs[$idx] = $row["id"];
                                 $stocksQTY[$idx] = $row["PRODUCT_QTY"];
                                 $prodName[$idx] = $row["PRODUCT_NAME"];
-                                $prodPrice[$idx] = $row["PRODUCT_PRICE"];
 
                                 $idx++;
 

@@ -2,10 +2,6 @@
 
     include 'connection.php';
 
-
-
-
-
 ?>
 
 
@@ -113,6 +109,71 @@ body {
                     </div></td>
                     <td>
                     <b>Stock Quantity:</b><br>
+
+                    <?php
+
+                        $sql = "
+                        SELECT
+                        *
+                        FROM 
+                            `packages_table_stocks` as pack
+                        LEFT JOIN 
+                            `packages_table` as e ON pack.id = e.id
+
+                        ";
+
+
+                        $result = $conn->query($sql);
+
+                        $stocksIDs = [];
+                        $stocksQTY = [];
+
+                        if($result->num_rows > 0){
+
+                            $idx = 0;
+
+                            while($row = $result->fetch_assoc()){
+
+                                $stocksIDs[$idx] = $row["id"];
+                                $stocksQTY[$idx] = $row["PRODUCT_QTY"];
+                                $prodName[$idx] = $row["PRODUCT_NAME"];
+                    
+                                $idx++;
+
+                            }
+                        }else{
+                            echo "0 result";
+                        }
+
+
+                            for($idx=0; $idx < count($stocksIDs); $idx++){
+                                                
+                                if(empty($prodName[$idx])){
+
+                                    // die();
+
+                                }else{
+
+                                    echo  $prodName[$idx] .":". "&nbsp" .  $stocksQTY[$idx]. "<br>";
+
+
+                                }
+                            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    ?>
+
                     </td>
                 </tr>
             </table>
