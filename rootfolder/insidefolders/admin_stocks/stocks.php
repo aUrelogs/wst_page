@@ -84,7 +84,7 @@
                             
             if(empty($prodName[$idx])){
 
-                die();
+                // die();
 
             }else{
                     echo"
@@ -141,103 +141,105 @@
 
     <!-------------BREAD--------------->
 
-    <!-- <?php
+    <?php
     
-    $sql = "
-    SELECT
-    *
-    FROM 
-        `classic_stocks_bread` as b
-    LEFT JOIN 
-        `classic_bread` as c ON b.id = c.id
+        $sql = "
+        SELECT
+        *
+        FROM 
+            `classic_stocks_bread` as b
+        LEFT JOIN 
+            `classic_bread` as c ON b.id = c.id
 
-    ";
+        ";
 
 
-    $result = $conn->query($sql);
+        $result = $conn->query($sql);
 
-    $stocksIDs = [];
-    $stocksQTY = [];
+        $stocksIDs = [];
+        $stocksQTY = [];
 
-    if($result->num_rows > 0){
+        if($result->num_rows > 0){
 
-        $idx = 0;
+            $idx = 0;
 
-        while($row = $result->fetch_assoc()){
+            while($row = $result->fetch_assoc()){
 
-            $stocksIDs[$idx] = $row["id"];
-            $stocksQTY[$idx] = $row["PRODUCT_QTY"];
-            $prodName[$idx] = $row["PRODUCT_NAME"];
-            $prodDet[$idx] = $row["PRODUCT_DETAIL"];
+                $stocksIDs[$idx] = $row["id"];
+                $stocksQTY[$idx] = $row["PRODUCT_QTY"];
+                $prodName[$idx] = $row["PRODUCT_NAME"];
+                $prodDet[$idx] = $row["PRODUCT_DETAIL"];
 
-            $idx++;
+                $idx++;
 
+            }
+        }else{
+            echo "0 result";
         }
-    }else{
-        echo "0 result";
-    }
 
 
-        for($idx=0; $idx < count($stocksIDs); $idx++){
-                            
-            if(empty($prodName[$idx])){
-
-                die();
-
-            }else{
-                    echo"
-                        
-                        <main>
-
-                            <section class='glass'>
-
-                                <div id='products'>
-
-                                    <h3>Product Name: $prodName[$idx] &nbsp;</h3> 
-                                    
-                                        <table>
-
-                                            <tr>
-
-                                                <td>
-                                                    <a href='bread/edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
-                                                    <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
-                                                    &nbsp;
-                                                </td>
-                                                <td>
-                                                    Product Details: $prodDet[$idx] &nbsp; 
-                                                    <br>
-                                                    <br>
-                                                    
-                                                    <div id='stocks'>
-                                                    
-                                                        Available Stock: $stocksQTY[$idx] &nbsp; 
-                                                        <br>
-                                                        <br>
-
-                                                    </div>
-                                                </td>
+            for($idx=0; $idx < count($stocksIDs); $idx++){
                                 
-                                            </tr>
+                if(empty($prodName[$idx])){
 
-                                        </table>
+                    // die();
 
-                                </div>
+                }else{
+                        echo"
+                            
+                            <main>
 
-                            </section>
+                                <section class='glass'>
 
-                        </main>
+                                    <div id='products'>
 
-                        <br>
-                    ";
+                                        <h3>Product Name: $prodName[$idx] &nbsp;</h3> 
+                                        
+                                            <table>
 
-                }
+                                                <tr>
 
-        }
+                                                    <td>
+                                                        <a href='bread/edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
+                                                        <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
+                                                        &nbsp;
+                                                    </td>
+                                                    <td>
+                                                        Product Details: $prodDet[$idx] &nbsp; 
+                                                        <br>
+                                                        <br>
+                                                        
+                                                        <div id='stocks'>
+                                                        
+                                                            Available Stock: $stocksQTY[$idx] &nbsp; 
+                                                            <br>
+                                                            <br>
 
-    ?> -->
+                                                        </div>
+                                                    </td>
+                                    
+                                                </tr>
+
+                                            </table>
+
+                                    </div>
+
+                                </section>
+
+                            </main>
+
+                            <br>
+                        ";
+
+                    }
+
+            }
+
+    ?>
+
 
     <!-------------DELUXE--------------->
+
 
     <?php
     
@@ -280,7 +282,7 @@
                             
             if(empty($prodName[$idx])){
 
-                die();
+                // die();
 
             }else{
                     echo"
@@ -334,6 +336,10 @@
         }
 
     ?>
+
+
+
+    
 
 
 
