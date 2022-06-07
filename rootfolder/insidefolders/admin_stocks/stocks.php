@@ -149,9 +149,9 @@
     SELECT
     *
     FROM 
-        `classic_stocks_bread` as s
+        `classic_stocks_bread` as b
     LEFT JOIN 
-        `classic_bread` as p ON s.id = p.id
+        `classic_bread` as c ON b.id = c.id
 
     ";
 
@@ -203,7 +203,7 @@
                                             <tr>
 
                                                 <td>
-                                                    <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
+                                                    <a href='bread/edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
                                                     <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
                                                     &nbsp;
                                                 </td>
