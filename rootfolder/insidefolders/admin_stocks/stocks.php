@@ -9,7 +9,7 @@
     FROM 
         `classic_stocks` as s
     LEFT JOIN 
-        `modify_products` as p ON s.id = p.id
+        `classic_table` as p ON s.id = p.id
 
     ";
 
@@ -69,7 +69,7 @@
     </header>
 
     <div class="name_of_page">
-        <div id="title">Stocks Information</div>
+        <div id="title">STOCKS INFORMATION</div>
     </div>
 
     <main>
@@ -130,6 +130,107 @@
    
                         </main>
    
+                        <br>
+                    ";
+
+                }
+
+        }
+
+    ?>
+
+    <!--BREAD-->
+
+    <?php
+
+    //-------------------------------------------------------------------------//
+
+    $sql = "
+    SELECT
+    *
+    FROM 
+        `classic_stocks_bread` as s
+    LEFT JOIN 
+        `classic_bread` as p ON s.id = p.id
+
+    ";
+
+    //------------------------------------------------------------------------//
+
+    $result = $conn->query($sql);
+
+    $stocksIDs = [];
+    $stocksQTY = [];
+
+    if($result->num_rows > 0){
+
+        $idx = 0;
+
+        while($row = $result->fetch_assoc()){
+
+            $stocksIDs[$idx] = $row["id"];
+            $stocksQTY[$idx] = $row["PRODUCT_QTY"];
+            $prodName[$idx] = $row["PRODUCT_NAME"];
+            $prodDet[$idx] = $row["PRODUCT_DETAIL"];
+
+            $idx++;
+
+        }
+    }else{
+        echo "0 result";
+    }
+
+
+        for($idx=0; $idx < count($stocksIDs); $idx++){
+                            
+            if(empty($prodName[$idx])){
+
+                die();
+
+            }else{
+                    echo"
+                        
+                        <main>
+
+                            <section class='glass'>
+
+                                <div id='products'>
+
+                                    <h3>Product Name: $prodName[$idx] &nbsp;</h3> 
+                                    
+                                        <table>
+
+                                            <tr>
+
+                                                <td>
+                                                    <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
+                                                    <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
+                                                    &nbsp;
+                                                </td>
+                                                <td>
+                                                    Product Details: $prodDet[$idx] &nbsp; 
+                                                    <br>
+                                                    <br>
+                                                    
+                                                    <div id='stocks'>
+                                                    
+                                                        Available Stock: $stocksQTY[$idx] &nbsp; 
+                                                        <br>
+                                                        <br>
+
+                                                    </div>
+                                                </td>
+                                
+                                            </tr>
+
+                                        </table>
+
+                                </div>
+
+                            </section>
+
+                        </main>
+
                         <br>
                     ";
 
