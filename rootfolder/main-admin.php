@@ -30,12 +30,12 @@
     <div style="margin: 10%;">
         <table align="center">
             <tr>
-                <th><a href="insidefolders/admin_summary/summaryreports.html"><img src="images/report.png" width="60%"></a></th>
+                <th><a href="insidefolders/admin_summary/summaryreports.php"><img src="images/report.png" width="60%"></a></th>
                 <th><a href="insidefolders/admin_stocks/stocks.php"><img src="images/warehouse.png" width="60%"></a></th>
                 <th><a href="insidefolders/admin_product/displayprod.php"><img src="images/edit.png" width="60%"></a></th>
             </tr>
             <tr align="center">
-                <td><a href="insidefolders/admin_summary/summaryreports.html"><font face="Century Gothic" size="20">SUMMARY REPORTS</a></font></td>
+                <td><a href="insidefolders/admin_summary/summaryreports.php"><font face="Century Gothic" size="20">SUMMARY REPORTS</a></font></td>
                 <td><a href="insidefolders/admin_stocks/stocks.php"><font face="Century Gothic" size="20">STOCKS / STORAGE</font></td>
                 <td><a href="insidefolders/admin_product/displayprod.php"><font face="Century Gothic" size="20">PRODUCT MANAGER</font></td>
             </tr>

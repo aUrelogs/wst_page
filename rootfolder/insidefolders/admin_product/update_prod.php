@@ -2,7 +2,7 @@
 
     include ('connection.php');
     $id =$_GET['updateid'];
-    $sql = "SELECT * FROM `modify_products` WHERE id=$id";
+    $sql = "SELECT * FROM `classic_table` WHERE id=$id";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
         $productID = $row['id'];
@@ -16,7 +16,7 @@
         $productPRICE = $_POST['productPrice'];
         $productDESC = $_POST['productDesc'];
    
-        $sql = "UPDATE `modify_products` 
+        $sql = "UPDATE `classic_table` 
         SET id=$id, id=$productID, PRODUCT_NAME='$productNAME', PRODUCT_PRICE=$productPRICE, PRODUCT_DETAIL='$productDESC'
         WHERE id = $id";
         $result = mysqli_query($conn, $sql);

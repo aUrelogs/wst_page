@@ -8,7 +8,7 @@
         $productPRICE = $_POST['productPrice'];
         $productDESC = $_POST['productDesc'];
    
-        $sql = "INSERT INTO `modify_products` (id, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_DETAIL) 
+        $sql = "INSERT INTO `classic_table` (id, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_DETAIL) 
         VALUES('$productID', '$productNAME', '$productPRICE', '$productDESC')";
         $result = mysqli_query($conn, $sql);
 

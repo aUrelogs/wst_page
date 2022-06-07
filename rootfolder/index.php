@@ -19,8 +19,8 @@
 <br><br><br><br>
 
 <div class="container">
-    <div class="box">
-        <img src="images/iceice.png" alt="icecreamshopgraphics" width="800px">
+    <div class="box" style="margin-left: 100px; margin-top: 65px;">
+        <img src="images/icecreamslides.gif" alt="icecreamshopgraphics" width="700px">
     </div>
     &emsp; 
     <div class="box">
@@ -34,7 +34,7 @@
                 <p class = "error"><?php echo $_GET['error']; ?></p>
             <?php } ?>
 
-                <table align="center">
+                <table align="center" >
                     <tr>
                         <td>
                             <input type="text" name="username" placeholder="User Name" >
