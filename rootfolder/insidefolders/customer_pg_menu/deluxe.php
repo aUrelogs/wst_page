@@ -131,6 +131,59 @@ body {
                     </div></td>
                     <td>
                     <b>Stock Quantity:</b><br>
+                    
+                    <?php
+
+                        $sql = "
+                        SELECT
+                        *
+                        FROM 
+                            `deluxe_table_stocks` as d
+                        LEFT JOIN 
+                            `deluxe_table` as e ON d.id = e.id
+
+                        ";
+
+
+                        $result = $conn->query($sql);
+
+                        $stocksIDs = [];
+                        $stocksQTY = [];
+
+                        if($result->num_rows > 0){
+
+                            $idx = 0;
+
+                            while($row = $result->fetch_assoc()){
+
+                                $stocksIDs[$idx] = $row["id"];
+                                $stocksQTY[$idx] = $row["PRODUCT_QTY"];
+                                $prodName[$idx] = $row["PRODUCT_NAME"];
+                                $prodDet[$idx] = $row["PRODUCT_DETAIL"];
+
+                                $idx++;
+
+                            }
+                        }else{
+                            echo "0 result";
+                        }
+
+
+                            for($idx=0; $idx < count($stocksIDs); $idx++){
+                                                
+                                if(empty($prodName[$idx])){
+
+                                    echo "No Stocks" . "<br>";
+
+                                }else{
+
+                                    echo  $prodName[$idx] .":". "&nbsp" .  $stocksQTY[$idx]. "<br>";
+
+                                }
+                            }
+
+                    ?>
+
                     </td>
                 </tr>
                 

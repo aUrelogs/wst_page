@@ -150,7 +150,8 @@ body {
                                                 
                                 if(empty($prodName[$idx])){
 
-                                    // die();
+                                    echo "No Stocks". "<br>";
+                                   
 
                                 }else{
 
