@@ -1,13 +1,8 @@
 <?php
 
     include ('connection.php');
-
    
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +43,7 @@ body {
         <div><img src="images/logo.png" style="width: 100px;"><img src="images/logoname.png" alt="logo"></div>
         <nav>
             <ul class ="nav_links">
-                <li><font color="#fa3c96"> My Cart </font><img src="images/shoppingicon.png" class="logo" style="width: 25px;">|<a href="index.php"> Admin Log In</a> <img src="images/userlogoo.png" class="logo" style="width: 20px;"></li>
+                <li><font color="#fa3c96"> My Cart </font><img src="images/shoppingicon.png" class="logo" style="width: 25px;">|<a href="http://localhost/wst_page/rootfolder/"> Admin Log In</a> <img src="images/userlogoo.png" class="logo" style="width: 20px;"></li>
             </ul>
         </nav>
     </header>
@@ -95,15 +90,15 @@ body {
             <font face="Century Gothic">
             <b>Flavors:</b><br>
             <input type="radio" id="Avocado_Machiatto" name="classicflavor" value="Avocado Machiatto" style="height:13px; width:20px;">
-            <label for="Avocado_Machiatto">Avocado Machiatto</label>
+            <label for="Avocado_Machiatto">Avocado Macchiato</label> <br>
             <input type="radio" id="Macapuno_Caramel" name="classicflavor" value="Macapuno Caramel" style="height:13px; width:20px;">
-            <label for="Macapuno_Caramel">Macapuno Caramel</label>
+            <label for="Macapuno_Caramel">Macapuno Caramel</label> <br>
             <input type="radio" id="Mango_Dark" name="classicflavor" value="Mango Dark Chocolate" style="height:13px; width:20px;">
             <label for="Mango_Dark">Mango Dark Chocolate</label> <br>
             <input type="radio" id="Mango_Salted" name="classicflavor" value="Mango Salted Caramel" style="height:13px; width:20px;">
-            <label for="Mango_Salted">Mango Salted Caramel</label>
+            <label for="Mango_Salted">Mango Salted Caramel</label> <br>
             <input type="radio" id="Ube_Caramelized" name="classicflavor" value="Ube Caramelized Sugar" style="height:13px; width:20px;">
-            <label for="Ube_Caramelized">Ube Caramelized Sugar</label>
+            <label for="Ube_Caramelized">Ube Caramelized Sugar</label> <br>
             <input type="radio" id="Ube_Keso" name="classicflavor" value="Ube Keso" style="height:13px; width:20px;">
             <label for="Ube_Keso">Ube Keso</label>
             </font>
@@ -132,6 +127,61 @@ body {
                     </div></td>
                     <td>
                     <b>Stock Quantity:</b><br>
+                    <?php
+
+$sql = "
+SELECT
+*
+FROM 
+    `classic_stocks` as s
+LEFT JOIN 
+    `classic_table` as p ON s.id = p.id
+
+";
+
+
+
+$result = $conn->query($sql);
+
+$stocksIDs = [];
+$stocksQTY = [];
+
+if($result->num_rows > 0){
+
+    $idx = 0;
+
+    while($row = $result->fetch_assoc()){
+
+        $stocksIDs[$idx] = $row["id"];
+        $stocksQTY[$idx] = $row["PRODUCT_QTY"];
+        $prodName[$idx] = $row["PRODUCT_NAME"];
+        $prodPrice[$idx] = $row["PRODUCT_PRICE"];
+
+        $idx++;
+
+    }
+}else{
+    echo "0 result";
+}
+
+for($idx=0; $idx < count($stocksIDs); $idx++){
+                            
+    if(empty($prodName[$idx])){
+
+        // die();
+
+    }else{
+
+       echo  $prodName[$idx] .":". "&nbsp" . $prodPrice[$idx] . "<br>";
+
+
+    }}
+
+
+
+                    
+                    ?>
+
                     </td>
                 </tr>
                 
