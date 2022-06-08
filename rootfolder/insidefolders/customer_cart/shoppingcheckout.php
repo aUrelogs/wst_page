@@ -1,82 +1,125 @@
-<?php
+    <?php   
  session_start();  
-     $dbHost = "localhost";
-     $dbuser = "root";
-     $dbPass = "";
-     $dbTable = "websysproj";
-
- $connect = mysqli_connect($dbHost, $dbuser, $dbPass, $dbTable);  
+ $connect = mysqli_connect("localhost", "root", "", "test");  
  if(isset($_POST["add_to_cart"]))  
  {  
-      if(isset($_SESSION["shopping_cart"]))  
+      if(isset($_SESSION["shoppingcart"]))  
       {  
-           $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");  
+           $item_array_id = array_column($_SESSION["shoppingcart"], "product_id");  
            if(!in_array($_GET["id"], $item_array_id))  
            {  
-                $count = count($_SESSION["shopping_cart"]);  
+                $count = count($_SESSION["shoppingcart"]);  
                 $item_array = array(  
-                     'item_id'               =>     $_GET["id"],  
-                     'item_name'               =>     $_POST["hidden_name"],  
-                     'item_price'          =>     $_POST["hidden_price"],  
-                     'item_quantity'          =>     $_POST["quantity"]  
+                     'product_id'               =>     $_GET["id"],  
+                     'product_name'               =>     $_POST["hidden_name"],  
+                     'product_price'          =>     $_POST["hidden_price"],  
+                     'product_quantity'          =>     $_POST["quantity"]  
                 );  
-                $_SESSION["shopping_cart"][$count] = $item_array;  
+                $_SESSION["shoppingcart"][$count] = $item_array;  
            }  
            else  
            {  
-                echo '';  
-                echo '';  
+                echo '<script>alert("Item Already Added")</script>';  
+                echo '<script>window.location="index.php"</script>';  
            }  
       }  
       else  
       {  
            $item_array = array(  
-                'item_id'               =>     $_GET["id"],  
-                'item_name'               =>     $_POST["hidden_name"],  
-                'item_price'          =>     $_POST["hidden_price"],  
-                'item_quantity'          =>     $_POST["quantity"]  
+                'product_id'               =>     $_GET["id"],  
+                'product_name'               =>     $_POST["hidden_name"],  
+                'product_price'          =>     $_POST["hidden_price"],  
+                'product_quantity'          =>     $_POST["quantity"]  
            );  
-           $_SESSION["shopping_cart"][0] = $item_array;  
+           $_SESSION["shoppingcart"][0] = $item_array;  
       }  
  }  
  if(isset($_GET["action"]))  
  {  
       if($_GET["action"] == "delete")  
       {  
-           foreach($_SESSION["shopping_cart"] as $keys => $values)  
+           foreach($_SESSION["shoppingcart"] as $keys => $values)  
            {  
-                if($values["item_id"] == $_GET["id"])  
+                if($values["product_id"] == $_GET["id"])  
                 {  
-                     unset($_SESSION["shopping_cart"][$keys]);  
-                     echo '';  
-                     echo '';  
+                     unset($_SESSION["shoppingcart"][$keys]);  
+                     echo '<script>alert("Item Removed")</script>';  
+                     echo '<script>window.location="shoppingcheckout.php"</script>';  
                 }  
            }  
       }  
  }  
  ?>  
+ <!DOCTYPE html>  
+ <html>  
+      <head>  
+           <title>Check out and Details</title>  
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
       </head>  
-<style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <title>Menu</title>
+</head>
+
+    <style>
+
+    .orderdetailsbutton {
+    background-color: #fa3c96;
+    border-color: #fa3c96;
+    border-radius: 40px;
+    color: #ffffff;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+     .checkoutbutton {
+   background-color: #c2f2d0;
+    border-color: #fa3c96;
+    border-radius: 40px;
+    color: #fa3c96;
+    padding: 10px 50px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+
 @font-face {
     font-family: 'Melted Font';
     src: url(fonts/MeltedDl-XdLg.ttf);
 }
+
 body {
-    background-image: url(bgimg.PNG);
+    background-image: url(images/bgimg.PNG);
    background-size: 100%;
 }
+
 .bgcol{
     background-color: #c2f2d0;
     padding: 20px;
     border-radius: 50px;
     width: 90%;
+    
 }
+
 .bgcol2{
     background-color: #c2f2d0;
     border-radius: 40px;
     width: 50%;
 }
+
+
 li, a{
     font-family: "Century Gothic";
     font-weight: 500;
@@ -85,17 +128,21 @@ li, a{
     text-decoration: none;
     cursor: pointer;
 }
+
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
     background-color: #fdf5c9;
+
 }
+
 .logo{
     cursor: pointer;
     width: 40%;
 }
+
 .nav_links {
     list-style: none;
 }
@@ -104,8 +151,31 @@ header{
     padding: 0px 20px;
     transition: all 0.3s ease 0s;
 }
-</style>
-      <body style="margin: 0">
+
+.container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.box {
+    
+    border: none;
+    position: relative;
+}
+
+.error {
+    background: #eeafaf;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+}
+
+
+
+    </style>
+<body style="margin: 0">
     <header >
         <div><img src="images/logo.png" style="width: 100px;"><img src="images/logoname.png" alt="logo"></div>
         <nav>
@@ -116,36 +186,27 @@ header{
     </header>
     <br><br><br>
 <font face="Melted Font" size="50" color="#fa3c96"><center>SHOPPING CART</center></font>
+
+<div align="center">
+<font face="Century Gothic"><button class="orderdetailsbutton"><b>ORDER DETAILS</b></button></font>
+</div>
            <br />  
-           <div class="container" style="width:700px;">  
+        
                 <?php  
-                $query = "SELECT * FROM tbl_product ORDER BY id ASC";  
+                $query = "SELECT * FROM classic_table /* <-- DATABASE NG MAIN MENU */ ORDER BY id ASC";  
                 $result = mysqli_query($connect, $query);  
                 if(mysqli_num_rows($result) > 0)  
                 {  
                      while($row = mysqli_fetch_array($result))  
                      {  
                 ?>  
-                <div class="col-md-4">  
-                     <form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">  
-                          <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">  
-                               <img src="<?php echo $row["image"]; ?>" class="img-responsive" /><br />  
-                               <h4 class="text-info"><?php echo $row["name"]; ?></h4>  
-                               <h4 class="text-danger">P <?php echo $row["price"]; ?></h4>  
-                               <input type="text" name="quantity" class="form-control" value="1" />  
-                               <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />  
-                               <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />  
-                               <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
-                          </div>  
-                     </form>  
-                </div>  
+              
                 <?php  
                      }  
                 }  
                 ?>  
                 <div style="clear:both"></div>  
                 <br />  
-                <h3><font face="Melted Font" size="50" color="#fa3c96"><center>Order Details</center></font></h3> 
                 <div class="table-responsive">  
                      <table class="table table-bordered">  
                           <tr>  
@@ -163,9 +224,9 @@ header{
                                {  
                           ?>  
                           <tr>  
-                               <td><?php echo $values["item_name"]; ?></td>  
-                               <td><?php echo $values["item_quantity"]; ?></td>  
-                               <td>P <?php echo $values["item_price"]; ?></td>  
+                               <td><?php echo $values["PRODUCT_NAME"]; ?></td>  
+                               <td><?php echo $values["ITEM_QUANTITY"]; ?></td>  
+                               <td>P <?php echo $values["PRODUCT_PRIICE"]; ?></td>  
                                <td>P <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>  
                                <td><a href="index.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>  
                           </tr>  
@@ -185,6 +246,11 @@ header{
                 </div>  
            </div>  
            <br />  
+
+<br /><br />
+<div align="center">
+<font face="Century Gothic"><button class="checkoutbutton"><b>CHECK OUT</b></button></font>
+</div>
+
       </body>  
  </html>
-
