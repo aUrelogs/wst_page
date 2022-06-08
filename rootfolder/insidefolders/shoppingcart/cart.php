@@ -1,6 +1,11 @@
-<?php   
+<?php
  session_start();  
- $connect = mysqli_connect("localhost", "root", "", "test");  
+     $dbHost = "localhost";
+     $dbuser = "root";
+     $dbPass = "";
+     $dbTable = "websysproj";
+
+ $connect = mysqli_connect($dbHost, $dbuser, $dbPass, $dbTable);  
  if(isset($_POST["add_to_cart"]))  
  {  
       if(isset($_SESSION["shopping_cart"]))  
@@ -19,8 +24,8 @@
            }  
            else  
            {  
-                echo '<script>alert("Item Already Added")</script>';  
-                echo '<script>window.location="index.php"</script>';  
+                echo '';  
+                echo '';  
            }  
       }  
       else  
@@ -43,53 +48,76 @@
                 if($values["item_id"] == $_GET["id"])  
                 {  
                      unset($_SESSION["shopping_cart"][$keys]);  
-                     echo '<script>alert("Item Removed")</script>';  
-                     echo '<script>window.location="index.php"</script>';  
+                     echo '';  
+                     echo '';  
                 }  
            }  
       }  
  }  
  ?>  
- <!DOCTYPE html>  
- <html>  
-      <head>  
-           <title>Shopping Cart</title>  
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
       </head>  
-
 <style>
-
+@font-face {
+    font-family: 'Melted Font';
+    src: url(fonts/MeltedDl-XdLg.ttf);
+}
 body {
     background-image: url(bgimg.PNG);
    background-size: 100%;
 }
-
 .bgcol{
     background-color: #c2f2d0;
     padding: 20px;
-    border-radius: 40px;
+    border-radius: 50px;
     width: 90%;
-    
 }
-
 .bgcol2{
     background-color: #c2f2d0;
     border-radius: 40px;
     width: 50%;
 }
-
-
-
+li, a{
+    font-family: "Century Gothic";
+    font-weight: 500;
+    font-size: 20px;
+    color: #6b3e26;
+    text-decoration: none;
+    cursor: pointer;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #fdf5c9;
+}
+.logo{
+    cursor: pointer;
+    width: 40%;
+}
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+    transition: all 0.3s ease 0s;
+}
 </style>
-
-
-
-      <body>  
+      <body style="margin: 0">
+    <header >
+        <div><img src="images/logo.png" style="width: 100px;"><img src="images/logoname.png" alt="logo"></div>
+        <nav>
+            <ul class ="nav_links">
+                <li><font color="#fa3c96"> Back to Menu </font><img src="images/shoppingicon.png" class="logo" style="width: 25px;"><a href="">|  Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br><br>
+<font face="Melted Font" size="50" color="#fa3c96"><center>SHOPPING CART</center></font>
            <br />  
            <div class="container" style="width:700px;">  
-                <h3 align="center"> <img src="logoname.png"></h3><br />  
                 <?php  
                 $query = "SELECT * FROM tbl_product ORDER BY id ASC";  
                 $result = mysqli_query($connect, $query);  
@@ -117,11 +145,11 @@ body {
                 ?>  
                 <div style="clear:both"></div>  
                 <br />  
-                <h3>Order Details</h3>  
+                <h3><font face="Melted Font" size="50" color="#fa3c96"><center>Order Details</center></font></h3> 
                 <div class="table-responsive">  
                      <table class="table table-bordered">  
                           <tr>  
-                               <th width="40%">Item Name</th>  
+                               <th width="40%">Product Name</th>  
                                <th width="10%">Quantity</th>  
                                <th width="20%">Price</th>  
                                <th width="15%">Total</th>  
@@ -159,3 +187,4 @@ body {
            <br />  
       </body>  
  </html>
+

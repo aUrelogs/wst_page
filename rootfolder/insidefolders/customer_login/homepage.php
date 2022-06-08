@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     <title>Webpage Design</title>
+     <title>WHAT'S THE SCOOP?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,7 +13,7 @@
         
         </div>
         <nav>
-            <h2 class="Comp-Name">What's the scoop?</h2> 
+            <h2 class="Comp-Name">What's The Scoop?</h2> 
                 <!-- <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
@@ -27,10 +27,10 @@
                         <h2>Login Here</h2>
                         <input type="email" name="Loginemail" placeholder="Enter Email">
                         <input type="password" name="LoginPassword" placeholder="Enter Password Here">
-                        <button class="btnn" type="submit" name="Login">Login</button>
+                        <button class="btnn" type="submit" name="Login">LOGIN</button>
 
-                        <p class="link">Don't have an account<br>
-                        <a href="#" id = "button">Sign up </a> here</a>
+                        <p class="link">New customer?<br>
+                        <a href="#" id = "button">Sign up </a> here first</a>
 
                     </div>
             </div>
@@ -46,7 +46,7 @@
         <div class="bg-modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-logo">Sign Up</h5>
+                    <h5 class="modal-logo">REGISTER</h5>
                     <div class="close-modal" id= "close">+</div>
                 </div>
                 <div class="input-modal">
@@ -59,7 +59,7 @@
                     <input type="text" name="username" placeholder="Username:">
                     <input type="password" name="Password" placeholder="Password:">
                     <input type="password" name="ConfirmPassowrd" placeholder="Confirm Password:">
-                    <button class="btnn" type="submit" name="submit">Register</button>
+                    <button class="btnn" type="submit" name="submit">CONTINUE</button>
                 </div>
             </div>
         </div>

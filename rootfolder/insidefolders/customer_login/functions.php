@@ -1,9 +1,10 @@
 <?php
 
-    function emptyinputSignup ($email, $mobilenumber, $firstname,
-    $lastname, $address, $areacode, $username, $Password, $ConfirmPassowrd)
-    {
-    $result;
+Function emptyinputSignup ($email, $mobilenumber, $firstname,
+$lastname, $address, $areacode, $username, $Password, $ConfirmPassowrd)
+
+{
+   
     if (empty($email) || empty($mobilenumber) || empty($firstname)|| empty($lastname)|| empty($address)
     || empty($areacode)|| empty($username) || empty($Password) || empty($ConfirmPassowrd))
     {
@@ -17,7 +18,7 @@
 
 function InvalidUID ($username)
 {
-    $result;
+    
     if (!preg_match("/^[a-zA-Z0-9]*$/", $username))
     {
     $result = true;
@@ -30,7 +31,7 @@ function InvalidUID ($username)
 
 function InvalidEmail($email)
 {
-    $result;
+
     if (!filter_var($email, FILTER_VALIDATE_EMAIL))
     {
     $result = true;
@@ -44,7 +45,7 @@ function InvalidEmail($email)
 
 function PasswordMatch($Password, $ConfirmPassowrd)
 {
-    $result;
+
     if ($Password !== $ConfirmPassowrd)
     {
     $result = true;
@@ -70,14 +71,14 @@ Function uidExist($conn, $username, $email)
 
         $resultData = mysqli_stmt_get_result($stnt);
 
-            if ($row = mysqli_fetch_assoc($resultData)){
-                return $row;
-            }
-            else {
-                $result = false;
-                return $result;
-            }
-            mysqli_stmt_close($stnt);
+        if ($row = mysqli_fetch_assoc($resultData)){
+            return $row;
+    }
+    else {
+            $result = false;
+            return $result;
+    }
+    mysqli_stmt_close($stnt);
 }
 
 
@@ -85,39 +86,39 @@ Function uidExist($conn, $username, $email)
 Function createUser($conn, $email, $mobilenumber, $firstname, $lastname, $address, $areacode, $username, $Password)
 
 {
-$sql = "INSERT INTO signup (Email_add, Mobile_Num, First_Name, Last_name, User_Address, ZipCode, Username, User_Password) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
-$stnt = mysqli_stmt_init($conn);
+    $sql = "INSERT INTO signup (Email_add, Mobile_Num, First_Name, Last_name, User_Address, ZipCode, Username, User_Password) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+    $stnt = mysqli_stmt_init($conn);
 
-if (!mysqli_stmt_prepare($stnt, $sql))
-{
-    header("location: homepage.php?error=filenotsave");
-    exit();
-}
+    if (!mysqli_stmt_prepare($stnt, $sql))
+    {
+        header("location: homepage.php?error=filenotsave");
+        exit();
+    }
 
-$HashPassword = password_hash($Password, PASSWORD_DEFAULT);
+    $HashPassword = password_hash($Password, PASSWORD_DEFAULT);
 
-mysqli_stmt_bind_param($stnt, "ssssssss", $email, $mobilenumber, $firstname,
-$lastname, $address, $areacode, $username, $HashPassword);
-mysqli_stmt_execute($stnt);
-mysqli_stmt_close($stnt);
-header("location: homepage.php?error=none");
-    exit();
+    mysqli_stmt_bind_param($stnt, "ssssssss", $email, $mobilenumber, $firstname,
+    $lastname, $address, $areacode, $username, $HashPassword);
+    mysqli_stmt_execute($stnt);
+    mysqli_stmt_close($stnt);
+    header("location: homepage.php?error=none");
+        exit();
 }
 
 
 
 function emptyinputlogin ($email, $Password)
 {
-$result;
-if (empty($email) || empty($Password))
-{
- $result = true;
-}
-else {
-    $result = false;
-}
-return $result;
-}
+
+        if (empty($email) || empty($Password))
+        {
+            $result = true;
+        }
+        else {
+            $result = false;
+        }
+        return $result;
+    }
 
 Function Userlogin($conn, $email, $Password)
 {
@@ -144,7 +145,7 @@ Function Userlogin($conn, $email, $Password)
         $_SESSION["userID"] = $uidexist["userID"];
         $_SESSION["Username"] = $uidexist["Username"];
 
-        header("location: homepage.php?loginsuccessfull");
+        header("location: http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/menu.php");
         exit();
     }
 
