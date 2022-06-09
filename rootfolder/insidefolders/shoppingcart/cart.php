@@ -1,190 +1,115 @@
 <?php
- session_start();  
-     $dbHost = "localhost";
-     $dbuser = "root";
-     $dbPass = "";
-     $dbTable = "websysproj";
 
- $connect = mysqli_connect($dbHost, $dbuser, $dbPass, $dbTable);  
- if(isset($_POST["add_to_cart"]))  
- {  
-      if(isset($_SESSION["shopping_cart"]))  
-      {  
-           $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");  
-           if(!in_array($_GET["id"], $item_array_id))  
-           {  
-                $count = count($_SESSION["shopping_cart"]);  
-                $item_array = array(  
-                     'item_id'               =>     $_GET["id"],  
-                     'item_name'               =>     $_POST["hidden_name"],  
-                     'item_price'          =>     $_POST["hidden_price"],  
-                     'item_quantity'          =>     $_POST["quantity"]  
-                );  
-                $_SESSION["shopping_cart"][$count] = $item_array;  
-           }  
-           else  
-           {  
-                echo '';  
-                echo '';  
-           }  
-      }  
-      else  
-      {  
-           $item_array = array(  
-                'item_id'               =>     $_GET["id"],  
-                'item_name'               =>     $_POST["hidden_name"],  
-                'item_price'          =>     $_POST["hidden_price"],  
-                'item_quantity'          =>     $_POST["quantity"]  
-           );  
-           $_SESSION["shopping_cart"][0] = $item_array;  
-      }  
- }  
- if(isset($_GET["action"]))  
- {  
-      if($_GET["action"] == "delete")  
-      {  
-           foreach($_SESSION["shopping_cart"] as $keys => $values)  
-           {  
-                if($values["item_id"] == $_GET["id"])  
-                {  
-                     unset($_SESSION["shopping_cart"][$keys]);  
-                     echo '';  
-                     echo '';  
-                }  
-           }  
-      }  
- }  
- ?>  
-           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-      </head>  
-<style>
-@font-face {
-    font-family: 'Melted Font';
-    src: url(fonts/MeltedDl-XdLg.ttf);
-}
-body {
-    background-image: url(images/bgimg.PNG);
-   background-size: 100%;
-}
-.bgcol{
-    background-color: #c2f2d0;
-    padding: 20px;
-    border-radius: 50px;
-    width: 90%;
-}
-.bgcol2{
-    background-color: #c2f2d0;
-    border-radius: 40px;
-    width: 50%;
-}
-li, a{
-    font-family: "Century Gothic";
-    font-weight: 500;
-    font-size: 20px;
-    color: #6b3e26;
-    text-decoration: none;
-    cursor: pointer;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-    background-color: #fdf5c9;
-}
-.logo{
-    cursor: pointer;
-    width: 40%;
-}
-.nav_links {
-    list-style: none;
-}
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-    transition: all 0.3s ease 0s;
-}
-</style>
-      <body style="margin: 0">
-    <header >
-        <div><img src="images/logo.png" style="width: 100px;"><img src="images/logoname.png" alt="logo"></div>
-        <nav>
-            <ul class ="nav_links">
-                <li><font color="#fa3c96"> Back to Menu </font><img src="images/shoppingicon.png" class="logo" style="width: 25px;"><a href="">|  Admin</a></li>
-            </ul>
-        </nav>
-    </header>
-    <br><br><br>
-<font face="Melted Font" size="50" color="#fa3c96"><center>SHOPPING CART</center></font>
-           <br />  
-           <div class="container" style="width:700px;">  
-                <?php  
-                $query = "SELECT * FROM tbl_product ORDER BY id ASC";  
-                $result = mysqli_query($connect, $query);  
-                if(mysqli_num_rows($result) > 0)  
-                {  
-                     while($row = mysqli_fetch_array($result))  
-                     {  
-                ?>  
-                <div class="col-md-4">  
-                     <form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">  
-                          <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">  
-                               <img src="<?php echo $row["image"]; ?>" class="img-responsive" /><br />  
-                               <h4 class="text-info"><?php echo $row["name"]; ?></h4>  
-                               <h4 class="text-danger">P <?php echo $row["price"]; ?></h4>  
-                               <input type="text" name="quantity" class="form-control" value="1" />  
-                               <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />  
-                               <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />  
-                               <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
-                          </div>  
-                     </form>  
-                </div>  
-                <?php  
-                     }  
-                }  
-                ?>  
-                <div style="clear:both"></div>  
-                <br />  
-                <h3><font face="Melted Font" size="50" color="#fa3c96"><center>Order Details</center></font></h3> 
-                <div class="table-responsive">  
-                     <table class="table table-bordered">  
-                          <tr>  
-                               <th width="40%">Product Name</th>  
-                               <th width="10%">Quantity</th>  
-                               <th width="20%">Price</th>  
-                               <th width="15%">Total</th>  
-                               <th width="5%">Action</th>  
-                          </tr>  
-                          <?php   
-                          if(!empty($_SESSION["shopping_cart"]))  
-                          {  
-                               $total = 0;  
-                               foreach($_SESSION["shopping_cart"] as $keys => $values)  
-                               {  
-                          ?>  
-                          <tr>  
-                               <td><?php echo $values["item_name"]; ?></td>  
-                               <td><?php echo $values["item_quantity"]; ?></td>  
-                               <td>P <?php echo $values["item_price"]; ?></td>  
-                               <td>P <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>  
-                               <td><a href="index.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>  
-                          </tr>  
-                          <?php  
-                                    $total = $total + ($values["item_quantity"] * $values["item_price"]);  
-                               }  
-                          ?>  
-                          <tr>  
-                               <td colspan="3" align="right">Total</td>  
-                               <td align="right">P <?php echo number_format($total, 2); ?></td>  
-                               <td></td>  
-                          </tr>  
-                          <?php  
-                          }  
-                          ?>  
-                     </table>  
-                </div>  
-           </div>  
-           <br />  
-      </body>  
- </html>
+@include 'config.php';
 
+if(isset($_POST['update_update_btn'])){
+   $update_value = $_POST['update_quantity'];
+   $update_id = $_POST['update_quantity_id'];
+   $update_quantity_query = mysqli_query($conn, "UPDATE `cart` SET quantity = '$update_value' WHERE id = '$update_id'");
+   if($update_quantity_query){
+      header('location:cart.php');
+   };
+};
+
+if(isset($_GET['remove'])){
+   $remove_id = $_GET['remove'];
+   mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'");
+   header('location:cart.php');
+};
+
+if(isset($_GET['delete_all'])){
+   mysqli_query($conn, "DELETE FROM `cart`");
+   header('location:cart.php');
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>shopping cart</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<?php include 'header.php'; ?>
+
+<div class="container">
+
+<section class="shopping-cart">
+
+   <h1 class="heading">shopping cart</h1>
+
+   <table>
+
+      <thead>
+         <th>image</th>
+         <th>name</th>
+         <th>price</th>
+         <th>quantity</th>
+         <th>total price</th>
+         <th>action</th>
+      </thead>
+
+      <tbody>
+
+         <?php 
+         
+         $select_cart = mysqli_query($conn, "SELECT * FROM `cart`");
+         $grand_total = 0;
+         if(mysqli_num_rows($select_cart) > 0){
+            while($fetch_cart = mysqli_fetch_assoc($select_cart)){
+         ?>
+
+         <tr>
+            <td><img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
+            <td><?php echo $fetch_cart['name']; ?></td>
+            <td>$<?php echo number_format($fetch_cart['price']); ?>/-</td>
+            <td>
+               <form action="" method="post">
+                  <input type="hidden" name="update_quantity_id"  value="<?php echo $fetch_cart['id']; ?>" >
+                  <input type="number" name="update_quantity" min="1"  value="<?php echo $fetch_cart['quantity']; ?>" >
+                  <input type="submit" value="update" name="update_update_btn">
+               </form>   
+            </td>
+            <td>$<?php echo $sub_total = number_format($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</td>
+            <td><a href="cart.php?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('remove item from cart?')" class="delete-btn"> <i class="fas fa-trash"></i> remove</a></td>
+         </tr>
+         <?php
+           $grand_total += $sub_total;  
+            };
+         };
+         ?>
+         <tr class="table-bottom">
+            <td><a href="http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/products.php" class="option-btn" style="margin-top: 0;">continue shopping</a></td>
+            <td colspan="3">grand total</td>
+            <td>$<?php echo $grand_total; ?>/-</td>
+            <td><a href="cart.php?delete_all" onclick="return confirm('are you sure you want to delete all?');" class="delete-btn"> <i class="fas fa-trash"></i> delete all </a></td>
+         </tr>
+
+      </tbody>
+
+   </table>
+
+   <div class="checkout-btn">
+      <a href="http://localhost/wst_page/rootfolder/insidefolders/customer_checkout/checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">procced to checkout</a>
+   </div>
+
+</section>
+
+</div>
+   
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

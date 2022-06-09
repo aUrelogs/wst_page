@@ -145,7 +145,7 @@ Function Userlogin($conn, $email, $Password)
         $_SESSION["userID"] = $uidexist["userID"];
         $_SESSION["Username"] = $uidexist["Username"];
 
-        header("location: http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/menu.php");
+        header("location: http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/products.php");
         exit();
     }
 
