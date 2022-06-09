@@ -130,7 +130,7 @@ ul li a:hover{
     width: 1200px;
     height: auto;
     margin: auto;
-    color: ;
+
     position: relative;
 }
 
@@ -139,18 +139,8 @@ ul li a:hover{
    padding-top: 3%;
    padding-left: 10%; 
 
+
 }
-.image{
-    width: 100%;
-    padding-top: 75%;
-    background: url('iceice.png') no-repeat;
-    background-size: contain;
-}
-/* .store{
-    position: fixed;
-    left: 10%;
-    top: 5%;
-} */
 
 .content .par{
     padding-left: 20px;
@@ -216,7 +206,7 @@ ul li a:hover{
     text-align: center;
     color: black;
     font-size: 22px;
-    background-color: ;
+
     border-radius: 10px;
     margin: 2px;
     padding: 8px;
@@ -299,9 +289,9 @@ ul li a:hover{
 
 /* pop-up modal */
 .bg-modal {
-    width: 100%;
+    width: 100px;
     height: 100%;
-    background-color: ;
+
     position: absolute;
     top: 0;
     display: flex;
@@ -312,7 +302,7 @@ ul li a:hover{
 .modal-content{
     width: 25%;
     height: 95%;
-    background: #fdf5c9 ;
+    background: #000000 ;
     border-radius: 10px;
     padding: 10px;
     position: relative;
@@ -334,7 +324,7 @@ ul li a:hover{
     border-top: none;
     border-right: none;
     border-left: none;
-    color: #fff;
+    color: black;
     font-size: 15px;
     letter-spacing: 1px;
     margin-top: 8%;
@@ -344,7 +334,7 @@ ul li a:hover{
 }
 
 .input-modal input:focus{
-    outline: none;
+    outline: #000;
 }
 
 ::placeholder{

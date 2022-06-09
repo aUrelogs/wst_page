@@ -72,7 +72,7 @@ if(isset($message)){
             <h3><?php echo $fetch_product['name']; ?></h3>
             <div class="price">Php <?php echo $fetch_product['price']; ?></div>
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
-           <input style = "text-align: center; color: red;"type="show" name="product_desc" value="<?php echo "Desc: "; echo $fetch_product['product_desc']; ?>">
+           <input style = "text-align: center; color: red;"type="show" name="product_desc" value="<?php echo 'Desc: '; echo $fetch_product['product_desc']; ?>">
             <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
             <input type="submit" class="btn" value="add to cart" name="add_to_cart">
