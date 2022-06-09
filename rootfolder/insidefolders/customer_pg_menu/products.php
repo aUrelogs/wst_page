@@ -37,6 +37,12 @@ if(isset($_POST['add_to_cart'])){
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+   body {
+   background-image: url(images/bgimg2.PNG);
+   background-size: 100%;
+}
+</style>
 <body>
    
 <?php
@@ -55,7 +61,8 @@ if(isset($message)){
 
 <section class="products">
 
-   <h1 class="heading">latest products</h1>
+   <h1 class="heading">Products</h1>
+   <br>
 
    <div class="box-container">
 
@@ -72,7 +79,7 @@ if(isset($message)){
             <h3><?php echo $fetch_product['name']; ?></h3>
             <div class="price">Php <?php echo $fetch_product['price']; ?></div>
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
-           <?php echo 'Desc: '; echo $fetch_product['product_desc']; ?>
+            <div><font size="3"><?php echo "Desc: "; echo $fetch_product['product_desc']; ?></font></div>
             <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
             <input type="submit" class="btn" value="add to cart" name="add_to_cart">

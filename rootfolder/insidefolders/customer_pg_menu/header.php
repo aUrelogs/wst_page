@@ -2,7 +2,7 @@
 
    <div class="flex">
 
-      <a href="#" class="logo">foodies</a>
+      <a href="#" class="logo"><img src="images/logo.png" style="width: 100px;"></a>
 
       <nav class="navbar">
          <a href="http://localhost/wst_page/rootfolder/">add products</a>
