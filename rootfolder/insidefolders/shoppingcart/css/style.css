@@ -50,7 +50,7 @@ section{
    display: block;
    width: 100%;
    text-align: center;
-   background-color: var(--blue);
+   background-color: #FFC5D9;
    color:var(--white);
    font-size: 1.7rem;
    padding:1.2rem 3rem;
@@ -71,12 +71,12 @@ section{
 }
 
 .option-btn{
-   background-color: var(--orange);
+   background-color: green;
 }
 
 .delete-btn{
    margin-top: 0;
-   background-color: var(--red);
+   background-color: red;
 }
 
 .message{
@@ -111,7 +111,7 @@ section{
 }
 
 .header{
-   background-color: var(--blue);
+   background-color: #c2f2d0;
    position: sticky;
    top:0; left:0;
    z-index: 1000;
@@ -128,27 +128,27 @@ section{
 .header .flex .logo{
    margin-right: auto;
    font-size: 2.5rem;
-   color:var(--white);
+   color:var(--black);
 }
 
 .header .flex .navbar a{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--white);
+   color:var(--black);
 }
 
 .header .flex .navbar a:hover{
-   color:yellow;
+   color:white;
 }
 
 .header .flex .cart{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--white);
+   color:var(--black);
 }
 
 .header .flex .cart:hover{
-   color:yellow;
+   color:white;
 }
 
 .header .flex .cart span{
@@ -198,13 +198,17 @@ section{
 .display-product-table table{
    width: 100%;
    text-align: center;
+   border-style:groove;
+   background-color: #ffcb85;
+   
 }
 
 .display-product-table table thead th{
    padding:1.5rem;
    font-size: 2rem;
-   background-color: var(--black);
+   background-color: #6b3e26;
    color:var(--white);
+   
 }
 
 .display-product-table table td{
@@ -302,6 +306,7 @@ section{
    font-size: 2rem;
    color:var(--white);
    background-color: var(--black);
+   
 }
 
 .shopping-cart table tr td{
