@@ -116,11 +116,11 @@ if(isset($message)){
    <table>
 
       <thead>
-         <th>product image</th>
-         <th>product name</th>
-         <th>product price</th>
-         <th>product description</th>
-         <th>action</th>
+         <th>PRODUCT IMAGE</th>
+         <th>PRODUCT NAME</th>
+         <th>PRODUCT PRICE</th>
+         <th>PRODUCT DESCRIPTION</th>
+         <th>ACTION</th>
       </thead>
 
       <tbody style="border-style: solid;">
