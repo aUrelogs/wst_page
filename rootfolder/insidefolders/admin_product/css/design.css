@@ -70,14 +70,6 @@ li, a{
     cursor: pointer;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-    background-color: #fdf5c9;
-
-}
 
 .logo{
     cursor: pointer;
