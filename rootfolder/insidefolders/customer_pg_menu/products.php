@@ -5,6 +5,7 @@
 if(isset($_POST['add_to_cart'])){
 
    $product_name = $_POST['product_name'];
+   $product_desc = $_POST['product_desc'];
    $product_price = $_POST['product_price'];
    $product_image = $_POST['product_image'];
    $product_quantity = 1;
@@ -71,6 +72,7 @@ if(isset($message)){
             <h3><?php echo $fetch_product['name']; ?></h3>
             <div class="price">Php <?php echo $fetch_product['price']; ?></div>
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
+           <input style = "text-align: center; color: red;"type="show" name="product_desc" value="<?php echo "Desc: "; echo $fetch_product['product_desc']; ?>">
             <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
             <input type="submit" class="btn" value="add to cart" name="add_to_cart">
