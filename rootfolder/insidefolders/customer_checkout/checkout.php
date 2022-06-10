@@ -4,6 +4,8 @@
 
 if(isset($_POST['order_btn'])){
 
+
+
    $name = $_POST['name'];
    $number = $_POST['number'];
    $email = $_POST['email'];
@@ -101,6 +103,18 @@ if(isset($_POST['order_btn'])){
       ?>
       <span class="grand-total"> Grand total : ₱<?= $grand_total; ?></span>
    </div>
+
+      <?php 
+         
+         
+         $sql = "SELECT * FROM `signup`";
+         $result = mysqli_query($conn, $sql);
+
+         $name[] = $_POST['ZipCode'];
+
+         echo $name;
+      
+      ?>
 
       <div class="flex">
          <div class="inputBox">
