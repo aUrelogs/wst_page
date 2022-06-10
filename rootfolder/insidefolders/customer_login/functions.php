@@ -95,7 +95,7 @@ Function createUser($conn, $email, $mobilenumber, $firstname, $lastname, $addres
         exit();
     }
 
-    $HashPassword = $Password;
+    $HashPassword =$Password;
 
     mysqli_stmt_bind_param($stnt, "ssssssss", $email, $mobilenumber, $firstname,
     $lastname, $address, $areacode, $username, $HashPassword);

@@ -5,7 +5,7 @@
 if(isset($_POST['add_to_cart'])){
 
    $product_name = $_POST['product_name'];
-   $product_desc = $_POST['product_desc'];
+
    $product_price = $_POST['product_price'];
    $product_image = $_POST['product_image'];
    $product_quantity = 1;
@@ -39,7 +39,7 @@ if(isset($_POST['add_to_cart'])){
 </head>
 <style>
    body {
-   background-image: url(images/bgimg2.PNG);
+   background-image: url(images_/bgimg2.PNG);
    background-size: 100%;
 }
 </style>

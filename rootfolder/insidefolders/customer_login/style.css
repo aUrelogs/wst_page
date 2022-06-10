@@ -138,9 +138,14 @@ ul li a:hover{
    max-width: 960px;
    padding-top: 3%;
    padding-left: 10%; 
-
-
 }
+
+
+/* .store{
+    position: fixed;
+    left: 10%;
+    top: 5%;
+} */
 
 .content .par{
     padding-left: 20px;
@@ -289,7 +294,7 @@ ul li a:hover{
 
 /* pop-up modal */
 .bg-modal {
-    width: 100px;
+    width: 100%;
     height: 100%;
 
     position: absolute;
@@ -301,14 +306,14 @@ ul li a:hover{
 }
 .modal-content{
     width: 25%;
-    height: 95%;
-    background: #000000 ;
+    height: 80%;
+    background: #fdf5c9 ;
     border-radius: 10px;
     padding: 10px;
     position: relative;
 }
 .modal-logo{
-    color: #000;
+    color: black;
     font-size: 35px;
     font-family: Arial;
     float: left;
@@ -324,7 +329,7 @@ ul li a:hover{
     border-top: none;
     border-right: none;
     border-left: none;
-    color: black;
+
     font-size: 15px;
     letter-spacing: 1px;
     margin-top: 8%;
@@ -334,7 +339,7 @@ ul li a:hover{
 }
 
 .input-modal input:focus{
-    outline: #000;
+    outline: none;
 }
 
 ::placeholder{

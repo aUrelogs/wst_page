@@ -15,6 +15,7 @@ if(isset($_POST["Login"]))
    }
    
     Userlogin($conn, $email, $Password);
+    header("location: http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/products.php");
 }
 else
 {
