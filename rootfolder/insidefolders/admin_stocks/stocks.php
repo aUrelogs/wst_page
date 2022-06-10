@@ -1,8 +1,9 @@
 <?php
 
     include 'connection.php';
+   
 
- 
+   
     $sql = "
     SELECT
     *
@@ -82,11 +83,11 @@
 
         for($idx=0; $idx < count($stockid); $idx++){
                             
-            // if(empty($prodName[$idx])){
+            if(empty($pname[$idx])){
 
-            //     // die();
+                die();
 
-            // }else{
+            }else{
                     echo"
                         
                         <main>
@@ -103,7 +104,7 @@
 
                                                 <td>
                                                     <a href='edit_stock.php? id=$stockid[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
-                                                    <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
+                                                    <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/admin.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
                                                     &nbsp;
                                                 </td>
                                                 <td>
@@ -135,7 +136,7 @@
 
                 }
 
-        // }
+        }
 
     ?>
 

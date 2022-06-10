@@ -18,7 +18,7 @@
     $id = $_POST["stock_id"];
     $newStocks = $_POST["product_stocks"];
 
-    $sql = "UPDATE `stocks` SET `PRODUCT_QTY` = '$newStocks' WHERE `id` = $id;";
+    $sql = "UPDATE `stocks` SET `PRODUCT_QTY` = '$newStocks' WHERE `sid` = $id;";
 
         
 
