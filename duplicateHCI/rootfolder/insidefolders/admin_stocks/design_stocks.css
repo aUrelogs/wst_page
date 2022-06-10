@@ -1,0 +1,210 @@
+    @font-face {
+        font-family: 'Melted Dl';
+        src: url(fonts/MeltedDl-XdLg.ttf);
+    }
+
+    body {
+        background-image: url(images/bgimg.PNG);
+        background-size: 100%;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+        background-color: #fdf5c9;
+
+    }
+
+    h2{
+        font-family: "Century Gothic";
+        color: white;
+    }
+
+    h3{
+        font-family: "Century Gothic";
+        color: white;
+    }
+
+    p{
+        font-family: "Century Gothic";
+    }
+
+    li, a{
+        font-family: "Century Gothic";
+        font-weight: 500;
+        font-size: 20px;
+        color: #6b3e26;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    main{
+        min-height: 5vh;
+        /* background: linear-gradient(to right top, #0e4fb1, #3c4ec7, #6549d8, #903be5, #bb12eb); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    table{
+        width: 70%;
+        
+    }
+
+    tr{
+        width: 50%;
+    }
+
+    input[type=number]{
+        padding: 3px;
+        width: 20%;
+        border: 2px solid white;
+        border-radius: 4px;
+       
+    }
+
+    input[type=number]:focus{
+        background-color: lightcyan;
+    }
+
+    label{
+        font-family: "Century Gothic";
+        color: white;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .button1{
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .button1{
+        background-color: transparent; 
+        color: black; 
+        border: 2px solid #ba3500;
+        border-radius: 5px;
+    }
+
+      
+    .button1:hover {
+        background-color: #ba3500;
+        color: white;
+    }
+    
+    .button2{
+       
+        border: none;
+        color: white;
+        padding: 6px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .button2{
+        background-color: transparent; 
+        color: white; 
+        border: 2px solid #006bdd;
+        border-radius: 5px;
+    }
+      
+    .button2:hover {
+        background-color: #006bdd;
+        color: white;
+    }
+    
+    .button3{
+       
+        border: none;
+        color: white;
+        padding: 6px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .button3{
+        background-color: transparent; 
+        color: white; 
+        border: 2px solid #28a745;
+        border-radius: 5px;
+    }
+      
+    .button3:hover {
+        background-color: #28a745;
+        color: white;
+    }
+    
+    .logo{
+        cursor: pointer;
+        width: 40%;
+    }
+
+    .nav_links {
+        list-style: none;
+    }
+        
+    .nav_links li {
+        display: inline-block;
+        padding: 0px 20px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .glass{
+        min-height: 16vh;
+        width: 90%;
+        background: #6b3e26;
+        border-radius: 2rem;
+        z-index: 3;        
+    }
+
+    #products{
+        margin: 2%;
+        font-family: "Century Gothic";
+        color: white;
+    }
+
+    #title{
+        margin: 2%;
+        font-family: 'Melted Dl';
+        color: #fa3c96;
+        font-size: 45px;
+    }
+
+    #current_stock{
+        font-family: "Century Gothic";
+        color: white;
+        text-align: left;
+    }
+
+    #stocks{       
+        font-family: "Century Gothic";
+        color: orange;
+    
+    }
+
+
+
+
+            

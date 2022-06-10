@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Product Manager</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body style="margin: 0;  background-image: url(images_/bgimg.PNG);
+   background-size: 100%;">
+    
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; background-color: #fdf5c9;">
+    <img src="images_/logo.png" class="logo" style="width: 100px;">
+        <img class="logo" src="images_/logoname.png" alt="logo" style="margin-right: 250px;">
+        <nav>
+            <ul class ="nav_links">
+                <li style="list-style: none; font-family: Century Gothic; font-weight: 500; font-size: 20px; color: #6b3e26; text-decoration: none; cursor: pointer;">
+                <img src="images_/userlogoo.png" class="logo" style="width: 20px;"> Welcome | <a href = http://localhost/wst_page_hci/rootfolder/index.html style="font-family: Century Gothic; font-weight: 500; font-size: 20px; color: #6b3e26; text-decoration: none; cursor: pointer;">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<div class="container">
+
+<section>
+
+<form action="" method="post" class="add-product-form" enctype="multipart/form-data">
+   <h3>add a new product</h3>
+   <input type="text" name="p_name" placeholder="Product Name" class="box" required>
+   <input type="text" name="p_desc" placeholder="Product Description" class="box" required>
+   <input type="number" name="p_price" min="0" placeholder="Product Price" class="box" required>
+   <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg" class="box" required>
+   <input type="submit" value="add the product" name="add_product" class="btn">
+</form>
+
+</section>
+
+<section class="display-product-table">
+
+   <table>
+
+      <thead>
+         <th>PRODUCT IMAGE</th>
+         <th>PRODUCT NAME</th>
+         <th>PRODUCT PRICE</th>
+         <th>PRODUCT DESCRIPTION</th>
+         <th>ACTION</th>
+      </thead>
+
+      <tbody style="border-style: solid;">
+
+         <tr>
+            <td><img src="" height="100" alt=""></td>
+            <td></td>
+            <td>Php </td>
+            <td></td>
+            <td>
+               <a href="" class="delete-btn"> <i class="fas fa-trash"></i> delete </a>
+               <a href="" class="option-btn"> <i class="fas fa-edit"></i> update </a>
+            </td>
+         </tr>
+
+      </tbody>
+   </table>
+
+</section>
+
+<section class="edit-form-container">
+
+
+   <form action="" method="post" enctype="multipart/form-data">
+      <img src="" height="200" alt="">
+      <input type="hidden" name="update_p_id" value="">
+      <input type="text" class="box" required name="update_p_name" value="">
+      <input type="text" class="box" required name="update_p_desc" value="">
+      <input type="number" min="0" class="box" required name="update_p_price" value="">
+      <input type="file" class="box" required name="update_p_image" accept="image/png, image/jpg, image/jpeg">
+      <input type="submit" value="update the prodcut" name="update_product" class="btn">
+      <input type="reset" value="cancel" id="close-edit" class="option-btn"></a>
+   </form>
+
+
+</section>
+
+</div>
+
+
+</body>
+</html>
