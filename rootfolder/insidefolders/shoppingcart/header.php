@@ -2,7 +2,7 @@
 
    <div class="flex">
 
-      <a href="#" class="logo">WHAT'S THE SCOOP?</a>
+      <a href="#" class="logo">WHAT'S THE</a>
 
       <nav class="navbar">
          <a href="http://localhost/wst_page/rootfolder/">add products</a>
