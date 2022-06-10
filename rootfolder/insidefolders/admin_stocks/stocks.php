@@ -7,9 +7,9 @@
     SELECT
     *
     FROM 
-        `classic_stocks` as s
+        `stocks` as s
     LEFT JOIN 
-        `classic_table` as p ON s.id = p.id
+        `products` as p ON s.id = p.id
 
     ";
 
@@ -17,19 +17,19 @@
 
     $result = $conn->query($sql);
 
-    $stocksIDs = [];
-    $stocksQTY = [];
-
+  
     if($result->num_rows > 0){
 
         $idx = 0;
 
         while($row = $result->fetch_assoc()){
 
-            $stocksIDs[$idx] = $row["id"];
-            $stocksQTY[$idx] = $row["PRODUCT_QTY"];
-            $prodName[$idx] = $row["PRODUCT_NAME"];
-            $prodDet[$idx] = $row["PRODUCT_DETAIL"];
+            $stockid[$idx] = $row["sid"];
+            $prodQTY[$idx] = $row["PRODUCT_QTY"];
+            $pname[$idx] = $row["name"];
+            $desc[$idx] = $row["product_desc"];
+
+
 
             $idx++;
 
@@ -80,13 +80,13 @@
 
     <?php
 
-        for($idx=0; $idx < count($stocksIDs); $idx++){
+        for($idx=0; $idx < count($stockid); $idx++){
                             
-            if(empty($prodName[$idx])){
+            // if(empty($prodName[$idx])){
 
-                // die();
+            //     // die();
 
-            }else{
+            // }else{
                     echo"
                         
                         <main>
@@ -95,25 +95,25 @@
 
                                 <div id='products'>
 
-                                    <h3>Product Name: $prodName[$idx] &nbsp;</h3> 
+                                    <h3>Product Name: $pname[$idx] &nbsp;</h3> 
                                     
                                         <table>
 
                                             <tr>
 
                                                 <td>
-                                                    <a href='edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
+                                                    <a href='edit_stock.php? id=$stockid[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
                                                     <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
                                                     &nbsp;
                                                 </td>
                                                 <td>
-                                                    Product Details: $prodDet[$idx] &nbsp; 
+                                                    Product Details: $desc[$idx] &nbsp; 
                                                     <br>
                                                     <br>
                                                     
                                                     <div id='stocks'>
                                                     
-                                                        Available Stock: $stocksQTY[$idx] &nbsp; 
+                                                        Available Stock: $prodQTY[$idx] &nbsp; 
                                                         <br>
                                                         <br>
 
@@ -135,310 +135,16 @@
 
                 }
 
-        }
+        // }
 
     ?>
 
-    <!-------------BREAD--------------->
+  
 
-    <?php
-    
-        $sql = "
-        SELECT
-        *
-        FROM 
-            `classic_stocks_bread` as b
-        LEFT JOIN 
-            `classic_bread` as c ON b.id = c.id
+ 
 
-        ";
 
 
-        $result = $conn->query($sql);
-
-        $stocksIDs = [];
-        $stocksQTY = [];
-
-        if($result->num_rows > 0){
-
-            $idx = 0;
-
-            while($row = $result->fetch_assoc()){
-
-                $stocksIDs[$idx] = $row["id"];
-                $stocksQTY[$idx] = $row["PRODUCT_QTY"];
-                $prodName[$idx] = $row["PRODUCT_NAME"];
-                $prodDet[$idx] = $row["PRODUCT_DETAIL"];
-
-                $idx++;
-
-            }
-        }else{
-            echo "0 result";
-        }
-
-
-            for($idx=0; $idx < count($stocksIDs); $idx++){
-                                
-                if(empty($prodName[$idx])){
-
-                    // die();
-
-                }else{
-                        echo"
-                            
-                            <main>
-
-                                <section class='glass'>
-
-                                    <div id='products'>
-
-                                        <h3>Product Name: $prodName[$idx] &nbsp;</h3> 
-                                        
-                                            <table>
-
-                                                <tr>
-
-                                                    <td>
-                                                        <a href='bread/edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
-                                                        <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
-                                                        &nbsp;
-                                                    </td>
-                                                    <td>
-                                                        Product Details: $prodDet[$idx] &nbsp; 
-                                                        <br>
-                                                        <br>
-                                                        
-                                                        <div id='stocks'>
-                                                        
-                                                            Available Stock: $stocksQTY[$idx] &nbsp; 
-                                                            <br>
-                                                            <br>
-
-                                                        </div>
-                                                    </td>
-                                    
-                                                </tr>
-
-                                            </table>
-
-                                    </div>
-
-                                </section>
-
-                            </main>
-
-                            <br>
-                        ";
-
-                    }
-
-            }
-
-    ?>
-
-
-    <!-------------DELUXE--------------->
-
-
-    <?php
-    
-    $sql = "
-    SELECT
-    *
-    FROM 
-        `deluxe_table_stocks` as d
-    LEFT JOIN 
-        `deluxe_table` as e ON d.id = e.id
-
-    ";
-
-
-    $result = $conn->query($sql);
-
-    $stocksIDs = [];
-    $stocksQTY = [];
-
-    if($result->num_rows > 0){
-
-        $idx = 0;
-
-        while($row = $result->fetch_assoc()){
-
-            $stocksIDs[$idx] = $row["id"];
-            $stocksQTY[$idx] = $row["PRODUCT_QTY"];
-            $prodName[$idx] = $row["PRODUCT_NAME"];
-            $prodDet[$idx] = $row["PRODUCT_DETAIL"];
-
-            $idx++;
-
-        }
-    }else{
-        echo "0 result";
-    }
-
-
-        for($idx=0; $idx < count($stocksIDs); $idx++){
-                            
-            if(empty($prodName[$idx])){
-
-                // die();
-
-            }else{
-                    echo"
-                        
-                        <main>
-
-                            <section class='glass'>
-
-                                <div id='products'>
-
-                                    <h3>Product Name: $prodName[$idx] &nbsp;</h3> 
-                                    
-                                        <table>
-
-                                            <tr>
-
-                                                <td>
-                                                    <a href='deluxe/edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
-                                                    <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
-                                                    &nbsp;
-                                                </td>
-                                                <td>
-                                                    Product Details: $prodDet[$idx] &nbsp; 
-                                                    <br>
-                                                    <br>
-                                                    
-                                                    <div id='stocks'>
-                                                    
-                                                        Available Stock: $stocksQTY[$idx] &nbsp; 
-                                                        <br>
-                                                        <br>
-
-                                                    </div>
-                                                </td>
-                                
-                                            </tr>
-
-                                        </table>
-
-                                </div>
-
-                            </section>
-
-                        </main>
-
-                        <br>
-                    ";
-
-                }
-
-        }
-
-    ?>
-
-    <!-------------PACKAGES--------------->
-
-
-    <?php
-    
-    $sql = "
-    SELECT
-    *
-    FROM 
-        `packages_table_stocks` as pack
-    LEFT JOIN 
-        `packages_table` as e ON pack.id = e.id
-
-    ";
-
-
-    $result = $conn->query($sql);
-
-    $stocksIDs = [];
-    $stocksQTY = [];
-
-    if($result->num_rows > 0){
-
-        $idx = 0;
-
-        while($row = $result->fetch_assoc()){
-
-            $stocksIDs[$idx] = $row["id"];
-            $stocksQTY[$idx] = $row["PRODUCT_QTY"];
-            $prodName[$idx] = $row["PRODUCT_NAME"];
-            $prodDet[$idx] = $row["PRODUCT_DETAIL"];
-
-            $idx++;
-
-        }
-    }else{
-        echo "0 result";
-    }
-
-
-        for($idx=0; $idx < count($stocksIDs); $idx++){
-                            
-            if(empty($prodName[$idx])){
-
-                // die();
-
-            }else{
-                    echo"
-                        
-                        <main>
-
-                            <section class='glass'>
-
-                                <div id='products'>
-
-                                    <h3>Product Name: $prodName[$idx] &nbsp;</h3> 
-                                    
-                                        <table>
-
-                                            <tr>
-
-                                                <td>
-                                                    <a href='packages/edit_stock.php? id=$stocksIDs[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
-                                                    <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/displayprod.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
-                                                    &nbsp;
-                                                </td>
-                                                <td>
-                                                    Product Details: $prodDet[$idx] &nbsp; 
-                                                    <br>
-                                                    <br>
-                                                    
-                                                    <div id='stocks'>
-                                                    
-                                                        Available Stock: $stocksQTY[$idx] &nbsp; 
-                                                        <br>
-                                                        <br>
-
-                                                    </div>
-                                                </td>
-                                
-                                            </tr>
-
-                                        </table>
-
-                                </div>
-
-                            </section>
-
-                        </main>
-
-                        <br>
-                    ";
-
-                }
-
-        }
-
-    ?>
-
-
-
-    
 
 
 
