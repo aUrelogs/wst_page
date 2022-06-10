@@ -1,19 +1,46 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-:root{
-   --blue:#2980b9;
-   --red:tomato;
-   --orange:orange;
-   --black:#333;
-   --white:#fff;
-   --bg-color:#eee;
-   --dark-bg:rgba(0,0,0,.7);
-   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-   --border:.1rem solid #999;
+@font-face {
+   font-family: 'Melted Font';
+   src: url(fonts/MeltedDl-XdLg.ttf);
 }
 
+body {
+    background-image: url(images/bgimg.PNG);
+   background-size: 100%;
+}
+
+li, a{
+   font-family: 'Melted Font';
+   font-weight: 500;
+   font-size: 20px;
+   color: #6b3e26;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+
+.logo{
+   cursor: pointer;
+   width: 40%;
+}
+
+.nav_links {
+   list-style: none;
+}
+.nav_links li {
+   display: inline-block;
+   padding: 0px 20px;
+   transition: all 0.3s ease 0s;
+}
+
+
+
+
+
 *{
-   font-family: 'Poppins', sans-serif;
+   font-family: 'Century Gothic';
    margin:0; padding:0;
    box-sizing: border-box;
    outline: none; border:none;
@@ -36,13 +63,7 @@ section{
    padding:2rem;
 }
 
-.heading{
-   text-align: center;
-   font-size: 3.5rem;
-   text-transform: uppercase;
-   color:var(--black);
-   margin-bottom: 2rem;
-}
+
 
 .btn,
 .option-btn,
@@ -50,9 +71,10 @@ section{
    display: block;
    width: 100%;
    text-align: center;
-   background-color: #FFC5D9;
+   background-color: #6b3e26;
    color:var(--white);
    font-size: 1.7rem;
+   font-family: 'Melted Font';
    padding:1.2rem 3rem;
    border-radius: .5rem;
    cursor: pointer;
@@ -62,7 +84,8 @@ section{
 .btn:hover,
 .option-btn:hover,
 .delete-btn:hover{
-   background-color: var(--black);
+   background-color: #6b3e26;
+   color: white;
 }
 
 .option-btn i,
@@ -71,21 +94,21 @@ section{
 }
 
 .option-btn{
-   background-color: green;
+   background-color: #ffcb85;
 }
 
 .delete-btn{
    margin-top: 0;
-   background-color: red;
+   background-color: #ffcb85;
 }
 
 .message{
-   background-color: var(--blue);
+   background-color: #ffcb85;
    position: sticky;
    top:0; left:0;
    z-index: 10000;
    border-radius: .5rem;
-   background-color: var(--white);
+   background-color: #fdf5c9;
    padding:1.5rem 2rem;
    margin:0 auto;
    max-width: 1200px;
@@ -97,21 +120,21 @@ section{
 
 .message span{
    font-size: 2rem;
-   color:var(--black);
+   color:#6b3e26;
 }
 
 .message i{
    font-size: 2.5rem;
-   color:var(--black);
+   color:#6b3e26;
    cursor: pointer;
 }
 
 .message i:hover{
-   color:var(--red);
+   color:#6b3e26;
 }
 
 .header{
-   background-color: #c2f2d0;
+   background-color: #fdf5c9;
    position: sticky;
    top:0; left:0;
    z-index: 1000;
@@ -128,48 +151,49 @@ section{
 .header .flex .logo{
    margin-right: auto;
    font-size: 2.5rem;
-   color:var(--black);
+   color: #6b3e26;
 }
 
 .header .flex .navbar a{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--black);
+   color:black;
 }
 
 .header .flex .navbar a:hover{
-   color:white;
+   color:#ffc5d9;
 }
 
 .header .flex .cart{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--black);
+   color:black;
 }
 
 .header .flex .cart:hover{
-   color:white;
+   color:#ffc5d9;
 }
 
 .header .flex .cart span{
    padding:.1rem .5rem;
    border-radius: .5rem;
-   background-color: var(--white);
-   color:var(--blue);
+   background-color: #6b3e26;
+   color:#ffc5d9;
    font-size: 2rem;
 }
 
 #menu-btn{
    margin-left: 2rem;
    font-size: 3rem;
+   font-family: 'Melted Font';
    cursor: pointer;
-   color:var(--white);
+   color:#c2f2d0;
    display: none;
 }
 
 .add-product-form{
    max-width: 50rem;
-   background-color: var(--bg-color);
+   background-color: #fdf5c9;
    border-radius: .5rem;
    padding:2rem;
    margin:0 auto;
@@ -179,7 +203,7 @@ section{
 .add-product-form h3{
    font-size: 2.5rem;
    margin-bottom: 1rem;
-   color:var(--black);
+   color:#fdf5c9;
    text-transform: uppercase;
    text-align: center;
 }
@@ -188,9 +212,9 @@ section{
    text-transform: none;
    padding:1.2rem 1.4rem;
    font-size: 1.7rem;
-   color:var(--black);
+   color:#6b3e26;
    border-radius: .5rem;
-   background-color: var(--white);
+   background-color: #c2f2d0;
    margin:1rem 0;
    width: 100%;
 }
@@ -207,14 +231,14 @@ section{
    padding:1.5rem;
    font-size: 2rem;
    background-color: #6b3e26;
-   color:var(--white);
+   color:#fdf5c9;
    
 }
 
 .display-product-table table td{
    padding:1.5rem;
    font-size: 2rem;
-   color:var(--black);
+   color:#6b3e26;
 }
 
 .display-product-table table td:first-child{
@@ -222,14 +246,14 @@ section{
 }
 
 .display-product-table table tr:nth-child(even){
-   background-color: var(--bg-color);
+   background-color: #6b3e26;
 }
 
 .display-product-table .empty{
    margin-bottom: 2rem;
    text-align: center;
-   background-color: var(--bg-color);
-   color:var(--black);
+   background-color: #ffc5d9;
+   color:#6b3e26;
    font-size: 2rem;
    padding:1.5rem;
 }
@@ -238,7 +262,7 @@ section{
    position: fixed;
    top:0; left:0;
    z-index: 1100;
-   background-color: var(--dark-bg);
+   background-color: #c2f2d0;
    padding:2rem;
    display: none;
    align-items: center;
@@ -250,18 +274,18 @@ section{
 .edit-form-container form{
    width: 50rem;
    border-radius: .5rem;
-   background-color: var(--white);
+   background-color:#fdf5c9;
    text-align: center;
    padding:2rem;
 }
 
 .edit-form-container form .box{
    width: 100%;
-   background-color: var(--bg-color);
+   background-color: #6b3e26;
    border-radius: .5rem;
    margin:1rem 0;
    font-size: 1.7rem;
-   color:var(--black);
+   color:#6b3e26;
    padding:1.2rem 1.4rem;
    text-transform: none;
 }
@@ -276,8 +300,8 @@ section{
 .products .box-container .box{
    text-align: center;
    padding:2rem;
-   box-shadow: var(--box-shadow);
-   border:var(--border);
+   box-shadow: #c2f2d0;
+   border:#ffcb85;
    border-radius: .5rem;
 }
 
@@ -288,12 +312,12 @@ section{
 .products .box-container .box h3{
    margin:1rem 0;
    font-size: 2.5rem;
-   color:var(--black);
+   color:#6b3e26;
 }
 
 .products .box-container .box .price{
    font-size: 2.5rem;
-   color:var(--black);
+   color:#6b3e26;
 }
 
 .shopping-cart table{
@@ -304,23 +328,23 @@ section{
 .shopping-cart table thead th{
    padding:1.5rem;
    font-size: 2rem;
-   color:var(--white);
-   background-color: var(--black);
+   color:black;
+   background-color: #ffc5d9;
    
 }
 
 .shopping-cart table tr td{
-   border-bottom: var(--border);
+   border-bottom: #c2f2d0;
    padding:1.5rem;
    font-size: 2rem;
-   color:var(--black);
+   color: white;
 }
 
 .shopping-cart table input[type="number"]{
-   border: var(--border);
+   border: #ffcb85;
    padding:1rem 2rem;
    font-size: 2rem;
-   color:var(--black);
+   color:#6b3e26;
    width: 10rem;
 }
 
@@ -328,21 +352,23 @@ section{
    padding:.5rem 1.5rem;
    cursor: pointer;
    font-size: 2rem;
-   background-color: var(--orange);
-   color:var(--white);
+   background-color: #ffcb85;
+   color: black;
 }
 
 .shopping-cart table input[type="submit"]:hover{
-   background-color: var(--black);
+   background-color: #6b3e26;
+   color: white;
 }
 
 .shopping-cart table .table-bottom{
-   background-color: var(--bg-color);
+   background-color: #ffc5d9;
 }
 
 .shopping-cart .checkout-btn{
    text-align: center;
    margin-top: 1rem;
+   font-size: 10px;
 }
 
 .shopping-cart .checkout-btn a{
@@ -354,9 +380,10 @@ section{
    pointer-events: none;
    opacity: .5;
    user-select: none;
-   background-color: var(--red);
-}
+   background-color: #6b3e26;
+   color:#ffc5d9;
 
+}
 .checkout-form form{
    padding:2rem;
    border-radius: .5rem;
@@ -375,15 +402,15 @@ section{
 
 .checkout-form form .flex .inputBox span{
    font-size: 2rem;
-   color:var(--black);
+   color:#6b3e26;
 }
 
 .checkout-form form .flex .inputBox input,
 .checkout-form form .flex .inputBox select{
    width: 100%;
-   background-color: var(--white);
+   background-color: #fdf5c9;
    font-size: 1.7rem;
-   color:var(--black);
+   color:#6b3e26;
    border-radius: .5rem;
    margin:1rem 0;
    padding:1.2rem 1.4rem;
@@ -393,7 +420,7 @@ section{
 
 .display-order{
    max-width: 50rem;
-   background-color: var(--white);
+   background-color: #fdf5c9;
    border-radius: .5rem;
    text-align: center;
    padding:1.5rem;
@@ -409,14 +436,14 @@ section{
    background-color: var(--bg-color);
    padding:.5rem 1.5rem;
    font-size: 2rem;
-   color:var(--black);
+   color:#6b3e26;
    margin:.5rem;
 }
 
 .display-order span.grand-total{
    width: 100%;
    background-color: var(--red);
-   color:var(--white);
+   color:#fdf5c9;
    padding:1rem;
    margin-top: 1rem;
 }
@@ -432,7 +459,7 @@ section{
    align-items: center;
    justify-content: center;
    z-index: 1100;
-   background-color: var(--dark-bg);
+   background-color: black;
    width: 100%;
 }
 
@@ -450,7 +477,7 @@ section{
 
 .order-message-container .message-container{
    width: 50rem;
-   background-color: var(--white);
+   background-color: #fdf5c9;
    border-radius: .5rem;
    padding:2rem;
    text-align: center;
@@ -469,9 +496,9 @@ section{
 }
 
 .order-message-container .message-container .order-detail span{
-   background-color: var(--white);
+   background-color: #fdf5c9;
    border-radius: .5rem;
-   color:var(--black);
+   color:#6b3e26;
    font-size: 2rem;
    display: inline-block;
    padding:1rem 1.5rem;
@@ -480,8 +507,8 @@ section{
 
 .order-message-container .message-container .order-detail span.total{
    display: block;
-   background: var(--red);
-   color:var(--white);
+   background: #ffc5d9;
+   color:#ffcb85;
 }
 
 .order-message-container .message-container .customer-details{
@@ -502,27 +529,13 @@ section{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media queries  */
 
 @media (max-width:1200px){
 
    .shopping-cart{
       overflow-x: scroll;
+
    }
 
    .shopping-cart table{
@@ -561,7 +574,7 @@ section{
    .header .flex .navbar{
       position: absolute;
       top:99%; left:0; right:0;
-      background-color: var(--blue);
+      background-color: #c2f2d0;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       transition: .2s linear;
    }
