@@ -14,7 +14,7 @@ if(isset($_POST['order_btn'])){
    $state = $_POST['state'];
    $country = $_POST['country'];
    $pin_code = $_POST['pin_code'];
-
+   $product_name[] = '';
    $cart_query = mysqli_query($conn, "SELECT * FROM `cart`");
    $price_total = 0;
    if(mysqli_num_rows($cart_query) > 0){
@@ -99,7 +99,7 @@ if(isset($_POST['order_btn'])){
          echo "<div class='display-order'><span>your cart is empty!</span></div>";
       }
       ?>
-      <span class="grand-total"> Grand total : ₱<?= $grand_total; ?>/- </span>
+      <span class="grand-total"> Grand total : ₱<?= $grand_total; ?></span>
    </div>
 
       <div class="flex">
