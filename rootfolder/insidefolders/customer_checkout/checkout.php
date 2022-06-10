@@ -70,7 +70,7 @@ if(isset($_POST['order_btn'])){
    <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body background="images/bgimg.PNG" >
 
 <?php include 'header.php'; ?>
 
@@ -99,7 +99,7 @@ if(isset($_POST['order_btn'])){
          echo "<div class='display-order'><span>your cart is empty!</span></div>";
       }
       ?>
-      <span class="grand-total"> Grand total : $<?= $grand_total; ?>/- </span>
+      <span class="grand-total"> Grand total : ₱<?= $grand_total; ?>/- </span>
    </div>
 
       <div class="flex">
