@@ -68,7 +68,7 @@ if(isset($_POST['update_product'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="style.css">
 
 </head>
 <body style="margin: 0;  background-image: url(images_/bgimg.PNG);

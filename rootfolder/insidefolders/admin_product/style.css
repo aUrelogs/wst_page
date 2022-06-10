@@ -6,7 +6,6 @@
    --orange:orange;
    --black:#333;
    --white:#fff;
-   --meow: #fdf5c9;
    --bg-color:#eee;
    --dark-bg:rgba(0,0,0,.7);
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
@@ -51,8 +50,8 @@ section{
    display: block;
    width: 100%;
    text-align: center;
-   background-color: var(--blue);
-   color:var(--white);
+   background-color: #fa3c96;;
+   color:var(--black);
    font-size: 1.7rem;
    padding:1.2rem 3rem;
    border-radius: .5rem;
@@ -72,12 +71,12 @@ section{
 }
 
 .option-btn{
-   background-color: var(--orange);
+   background-color: #75f99d
 }
 
 .delete-btn{
    margin-top: 0;
-   background-color: var(--red);
+   background-color: #fb76a5;
 }
 
 .message{
@@ -112,47 +111,44 @@ section{
 }
 
 .header{
-   background-color: var(--meow);
+   background-color: #c2f2d0;
    position: sticky;
    top:0; left:0;
    z-index: 1000;
-   
 }
 
 .header .flex{
    display: flex;
    align-items: center;
-   padding: 10px;
+   padding:1.5rem 2rem;
    max-width: 1200px;
-   margin-left: 67px;
+   margin:0 auto;
 }
 
 .header .flex .logo{
    margin-right: auto;
    font-size: 2.5rem;
-   color:var(--white);
+   color:var(--black);
 }
-nav{
-   margin-left: 160px;
-}
+
 .header .flex .navbar a{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--dark-bg);
+   color:var(--black);
 }
 
 .header .flex .navbar a:hover{
-   color:yellow;
+   color:white;
 }
 
 .header .flex .cart{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--dark-bg);
+   color:var(--black);
 }
 
 .header .flex .cart:hover{
-   color:yellow;
+   color:white;
 }
 
 .header .flex .cart span{
@@ -202,13 +198,17 @@ nav{
 .display-product-table table{
    width: 100%;
    text-align: center;
+   border-style:groove;
+   background-color: #ffcb85;
+   
 }
 
 .display-product-table table thead th{
    padding:1.5rem;
    font-size: 2rem;
-   background-color: var(--black);
+   background-color: #6b3e26;
    color:var(--white);
+   
 }
 
 .display-product-table table td{
@@ -306,6 +306,7 @@ nav{
    font-size: 2rem;
    color:var(--white);
    background-color: var(--black);
+   
 }
 
 .shopping-cart table tr td{
@@ -498,6 +499,8 @@ nav{
    padding:0 .5rem;
    text-transform: none;
 }
+
+
 
 
 

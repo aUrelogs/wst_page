@@ -6,6 +6,7 @@
    --orange:orange;
    --black:#333;
    --white:#fff;
+   --meow: #fdf5c9;
    --bg-color:#eee;
    --dark-bg:rgba(0,0,0,.7);
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
@@ -50,7 +51,7 @@ section{
    display: block;
    width: 100%;
    text-align: center;
-   background-color: #FFC5D9;
+   background-color: #fa3c96;
    color:var(--white);
    font-size: 1.7rem;
    padding:1.2rem 3rem;
@@ -71,12 +72,12 @@ section{
 }
 
 .option-btn{
-   background-color: green;
+   background-color: var(--orange);
 }
 
 .delete-btn{
    margin-top: 0;
-   background-color: red;
+   background-color: var(--red);
 }
 
 .message{
@@ -111,44 +112,47 @@ section{
 }
 
 .header{
-   background-color: #c2f2d0;
+   background-color: var(--meow);
    position: sticky;
    top:0; left:0;
    z-index: 1000;
+   
 }
 
 .header .flex{
    display: flex;
    align-items: center;
-   padding:1.5rem 2rem;
+   padding: 10px;
    max-width: 1200px;
-   margin:0 auto;
+   margin-left: 67px;
 }
 
 .header .flex .logo{
    margin-right: auto;
    font-size: 2.5rem;
-   color:var(--black);
+   color:var(--white);
 }
-
+nav{
+   margin-left: 160px;
+}
 .header .flex .navbar a{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--black);
+   color:var(--dark-bg);
 }
 
 .header .flex .navbar a:hover{
-   color:white;
+   color:yellow;
 }
 
 .header .flex .cart{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--black);
+   color:var(--dark-bg);
 }
 
 .header .flex .cart:hover{
-   color:white;
+   color:yellow;
 }
 
 .header .flex .cart span{
@@ -198,17 +202,13 @@ section{
 .display-product-table table{
    width: 100%;
    text-align: center;
-   border-style:groove;
-   background-color: #ffcb85;
-   
 }
 
 .display-product-table table thead th{
    padding:1.5rem;
    font-size: 2rem;
-   background-color: #6b3e26;
+   background-color: var(--black);
    color:var(--white);
-   
 }
 
 .display-product-table table td{
@@ -306,7 +306,6 @@ section{
    font-size: 2rem;
    color:var(--white);
    background-color: var(--black);
-   
 }
 
 .shopping-cart table tr td{
@@ -415,7 +414,7 @@ section{
 
 .display-order span.grand-total{
    width: 100%;
-   background-color: var(--red);
+   background-color: #fa3c96;
    color:var(--white);
    padding:1rem;
    margin-top: 1rem;
@@ -499,8 +498,6 @@ section{
    padding:0 .5rem;
    text-transform: none;
 }
-
-
 
 
 

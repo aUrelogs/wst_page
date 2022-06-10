@@ -30,16 +30,15 @@ if(isset($_GET['delete_all'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style.css">
    <title>shopping cart</title>
 
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body style="margin: 0;  background-image: url(images_/bgimg.PNG);
+   background-size: 100%;">
 
 <?php include 'header.php'; ?>
 
@@ -47,7 +46,7 @@ if(isset($_GET['delete_all'])){
 
 <section class="shopping-cart">
 
-   <h1 class="heading">shopping cart</h1>
+<font face="Melted Font" size="50" color="#fa3c96"><center>SHOPPING CART</center></font>
 
    <table>
 
@@ -73,7 +72,7 @@ if(isset($_GET['delete_all'])){
          <tr>
             <td><img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
             <td><?php echo $fetch_cart['name']; ?></td>
-            <td>$<?php echo number_format($fetch_cart['price']); ?>/-</td>
+            <td>P<?php echo number_format($fetch_cart['price']); ?>/-</td>
             <td>
                <form action="" method="post">
                   <input type="hidden" name="update_quantity_id"  value="<?php echo $fetch_cart['id']; ?>" >
@@ -81,7 +80,7 @@ if(isset($_GET['delete_all'])){
                   <input type="submit" value="update" name="update_update_btn">
                </form>   
             </td>
-            <td>$<?php echo $sub_total = number_format($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</td>
+            <td>P<?php echo $sub_total = number_format($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</td>
             <td><a href="cart.php?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('remove item from cart?')" class="delete-btn"> <i class="fas fa-trash"></i> remove</a></td>
          </tr>
          <?php
@@ -92,7 +91,7 @@ if(isset($_GET['delete_all'])){
          <tr class="table-bottom">
             <td><a href="http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/products.php" class="option-btn" style="margin-top: 0;">continue shopping</a></td>
             <td colspan="3">grand total</td>
-            <td>$<?php echo $grand_total; ?>/-</td>
+            <td>P<?php echo $grand_total; ?>/-</td>
             <td><a href="cart.php?delete_all" onclick="return confirm('are you sure you want to delete all?');" class="delete-btn"> <i class="fas fa-trash"></i> delete all </a></td>
          </tr>
 
@@ -101,7 +100,7 @@ if(isset($_GET['delete_all'])){
    </table>
 
    <div class="checkout-btn">
-      <a href="http://localhost/wst_page/rootfolder/insidefolders/customer_checkout/checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">procced to checkout</a>
+      <a href="http://localhost/wst_page/rootfolder/insidefolders/customer_checkout/checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">proceed to checkout</a>
    </div>
 
 </section>
