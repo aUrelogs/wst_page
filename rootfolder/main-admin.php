@@ -37,7 +37,7 @@
             <tr align="center">
                 <td><a href="insidefolders/admin_summary/summaryreports.php"><font face="Century Gothic" size="20">SUMMARY REPORTS</a></font></td>
                 <td><a href="insidefolders/admin_stocks/stocks.php"><font face="Century Gothic" size="20">STOCKS / STORAGE</font></td>
-                <td><a href="insidefolders/admin_product/displayprod.php"><font face="Century Gothic" size="20">PRODUCT MANAGER</font></td>
+                <td><a href="insidefolders/admin_product/admin.php"><font face="Century Gothic" size="20">PRODUCT MANAGER</font></td>
             </tr>
         </table>
     </div>
