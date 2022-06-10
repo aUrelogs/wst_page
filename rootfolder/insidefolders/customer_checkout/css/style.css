@@ -6,6 +6,7 @@
    --orange:orange;
    --black:#333;
    --white:#fff;
+   --meow: #fdf5c9;
    --bg-color:#eee;
    --dark-bg:rgba(0,0,0,.7);
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
@@ -111,18 +112,19 @@ section{
 }
 
 .header{
-   background-color: var(--blue);
+   background-color: var(--meow);
    position: sticky;
    top:0; left:0;
    z-index: 1000;
+   
 }
 
 .header .flex{
    display: flex;
    align-items: center;
-   padding:1.5rem 2rem;
+   padding: 10px;
    max-width: 1200px;
-   margin:0 auto;
+   margin-left: 67px;
 }
 
 .header .flex .logo{
@@ -130,11 +132,13 @@ section{
    font-size: 2.5rem;
    color:var(--white);
 }
-
+nav{
+   margin-left: 160px;
+}
 .header .flex .navbar a{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--white);
+   color:var(--dark-bg);
 }
 
 .header .flex .navbar a:hover{
@@ -144,7 +148,7 @@ section{
 .header .flex .cart{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--white);
+   color:var(--dark-bg);
 }
 
 .header .flex .cart:hover{
@@ -494,8 +498,6 @@ section{
    padding:0 .5rem;
    text-transform: none;
 }
-
-
 
 
 
