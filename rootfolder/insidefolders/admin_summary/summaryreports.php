@@ -1,6 +1,6 @@
 <?php 
 
-
+    include('connection.php');
     
  
 ?>
@@ -46,7 +46,26 @@
             </thead>
             <tbody>
                 <?php 
-                
+                    $sql = "SELECT * FROM `cart`";
+                    $result = mysqli_query($conn, $sql);
+                        if($result) {
+                            while($row = mysqli_fetch_assoc($result)){
+                                $id = $row['id'];
+                                $productNAME = $row['name'];
+                                $productPRICE = $row['price'];
+                                $productDESC = $row['quantity'];
+                                $total = $row['price']; //SAMPLE LANG FOR TOTALISATION
+
+                                echo '<tr align="center">
+                                <th scope="row">'.$id.'</th>
+                                <td>'.$productNAME.'</td>
+                                <td>'."₱ ".$productPRICE.'</td>
+                                <td>'." ".$productDESC.'</td>
+                                <td>'."₱ ".$total.'</td>
+                                </tr>';
+                            }
+                        }
+                    
                     
                  
                 ?>
