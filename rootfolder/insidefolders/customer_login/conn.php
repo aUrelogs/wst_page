@@ -2,7 +2,7 @@
 $servername="localhost";
 $dBUsername="root";
 $dBPassword="";
-$dBName="signup";
+$dBName="websysproj";
 
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 
