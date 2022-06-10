@@ -1,12 +1,8 @@
 <?php 
 
 
-    include('connection.php');
     
-    session_start();
-    if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
-
-
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +22,7 @@
         <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 250px;">
         <nav>
             <ul class ="nav_links">
-             <li><img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome <?php echo $_SESSION['username']; ?> | <a href ="http://localhost/wst_page/rootfolder/index.php">Log out</a></li> 
+             <li><img src="images/userlogoo.png" class="logo" style="width: 20px;"> Welcome Admin | <a href ="http://localhost/wst_page/rootfolder/index.php">Log out</a></li> 
             </ul>
         </nav>
     </header>
@@ -36,6 +32,8 @@
     
         <a href="http://localhost/wst_page/rootfolder/main-admin.php" class="text-light"><button class="btn btn-danger my-4">
         BACK TO MAIN</button></a>
+        
+        <h3>SALE SUMMARY</h3>
         <table class="table table-dark">
             <thead>
                 <tr align="center">
@@ -50,25 +48,7 @@
                 <?php 
                 
                     
-                    $sql = "SELECT * FROM `modify_products`";
-                    $result = mysqli_query($conn, $sql);
-                        if($result) {
-                            while($row = mysqli_fetch_assoc($result)){
-                                $id = $row['id'];
-                                $productNAME = $row['PRODUCT_NAME'];
-                                $productPRICE = $row['PRODUCT_PRICE'];
-                                $productDESC = $row['PRODUCT_DETAIL'];
-                                $total = $row['PRODUCT_PRICE'] * 0; //SAMPLE LANG FOR TOTALISATION
-
-                                echo '<tr align="center">
-                                <th scope="row">'.$id.'</th>
-                                <td>'.$productNAME.'</td>
-                                <td>'."₱ ".$productPRICE.'</td>
-                                <td>'."₱ "."None".'</td>
-                                <td>'."₱ ".$total.'</td>
-                                </tr>';
-                            }
-                        }
+                 
                 ?>
             </tbody>
         </table>
@@ -92,24 +72,8 @@
             <tbody>
                 <?php 
                 
-                    $sql = "SELECT * FROM `modify_products` LIMIT 5";
-                    $result = mysqli_query($conn, $sql);
-                        if($result) {
-                            while($row = mysqli_fetch_assoc($result)){
-                                $id = $row['id'];
-                                $productNAME = $row['PRODUCT_NAME'];
-                                $productPRICE = $row['PRODUCT_PRICE'];
-                                $productDESC = $row['PRODUCT_DETAIL'];
-
-                                echo '<tr align="center">
-                                <th scope="row">'.$id.'</th>
-                                <td>'.$productNAME.'</td>
-                                <td>'."₱ ".$productPRICE.'</td>
-                                <td>
-                                </td>
-                                </tr>';
-                            }
-                        }
+                    
+                      
                 ?>
             </tbody>
         </table>
@@ -133,24 +97,7 @@
             <tbody>
                 <?php 
                 
-                    $sql = "SELECT * FROM `modify_products` LIMIT 5 ";
-                    $result = mysqli_query($conn, $sql);
-                        if($result) {
-                            while($row = mysqli_fetch_assoc($result)){
-                                $id = $row['id'];
-                                $productNAME = $row['PRODUCT_NAME'];
-                                $productPRICE = $row['PRODUCT_PRICE'];
-                                $productDESC = $row['PRODUCT_DETAIL'];
-
-                                echo '<tr align="center">
-                                <th scope="row">'.$id.'</th>
-                                <td>'.$productNAME.'</td>
-                                <td>'."₱ ".$productPRICE.'</td>
-                                <td>
-                                </td>
-                                </tr>';
-                            }
-                        }
+                  
                 ?>
             </tbody>
         </table>
@@ -164,9 +111,6 @@
 
 <?php 
 
-    }else {
-        header ("location: index.php");
-        exit();
-    }
+ 
 
 ?>
