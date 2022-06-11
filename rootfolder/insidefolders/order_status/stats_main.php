@@ -32,52 +32,44 @@
 
     <div id="title">ORDER STATUS</div>
 
+    <br><br><br>
+
 
     <div id="ready">
+  
+        <a href="#" > <img src="image/pack.gif" alt="pack" title="Packing"></a>
 
-<img src="image/packaging.gif" alt="pack" title="Packing">
+    </div>
 
-</div>
+    <div class="to_pay">
+        
+        <a href="#"><h3>To Pay</h3></a>
 
+    </div>
 
-<div id="set">
+    <div id="set">
+      
+        <a href="#"><img src="image/ship.gif" alt="ship" title="Ship"></a>
 
-<img src="image/ship.gif" alt="pack" title="Ship">
+    </div>
 
+    <div class="to_ship">
 
+        <a href="#"><h3>To Ship</h3></a>
 
-</div>
+    </div>
 
+    <div id="go">
 
-<div id="go">
+        <a href="#"><img src="image/receive.gif" alt="receive" title="Receive"></a>
+  
+    </div>
+    
+    <div class="to_receive">
 
-    <img src="image/receive.gif" alt="pack" title="Receive">
-
-</div>
-
-    <main>
-
-       
-
-
-
-
-    </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <a href="#"><h3>To Receive</h3></a>
+    
+    </div>
     
 </body>
 </html>
