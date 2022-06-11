@@ -47,7 +47,6 @@
 
     </div>
 
-
     <div id="set">
       
         <a href="#"><img src="image/ship.gif" alt="ship" title="Ship"></a>
@@ -60,8 +59,6 @@
 
     </div>
 
-
-   
     <div id="go">
 
         <a href="#"><img src="image/receive.gif" alt="receive" title="Receive"></a>
@@ -73,28 +70,6 @@
         <a href="#"><h3>To Receive</h3></a>
     
     </div>
-
-    
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
 </body>
 </html>
