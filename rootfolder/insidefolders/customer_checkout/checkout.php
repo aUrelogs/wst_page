@@ -37,7 +37,7 @@ if(isset($_POST['order_btn'])){
          <h3>thank you for shopping!</h3>
          <div class='order-detail'>
             <span>".$total_product."</span>
-            <span class='total'> total : $".$price_total."/-  </span>
+            <span class='total'> total : ₱".$price_total."/-  </span>
          </div>
          <div class='customer-details'>
             <p> your name : <span>".$name."</span> </p>
@@ -104,7 +104,7 @@ if(isset($_POST['order_btn'])){
       <span class="grand-total"> Grand total : ₱<?= $grand_total; ?></span>
    </div>
 
-      <?php 
+      <!-- <?php 
          
          
          $sql = "SELECT * FROM `signup`";
@@ -114,7 +114,7 @@ if(isset($_POST['order_btn'])){
 
          echo $name;
       
-      ?>
+      ?> -->
 
       <div class="flex">
          <div class="inputBox">
@@ -155,11 +155,11 @@ if(isset($_POST['order_btn'])){
          </div>
          <div class="inputBox">
             <span>country</span>
-            <input type="text" placeholder="e.g. india" name="country" required>
+            <input type="text" placeholder="e.g. Philippines" name="country" required>
          </div>
          <div class="inputBox">
             <span>pin code</span>
-            <input type="text" placeholder="e.g. 123456" name="pin_code" required>
+            <input type="text" placeholder="e.g. 1017" name="pin_code" required>
          </div>
       </div>
       <input type="submit" value="order now" name="order_btn" class="btn">
