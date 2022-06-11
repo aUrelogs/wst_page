@@ -28,7 +28,41 @@
 </head>
 <body>
 
-<?php include 'header.php'; ?>
+    <?php include 'header.php'; ?>
+
+    <div id="title">ORDER STATUS</div>
+
+
+    <div id="ready">
+
+<img src="image/packaging.gif" alt="pack" title="Packing">
+
+</div>
+
+
+<div id="set">
+
+<img src="image/ship.gif" alt="pack" title="Ship">
+
+
+
+</div>
+
+
+<div id="go">
+
+    <img src="image/receive.gif" alt="pack" title="Receive">
+
+</div>
+
+    <main>
+
+       
+
+
+
+
+    </main>
 
 
 

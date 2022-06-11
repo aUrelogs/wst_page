@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+@font-face {
+   font-family: 'Melted Dl';
+   src: url(fonts/MeltedDl-XdLg.ttf);
+}
+
 :root{
    --blue:#fa3c96;
    --red:tomato;
@@ -507,18 +512,6 @@ section{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* media queries  */
 
 @media (max-width:1200px){
@@ -604,3 +597,65 @@ section{
    }
 
 }
+
+
+
+
+
+/* --------------- text ------------------- */ 
+
+#title{
+   margin: 2%;
+   font-family: 'Melted Dl';
+   color: #fa3c96;
+   font-size: 45px;
+   text-align: center;
+}
+
+/* --------------- box ------------------- */ 
+/* 
+main{
+   min-height: 5vh;
+   background: linear-gradient(to right top, #0e4fb1, #3c4ec7, #6549d8, #903be5, #bb12eb);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+} */
+
+/* --------------- image ------------------- */ 
+
+
+#ready img{
+
+   position: absolute;
+   clip-path: inset(12% 5% 14% 8%);
+   border-radius: 6%;
+   margin-left: 13%;
+   width: 200px;
+
+}
+
+#set img{
+
+   position: absolute;
+   clip-path: inset(12% 1% 6% 1%);
+   border-radius: 15%;
+   margin-left: 41%;
+   margin-top: 0.2%;
+   width: 180px;
+
+}
+
+#go img{
+
+   position: absolute;
+   clip-path: inset(10% 1% 8% 1%);
+   border-radius: 15%;
+   margin-left: 68%;
+   margin-top: 0.5%;
+   width: 180px;
+
+}
+
+
