@@ -47,7 +47,7 @@ if(isset($_POST['order_btn'])){
             <p> your payment mode : <span>".$method."</span> </p>
             <p>(*pay when product arrives*)</p>
          </div>
-            <a href='http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/products.php' class='btn'>continue shopping</a>
+            <a href='http://localhost/wst_page/rootfolder/insidefolders/order_status/stats_main.php' class='btn'>view order status</a>
          </div>
       </div>
       ";
