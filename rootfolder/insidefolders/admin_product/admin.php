@@ -80,7 +80,8 @@ if(isset($_POST['update_product'])){
         <nav>
             <ul class ="nav_links">
                 <li style="list-style: none; font-family: Century Gothic; font-weight: 500; font-size: 20px; color: #6b3e26; text-decoration: none; cursor: pointer;">
-                <img src="images_/userlogoo.png" class="logo" style="width: 20px;"> Welcome | <a href = http://localhost/wst_page/rootfolder/ style="font-family: Century Gothic; font-weight: 500; font-size: 20px; color: #6b3e26; text-decoration: none; cursor: pointer;">Log out</a></li>
+                <img src="images_/userlogoo.png" class="logo" style="width: 20px;"> Welcome User | <a href = http://localhost/wst_page/rootfolder/ 
+                style="font-family: Century Gothic; font-weight: 500; font-size: 20px; color: #6b3e26; text-decoration: none; cursor: pointer;">Log out</a> | <a href="http://localhost/wst_page/rootfolder/main-admin.php"  style="font-family: Century Gothic; font-weight: 500; font-size: 20px; color: #6b3e26; text-decoration: none; cursor: pointer;"> Back </a></li>
             </ul>
         </nav>
     </header>
@@ -107,6 +108,7 @@ if(isset($message)){
    <input type="number" name="p_price" min="0" placeholder="Product Price" class="box" required>
    <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg" class="box" required>
    <input type="submit" value="add the product" name="add_product" class="btn">
+   
 </form>
 
 </section>
@@ -172,7 +174,7 @@ if(isset($message)){
       <input type="number" min="0" class="box" required name="update_p_price" value="<?php echo $fetch_edit['price']; ?>">
       <input type="file" class="box" required name="update_p_image" accept="image/png, image/jpg, image/jpeg">
       <input type="submit" value="update the prodcut" name="update_product" class="btn">
-      <input type="reset" value="cancel" id="close-edit" class="option-btn"></a>
+      <a href="admin.php"><button id="close-edit" class="option-btn">CANCEL</a>
    </form>
 
    <?php

@@ -6,8 +6,8 @@
       <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 150px;">
 
       <nav class="navbar">
-         <a href="http://localhost/wst_page/rootfolder/">add products</a>
-         <a href="products.php">view products</a>
+         <a href="http://localhost/wst_page/rootfolder/">Admin | </a>
+         <a href="products.php">view products |</a>
       </nav>
 
       <?php
