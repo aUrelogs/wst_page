@@ -33,13 +33,13 @@
                 <th><a href="insidefolders/admin_summary/summaryreports.php"><img src="images/report.png" width="60%"></a></th>
                 <th><a href="insidefolders/admin_stocks/stocks.php"><img src="images/warehouse.png" width="60%"></a></th>
                 <th><a href="insidefolders/admin_product/admin.php"><img src="images/edit.png" width="60%"></a></th>
-                <th><a href="insidefolders/admin_product/admin.php"><img src="images/order.png" width="60%"></a></th>
+                <th><a href="http://localhost/wst_page/rootfolder/insidefolders/order_status_admin/admin_stat_main.php"><img src="images/order.png" width="60%"></a></th>
             </tr>
             <tr align="center">
                 <td><a href="insidefolders/admin_summary/summaryreports.php"><font face="Century Gothic" size="10">SUMMARY REPORTS</a></font></td>
                 <td><a href="insidefolders/admin_stocks/stocks.php"><font face="Century Gothic" size="10">STOCKS / STORAGE</font></td>
                 <td><a href="insidefolders/admin_product/admin.php"><font face="Century Gothic" size="10">PRODUCT MANAGER</font></td>
-                <td><a href="insidefolders/admin_product/admin.php"><font face="Century Gothic" size="10">ORDER STATUS</font></td>
+                <td><a href="http://localhost/wst_page/rootfolder/insidefolders/order_status_admin/admin_stat_main.php"><font face="Century Gothic" size="10">ORDER STATUS</font></td>
             </tr>
         </table>
     </div>

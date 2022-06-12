@@ -14,6 +14,7 @@
         align-items: center;
         padding: 10px 5%;
         background-color: #fdf5c9;
+
     }
 
     h2{
@@ -23,7 +24,7 @@
 
     h3{
         font-family: "Century Gothic";
-        color: #fa3c96;
+        color: white;
     }
 
     p{
@@ -45,19 +46,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    
+    }
 
+    table{
+        width: 70%;
+        
+    }
+
+    tr{
+        width: 50%;
     }
 
     input[type=number]{
-        padding: 20px;
-        width: 50%;
-        border: 2px solid darkgray;
+        padding: 3px;
+        width: 20%;
+        border: 2px solid white;
         border-radius: 4px;
+       
     }
 
     input[type=number]:focus{
         background-color: lightcyan;
-    
     }
 
     label{
@@ -67,24 +77,11 @@
         text-align: left;
     }
 
-    input[type=submit] {
-        background-color: lightyellow;
-        color: darkblue;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    
-    }
-    
-    input[type=submit]:hover {
-        background-color: orange;
-    }
-
-    .btn1{
+    .button1{
+        background-color: #4CAF50;
         border: none;
         color: white;
-        padding: 7px 25px;
+        padding: 14px 25px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -94,19 +91,71 @@
         cursor: pointer;
     }
     
-    .btn1{
+    .button1{
         background-color: transparent; 
         color: black; 
-        border: 2px solid #dc3444;
+        border: 2px solid #ba3500;
         border-radius: 5px;
     }
 
-       
-    .btn1:hover {
-        background-color: #dc3444;
+      
+    .button1:hover {
+        background-color: #ba3500;
         color: white;
     }
-
+    
+    .button2{
+       
+        border: none;
+        color: white;
+        padding: 6px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .button2{
+        background-color: transparent; 
+        color: white; 
+        border: 2px solid #006bdd;
+        border-radius: 5px;
+    }
+      
+    .button2:hover {
+        background-color: #006bdd;
+        color: white;
+    }
+    
+    .button3{
+       
+        border: none;
+        color: white;
+        padding: 6px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    .button3{
+        background-color: transparent; 
+        color: white; 
+        border: 2px solid #28a745;
+        border-radius: 5px;
+    }
+      
+    .button3:hover {
+        background-color: #28a745;
+        color: white;
+    }
+    
     .logo{
         cursor: pointer;
         width: 40%;
@@ -125,17 +174,17 @@
     .glass{
         min-height: 16vh;
         width: 90%;
-        background: #c2f2d0;
+        background: #6b3e26;
         border-radius: 2rem;
-        z-index: 3;    
+        z-index: 3;        
     }
 
-    .main1{
-        min-height: 5vh;
-        display: flex;
-        margin-left: 43%;
+    #products{
+        margin: 2%;
+        font-family: "Century Gothic";
+        color: white;
     }
-    
+
     #title{
         margin: 2%;
         font-family: 'Melted Dl';
@@ -143,22 +192,18 @@
         font-size: 45px;
     }
 
-    #products{
-        margin: 2%;
-        margin-left: 25%;
+    #current_stock{
         font-family: "Century Gothic";
-        color: white;    
+        color: white;
+        text-align: left;
     }
 
-    #current{
+    #stocks{       
         font-family: "Century Gothic";
-        color: black;    
+        color: orange;
+    
     }
 
-
-
-
-        
 
 
 
