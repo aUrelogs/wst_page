@@ -190,7 +190,8 @@
         font-family: 'Melted Dl';
         color: #fa3c96;
         font-size: 45px;
-    }
+        text-align: center;
+     }
 
     #current_stock{
         font-family: "Century Gothic";

@@ -23,6 +23,89 @@
 
     </header>
 
+    
+    
+    <div id="title">UPDATE ORDER STATUS</div>
+   
+
+    <main>
+        <a href='http://localhost/wst_page/rootfolder/main-admin.php'><button class='button1'>BACK TO MAIN</button></a>
+    </main>
+
+    <br>
+
+    <?php
+
+        // for($idx=0; $idx < count($stockid); $idx++){
+                            
+            // if(empty($pname[$idx])){
+
+                // die();
+
+            // }else{
+                echo"
+                    
+                    <main>
+
+                        <section class='glass'>
+
+                            <div id='products'>
+
+                                <h3>Product Name:  &nbsp;</h3> 
+                                
+                                    <table>
+
+                                        <tr>
+
+                                            <td>
+                                                <a href='edit_stock.php? id='          '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
+                                                <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/admin.php'><button type= 'btn' class='button3'>Live View</button></a>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                Product Details:        &nbsp; 
+                                                <br>
+                                                <br>
+
+                                                Quantity of Orders:  &nbsp; 
+                                                    <br>
+                                                    <br>
+                                                
+                                                <div id='stocks'>
+                                                
+                                                Price: &nbsp; 
+                                                    
+
+                                                    
+
+                                                </div>
+                                            </td>
+                            
+                                        </tr>
+
+                                    </table>
+
+                            </div>
+
+                        </section>
+
+                    </main>
+
+                    <br>
+                ";
+
+            // }
+
+        // }
+        
+        
+
+    ?>
+
+
+
+
+
 
 
 
