@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WHAT'S THE SCOOP | ADMIN ORDER STATUS</title>
-    <link rel="stylesheet" type="text/css" href="design_stocks.css">
+    <link rel="stylesheet" type="text/css" href="design_stats.css">
 
 </head>
 <body style="margin: 0px">
@@ -51,34 +51,40 @@
 
                             <div id='products'>
 
-                                <h3>Product Name:  &nbsp;</h3> 
+                                <h3>
+                                    Order Number: 
+                                    <br>
+                                    <br>
+                                    
+                                    Product Name:  &nbsp;
+                                
+                                </h3> 
                                 
                                     <table>
 
                                         <tr>
 
                                             <td>
-                                                <a href='edit_stock.php? id='          '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
-                                                <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/admin.php'><button type= 'btn' class='button3'>Live View</button></a>
+                                                <a href='update_stat_ad.php? id=          '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
+                                                <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/admin.php'><button type= 'btn' class='button3'>LIVE VIEW</button></a>
                                                 &nbsp;
                                             </td>
                                             <td>
-                                                Product Details:        &nbsp; 
-                                                <br>
-                                                <br>
+                                                    Product Details:        &nbsp; 
+                                                    <br>
+                                                    <br>
 
-                                                Quantity of Orders:  &nbsp; 
+                                                    Quantity of Orders:  &nbsp; 
                                                     <br>
                                                     <br>
                                                 
-                                                <div id='stocks'>
-                                                
-                                                Price: &nbsp; 
+                                                        <div id='stocks'>
                                                     
+                                                        Total Price:&nbsp;₱         &nbsp; 
+                                                            <br>
+                                                            <br>
 
-                                                    
-
-                                                </div>
+                                                        </div>
                                             </td>
                             
                                         </tr>
