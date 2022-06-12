@@ -25,7 +25,8 @@
 
         while($row = $result->fetch_assoc()){
 
-            $id[$idx] = $row ["cid"];
+            $id[$idx] = $row["cid"];
+            $ch_id[$idx] = $row["id"];
 
             $cart_name[$idx] = $row["name"];
             $cart_price[$idx] = $row["price"];
@@ -75,8 +76,16 @@
 
         for ($idx = 0; $idx < count($id); $idx++){
 
+            if(empty($ch_id[$idx])){
 
-            echo $cart_name[$idx];
+                die();
+
+            }else{
+
+                echo $cart_name[$idx];
+            }
+
+           
 
 
 
