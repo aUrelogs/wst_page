@@ -1,7 +1,18 @@
 <?php
 
     include 'connection.php';
+
+
+    // $sql ="INSERT INTO `products` (`id`) VALUES ('id')";
+    
+
    
+
+    //         $result = $conn->query($sql);
+
+
+    // $sql = "INSERT INTO `stocks`( `id`) VALUES ('id')";
+
 
    
     $sql = "
@@ -14,12 +25,18 @@
 
     ";
 
+
   
 
     $result = $conn->query($sql);
 
   
-    if($result->num_rows > 0){
+    if($result->num_rows > 0){  
+
+         
+
+           
+        
 
         $idx = 0;
 
@@ -80,12 +97,12 @@
     <br>
 
     <?php
-
+        
         for($idx=0; $idx < count($stockid); $idx++){
                             
             if(empty($pname[$idx])){
 
-                die();
+                // die();
 
             }else{
                     echo"
