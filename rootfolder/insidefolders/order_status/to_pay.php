@@ -2,6 +2,47 @@
  
     include'connection.php';
 
+    $sql = "
+    SELECT
+    *
+    FROM 
+        `check_out_prod` as a
+    LEFT JOIN 
+        `cart` as c ON a.cid = c.id
+
+    ";
+
+
+  
+
+    $result = $conn->query($sql);
+
+  
+    if($result->num_rows > 0){  
+
+
+        $idx = 0;
+
+        while($row = $result->fetch_assoc()){
+
+            $id[$idx] = $row ["cid"];
+
+            $cart_name[$idx] = $row["name"];
+            $cart_price[$idx] = $row["price"];
+            $cart_image[$idx] = $row["image"];
+            $cart_quant[$idx] = $row["quantity"];
+
+
+
+
+            $idx++;
+
+        }
+    }else{
+        echo "0 result";
+    }
+
+
 
 
 ?>
@@ -29,6 +70,27 @@
 <body>
 
     <?php include 'header.php';?>
+
+    <?php
+
+        for ($idx = 0; $idx < count($id); $idx++){
+
+
+            echo $cart_name[$idx];
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+    ?>
 
 </body>
 </html>
