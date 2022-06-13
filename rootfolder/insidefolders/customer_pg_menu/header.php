@@ -7,7 +7,7 @@
 
       <nav class="navbar">
          <a href="http://localhost/wst_page/rootfolder/">Admin | </a>
-         <a href="products.php">view products |</a>
+         <a href="products.php">View Products |</a>
       </nav>
 
       <?php
@@ -17,7 +17,7 @@
 
       ?>
 
-      <a href="http://localhost/wst_page/rootfolder/insidefolders/shoppingcart/cart.php" class="cart">cart <span><?php echo $row_count; ?></span> </a>
+      <a href="http://localhost/wst_page/rootfolder/insidefolders/shoppingcart/cart.php" class="cart">Cart <span><?php echo $row_count; ?></span> </a>
 
       <div id="menu-btn" class="fas fa-bars"></div>
 
