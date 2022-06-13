@@ -79,7 +79,7 @@
 
     <?php
 
-        for ($idx = 0; $idx < count($status_id); $idx++){
+        for ($idx = 0; $idx < count($orderID); $idx++){
 
             
             if($status[$idx] == 1){
@@ -143,13 +143,13 @@
                 <br>
             
             ";
-            break;
+            
             }
 
 
             if($status[$idx] == 0){
 
-                echo "You don't have any purchase OR Your order is on processing";
+               
                 break;
 
             }

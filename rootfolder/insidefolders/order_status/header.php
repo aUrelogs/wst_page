@@ -21,6 +21,10 @@
 
       <div id="menu-btn" class="fas fa-bars"></div>
 
+      <nav class="navbar">
+         <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/stats_main.php">Order Status</a>
+      </nav>
+
    </div>
 
 </header>

@@ -145,7 +145,7 @@ section{
 
 .header .flex .navbar a{
    margin-left: 2rem;
-   font-size: 2rem;
+   font-size: 1.3rem;
    color:var(--white);
 }
 
@@ -155,7 +155,7 @@ section{
 
 .header .flex .cart{
    margin-left: 2rem;
-   font-size: 2rem;
+   font-size: 1.3rem;
    color:var(--white);
 }
 
