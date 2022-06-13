@@ -6,7 +6,8 @@ if(isset($_POST['order_btn'])){
 
 
 
-   $name = $_POST['name'];
+   $fname = $_POST['fname'];
+   $lname = $_POST['lname'];
    $number = $_POST['number'];
    $email = $_POST['email'];
    $method = $_POST['method'];
@@ -27,7 +28,7 @@ if(isset($_POST['order_btn'])){
       };
    };
 
-   $total_product = implode(', ',$product_name);
+   $total_product = implode(' ',$product_name);
    $detail_query = mysqli_query($conn, "INSERT INTO `order`(name, number, email, method, flat, street, city, state, country, pin_code, total_products, total_price) VALUES('$name','$number','$email','$method','$flat','$street','$city','$state','$country','$pin_code','$total_product','$price_total')") or die('query failed');
 
    if($cart_query && $detail_query){
@@ -37,10 +38,10 @@ if(isset($_POST['order_btn'])){
          <h3>thank you for shopping!</h3>
          <div class='order-detail'>
             <span>".$total_product."</span>
-            <span class='total'> total : $".$price_total."/-  </span>
+            <span class='total'> total : ₱ ".$price_total."  </span>
          </div>
          <div class='customer-details'>
-            <p> your name : <span>".$name."</span> </p>
+            <p> your name : <span>".$fname.$lname."</span> </p>
             <p> your number : <span>".$number."</span> </p>
             <p> your email : <span>".$email."</span> </p>
             <p> your address : <span>".$flat.", ".$street.", ".$city.", ".$state.", ".$country." - ".$pin_code."</span> </p>
@@ -105,21 +106,37 @@ if(isset($_POST['order_btn'])){
    </div>
 
       <?php 
-         
+
+         $sql = "SELECT * FROM signup";
+         $result = mysqli_query($conn, $sql);
+         $row = mysqli_fetch_assoc($result);
+
+         $nameSign = $row['First_Name'];
+         $nameSign2 = $row['Last_name'];
+         $emailSign = $row['Email_add'];
+         $mobile_num = $row['Mobile_Num'];
+         $user_add = $row['User_Address'];
+         $zipcode = $row['ZipCode'];
+        
+
       ?>
 
       <div class="flex">
          <div class="inputBox">
-            <span>your name</span>
-            <input type="text" placeholder="enter your name" name="name" required>
+            <span>First name</span>
+            <input type="text" placeholder="enter your name" name="fname" value = <?php echo $nameSign;?> required>
          </div>
          <div class="inputBox">
-            <span>your number</span>
-            <input type="number" placeholder="enter your number" name="number" required>
+            <span>Last Name</span>
+            <input type="text" placeholder="enter your name" name="lname" value = <?php echo $nameSign2; ?> required>
+         </div>
+         <div class="inputBox">
+            <span>Mobile Number</span>
+            <input type="text" placeholder="enter your number" name="number" value=  <?php echo $mobile_num; ?> required>
          </div>
          <div class="inputBox">
             <span>your email</span>
-            <input type="email" placeholder="enter your email" name="email" required>
+            <input type="email" placeholder="enter your email" name="email"  value=<?php echo $emailSign; ?> required>
          </div>
          <div class="inputBox">
             <span>payment method</span>
@@ -129,13 +146,10 @@ if(isset($_POST['order_btn'])){
                <option value="paypal">Visa / Paypal</option>
             </select>
          </div>
+
          <div class="inputBox">
-            <span>address line 1</span>
-            <input type="text" placeholder="e.g. flat no." name="flat" required>
-         </div>
-         <div class="inputBox">
-            <span>address line 2</span>
-            <input type="text" placeholder="e.g. street name" name="street">
+            <span>address</span>
+            <input type="text" placeholder="e.g. street name" name="street" value = <?php echo $user_add ?> >
          </div>
          <div class="inputBox">
             <span>city</span>
@@ -151,7 +165,7 @@ if(isset($_POST['order_btn'])){
          </div>
          <div class="inputBox">
             <span>pin code</span>
-            <input type="text" placeholder="e.g. 123456" name="pin_code" required>
+            <input type="text" placeholder="e.g. 123456" name="pin_code" value = <?php $zipcode; ?> required>
          </div>
       </div>
       <input type="submit" value="order now" name="order_btn" class="btn">
