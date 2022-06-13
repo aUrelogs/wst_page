@@ -70,11 +70,11 @@
 
             <div id="products">
 
-                <form action="admin_stat_main.php" method="post">
+                <form action="save_stat.php" method="post">
 
                     <input type="hidden" name="ch_id" value="<?php echo $id; ?>" />
                     
-                    <input type="number" id = "status_up" name= "status_up" value="<?php echo $statusUP; ?> " placeholder = "Type Quantity" min="0" max = "2"/>
+                    <input type="number" id = "status_up" name= "status_up" value="<?php echo $statusUP ?> " placeholder = "Type Quantity" min="0" max = "2"/>
 
                     <input type= "submit" value="SUBMIT">
 

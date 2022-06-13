@@ -90,8 +90,8 @@
                             
             if(empty($pname[$idx])){
 
-                // die();
-
+        
+               
             }else{
                     echo"
                         
