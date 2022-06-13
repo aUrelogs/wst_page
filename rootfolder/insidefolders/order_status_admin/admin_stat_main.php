@@ -1,3 +1,32 @@
+<?php
+
+    include 'connection.php';
+
+
+    $sql = "SELECT * FROM `order` as o LEFT JOIN `check_out_prod` as c ON o.id = c.id";
+
+    $result = $conn->query($sql);
+
+    if($result->num_rows > 0){
+
+        while($row = $result->fetch_assoc()){
+
+            $total_prod = $row["total_products"];
+
+
+
+        }
+
+
+    }
+
+    
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,79 +63,67 @@
 
     <br>
 
-    <?php
+    
+    <main>
 
-        // for($idx=0; $idx < count($stockid); $idx++){
-                            
-            // if(empty($pname[$idx])){
+        <section class='glass'>
+ 
+           <div id='products'>
 
-                // die();
-
-            // }else{
-                echo"
-                    
-                    <main>
-
-                        <section class='glass'>
-
-                            <div id='products'>
-
-                                <h3>
-                                    Order Number: 
-                                    <br>
-                                    <br>
+                <h3>
+                        Order Number: 
+                        <br>
+                        <br>
                                     
-                                    Product Name:  &nbsp;
+                        Product Name:  &nbsp;
                                 
-                                </h3> 
+                </h3> 
                                 
-                                    <table>
+                    <table>
 
-                                        <tr>
+                        <tr>
 
-                                            <td>
-                                                <a href='update_stat_ad.php? id=          '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
-                                                <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/admin.php'><button type= 'btn' class='button3'>LIVE VIEW</button></a>
-                                                &nbsp;
-                                            </td>
-                                            <td>
-                                                    Product Details:        &nbsp; 
-                                                    <br>
-                                                    <br>
+                            <td>
+                                <a href='update_stat_ad.php? id=          '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
+                                <a href='http://localhost/wst_page/rootfolder/insidefolders/order_status/stats_main.php'><button type= 'btn' class='button3'>LIVE VIEW</button></a>
+                                &nbsp;
+                            </td>
+                            <td>
+                                Product Details:        &nbsp; 
+                                <br>
+                                <br>
 
-                                                    Quantity of Orders:  &nbsp; 
-                                                    <br>
-                                                    <br>
+                                Quantity of Orders:  &nbsp; 
+                                <br>
+                                <br>
+
+                                Total Price:&nbsp;₱         &nbsp; 
+                                <br>
+                                <br>
                                                 
-                                                        <div id='stocks'>
-                                                    
-                                                        Total Price:&nbsp;₱         &nbsp; 
-                                                            <br>
-                                                            <br>
+                                    <div id='stocks'>
 
-                                                        </div>
-                                            </td>
+                                        Status: &nbsp;
+                                        <br>
+                                        <br>
+                                    </div>
+                            </td>
                             
-                                        </tr>
+                        </tr>
 
-                                    </table>
+                    </table>
 
-                            </div>
+            </div>
 
-                        </section>
+        </section>
 
-                    </main>
+    </main>
 
-                    <br>
-                ";
+    <br>
 
-            // }
 
-        // }
-        
-        
+   
 
-    ?>
 
 
 
