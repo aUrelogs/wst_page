@@ -21,18 +21,22 @@ if(isset($_POST["submit"])){
    }
    if (InvalidUID($username) !== false){
     header("location: homepage.php?error=InvalidUsername");
+
     exit();
     }
     if (InvalidEmail($email) !== false){
         header("location: homepage.php?error=invalidEmail");
+   
         exit();
     }
     if (PasswordMatch($Password, $ConfirmPassowrd) !== false){
         header("location: homepage.php?error=PasswordNotMatch");
+ 
         exit();
     }
     if (uidExist($conn, $username, $email) !== false){
         header("location: homepage.php?error=UsernameExistorEmailExist");
+
         exit();
     }
 
