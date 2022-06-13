@@ -80,6 +80,8 @@
 
     <main>
         <a href='http://localhost/wst_page/rootfolder/main-admin.php'><button class='button1'>BACK TO MAIN</button></a>
+
+        
     </main>
 
     <br>
@@ -104,7 +106,7 @@
                             <div id='products'>
             
                                 <h3>
-                                        Order Number: 
+                                        Order Number:  $status_id[$idx]
                                         <br>
                                         <br>
                                                     
@@ -138,16 +140,11 @@
                                                             
                                                 <div id='stocks'>
             
-                                                    Status: $status[$idx]
-                                                    
-                                                    
-                                                    
-                                                    &nbsp;
+                                                    Status: $status[$idx] &nbsp;
                                                     <br>
                                                     <br>
                                                 </div>
                                         </td>
-                                        
                                     </tr>
             
                                 </table>

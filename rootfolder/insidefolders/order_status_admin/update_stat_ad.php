@@ -101,11 +101,11 @@
                                 
                             
                                 if($statusUP == 0 ){
-                                    echo "&nbsp;No stock";
+                                    echo "&nbsp;To Pay";
                                 } elseif($statusUP == 1){
-                                    echo "&nbsp;Piece";
+                                    echo "&nbsp;To Ship";
                                 }else{
-                                    echo "&nbsp;Pieces";
+                                    echo "&nbsp; To Receive";
                                 }
                                
                             ?>
