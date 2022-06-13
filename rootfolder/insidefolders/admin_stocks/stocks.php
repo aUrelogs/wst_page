@@ -2,18 +2,6 @@
 
     include 'connection.php';
 
-
-    // $sql ="INSERT INTO `products` (`id`) VALUES ('id')";
-    
-
-   
-
-    //         $result = $conn->query($sql);
-
-
-    // $sql = "INSERT INTO `stocks`( `id`) VALUES ('id')";
-
-
    
     $sql = "
     SELECT

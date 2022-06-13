@@ -2,6 +2,35 @@
 
     include 'connection.php';
 
+    $id = "-1";
+
+    if(!isset($_GET['id'])){
+        header('Location: admin_stat_main.php');
+        exit();
+    }
+
+    $id = $_GET['id'];
+    $productQuant = "";
+
+   
+
+    $sql = "SELECT * FROM `check_out_prod` WHERE `cid` = $id;";
+
+    $result = $conn->query($sql);
+
+    if($result->num_rows > 0){
+        
+        while($row = $result->fetch_assoc()){
+            
+            $statusUP = $row["status"];
+
+        }
+
+    }else{
+        echo "0 result";
+    }
+
+
 ?>
 
 
@@ -43,9 +72,9 @@
 
                 <form action="admin_stat_main.php" method="post">
 
-                    <input type="hidden" name="stock_id" value="<?php echo $id; ?>" />
+                    <input type="hidden" name="ch_id" value="<?php echo $id; ?>" />
                     
-                    <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?> " placeholder = "Type Quantity" min="0"/>
+                    <input type="number" id = "status_up" name= "status_up" value="<?php echo $statusUP; ?> " placeholder = "Type Quantity" min="0" max = "2"/>
 
                     <input type= "submit" value="SUBMIT">
 
@@ -71,13 +100,13 @@
                                 echo "Current Status:" . "&nbsp;" ;
                                 
                             
-                                // if( == 0 ){
-                                //     echo "&nbsp;No stock";
-                                // } elseif( == 1){
-                                //     echo "&nbsp;Piece";
-                                // }else{
-                                //     echo "&nbsp;Pieces";
-                                // }
+                                if($statusUP == 0 ){
+                                    echo "&nbsp;No stock";
+                                } elseif($statusUP == 1){
+                                    echo "&nbsp;Piece";
+                                }else{
+                                    echo "&nbsp;Pieces";
+                                }
                                
                             ?>
 

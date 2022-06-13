@@ -3,15 +3,34 @@
     include 'connection.php';
 
 
-    $sql = "SELECT * FROM `order` as o LEFT JOIN `check_out_prod` as c ON o.id = c.id";
+    $sql = "
+    SELECT
+    *
+    FROM 
+        `check_out_prod` as c
+    LEFT JOIN 
+        `order` as o ON c.id = o.id
+
+    ";
+
 
     $result = $conn->query($sql);
 
     if($result->num_rows > 0){
 
+
+        $idx = 0;
+
         while($row = $result->fetch_assoc()){
 
-            $total_prod = $row["total_products"];
+            $status_id[$idx] = $row["cid"];
+
+            $total_prod[$idx] = $row["total_products"];
+            $status[$idx]= $row["status"];
+
+
+
+            $idx++;
 
 
 
@@ -64,62 +83,113 @@
     <br>
 
     
-    <main>
+    <?php
 
-        <section class='glass'>
- 
-           <div id='products'>
 
-                <h3>
-                        Order Number: 
-                        <br>
-                        <br>
-                                    
-                        Product Name:  &nbsp;
-                                
-                </h3> 
-                                
-                    <table>
+            for($idx=0; $idx < count($status_id); $idx++){
 
-                        <tr>
+                if(empty($total_prod[$idx])){
 
-                            <td>
-                                <a href='update_stat_ad.php? id=          '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
-                                <a href='http://localhost/wst_page/rootfolder/insidefolders/order_status/stats_main.php'><button type= 'btn' class='button3'>LIVE VIEW</button></a>
-                                &nbsp;
-                            </td>
-                            <td>
-                                Product Details:        &nbsp; 
+                    die();
+                }else{
+
+                    echo "
+
+                <main>
+
+                <section class='glass'>
+         
+                   <div id='products'>
+        
+                        <h3>
+                                Order Number: 
                                 <br>
                                 <br>
-
-                                Quantity of Orders:  &nbsp; 
-                                <br>
-                                <br>
-
-                                Total Price:&nbsp;₱         &nbsp; 
-                                <br>
-                                <br>
+                                            
+                                Product Name:<?php  echo $total_prod[$idx];            ?>  &nbsp;
+                                        
+                        </h3> 
+                                        
+                            <table>
+        
+                                <tr>
+        
+                                    <td>
+                                        <a href='update_stat_ad.php? id= $status_id[$idx] '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
+                                        <a href='http://localhost/wst_page/rootfolder/insidefolders/order_status/stats_main.php'><button type= 'btn' class='button3'>LIVE VIEW</button></a>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        Product Details:        &nbsp; 
+                                        <br>
+                                        <br>
+        
+                                        Quantity of Orders:  &nbsp; 
+                                        <br>
+                                        <br>
+        
+                                        Total Price:&nbsp;₱         &nbsp; 
+                                        <br>
+                                        <br>
+                                                        
+                                            <div id='stocks'>
+        
+                                                Status: $status[$idx]
                                                 
-                                    <div id='stocks'>
+                                                
+                                                
+                                                &nbsp;
+                                                <br>
+                                                <br>
+                                            </div>
+                                    </td>
+                                    
+                                </tr>
+        
+                            </table>
+        
+                    </div>
+        
+                </section>
+        
+            </main>
+        
+            <br>
+                
+                ";
 
-                                        Status: &nbsp;
-                                        <br>
-                                        <br>
-                                    </div>
-                            </td>
-                            
-                        </tr>
 
-                    </table>
+                }
 
-            </div>
 
-        </section>
 
-    </main>
 
-    <br>
+
+
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ?>
 
 
    
