@@ -24,9 +24,12 @@
         while($row = $result->fetch_assoc()){
 
             $status_id[$idx] = $row["cid"];
+            $orderID[$idx] = $row["id"];
             
-
+            $customer[$idx] = $row["name"];
+            $phone[$idx] = $row["number"];
             $total_prod[$idx] = $row["total_products"];
+            $total_price[$idx] = $row["total_price"];
             $status[$idx]= $row["status"];
 
             $idx++;
@@ -87,7 +90,7 @@
 
             for($idx=0; $idx < count($status_id); $idx++){
 
-                if(empty($status_id[$idx] )){        
+                if(empty($orderID[$idx])){        
 
 
                 }else{
@@ -105,7 +108,7 @@
                                         <br>
                                         <br>
                                                     
-                                        Product Name:  $total_prod[$idx]      &nbsp;
+                                        Names of Product Purchased (Quantity):  &nbsp; $total_prod[$idx]
                                                 
                                 </h3> 
                                             
@@ -119,15 +122,17 @@
                                             &nbsp;
                                         </td>
                                         <td>
-                                            Product Details:        &nbsp; 
+
+
+                                            Name of Customer: &nbsp; $customer[$idx]       
+                                            <br>
+                                            <br>
+
+                                            Phone Number: &nbsp; $phone[$idx]
                                             <br>
                                             <br>
             
-                                            Quantity of Orders:  &nbsp; 
-                                            <br>
-                                            <br>
-            
-                                            Total Price:&nbsp;₱         &nbsp; 
+                                            Total Price:&nbsp;₱&nbsp; $total_price[$idx]
                                             <br>
                                             <br>
                                                             
