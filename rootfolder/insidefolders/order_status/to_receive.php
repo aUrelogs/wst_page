@@ -2,15 +2,15 @@
  
     include 'connection.php';
 
-    // $sql = "
-    // SELECT
-    // *
-    // FROM 
-    //     `check_out_prod` as a
-    // LEFT JOIN 
-    //     `cart` as c ON a.cid = c.id
+    $sql = "
+    SELECT
+    *
+    FROM 
+        `check_out_prod` as a
+    LEFT JOIN 
+        `order` as c ON a.id = c.id
 
-    // ";
+    ";
 
 
   

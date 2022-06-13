@@ -1,16 +1,16 @@
 <?php 
  
-    // include 'connection.php';
+    include 'connection.php';
 
-    // $sql = "
-    // SELECT
-    // *
-    // FROM 
-    //     `check_out_prod` as a
-    // LEFT JOIN 
-    //     `cart` as c ON a.cid = c.id
+    $sql = "
+    SELECT
+    *
+    FROM 
+        `check_out_prod` as a
+    LEFT JOIN 
+        `order` as c ON a.id = c.id
 
-    // ";
+    ";
 
 
   
@@ -25,18 +25,23 @@
 
         while($row = $result->fetch_assoc()){
 
-            $id[$idx] = $row["cid"];
-            $ch_id[$idx] = $row["id"];
 
-            $cart_name[$idx] = $row["name"];
-            $cart_price[$idx] = $row["price"];
-            $cart_image[$idx] = $row["image"];
-            $cart_quant[$idx] = $row["quantity"];
-
-
-
+            $status_id[$idx] = $row["cid"];
+            $orderID[$idx] = $row["id"];
+            
+            $customer[$idx] = $row["name"];
+            $phone[$idx] = $row["number"];
+            $total_prod[$idx] = $row["total_products"];
+            $total_price[$idx] = $row["total_price"];
+            $status[$idx]= $row["status"];
 
             $idx++;
+
+           
+
+
+
+        
 
         }
     }else{
@@ -55,7 +60,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHAT'S THE SCOOP?  | To Pay</title>
+    <title>WHAT'S THE SCOOP?  | TO PAY</title>
 
      <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -74,10 +79,10 @@
 
     <?php
 
-        for ($idx = 0; $idx < count($id); $idx++){
+        for ($idx = 0; $idx < count($status_id); $idx++){
 
 
-            echo $cart_name[$idx] . "<br>";
+         echo  $status[$idx] . "<br>";
 
 
 

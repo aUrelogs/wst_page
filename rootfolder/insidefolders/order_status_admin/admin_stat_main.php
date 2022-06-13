@@ -81,11 +81,24 @@
     <main>
         <a href='http://localhost/wst_page/rootfolder/main-admin.php'><button class='button1'>BACK TO MAIN</button></a>
 
-        
     </main>
 
-    <br>
+    <main>
 
+
+    <h3 style="color: black;"> Meaning of Numbers:  </h3>
+
+    </main>
+
+        
+        <p style="color: red;"><b>0 - To Pay</b></p>
+        <p style="color: blue;"><b>1 - To Ship</b></p>
+        <p style="color: green;"><b>2 - To Receive</b></p>
+
+
+        <br>
+
+    
     
     <?php
 
@@ -104,7 +117,7 @@
                         <section class='glass'>
             
                             <div id='products'>
-            
+
                                 <h3>
                                         Order Number:  $status_id[$idx]
                                         <br>
@@ -117,6 +130,8 @@
                                 <table>
             
                                     <tr>
+
+                                      
             
                                         <td>
                                             <a href='update_stat_ad.php? id= $status_id[$idx] '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
