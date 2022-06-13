@@ -21,11 +21,6 @@
   
     if($result->num_rows > 0){  
 
-         
-
-           
-        
-
         $idx = 0;
 
         while($row = $result->fetch_assoc()){
@@ -34,8 +29,6 @@
             $prodQTY[$idx] = $row["PRODUCT_QTY"];
             $pname[$idx] = $row["name"];
             $desc[$idx] = $row["product_desc"];
-
-
 
             $idx++;
 
@@ -56,7 +49,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="design_stocks.css">
   
-    <title> Stocks Status</title>
+    <title>WHAT'S THE SCOOP | STOCK STATUS</title>
 
 </head>
 <body style="margin: 0px">

@@ -105,7 +105,7 @@
                                         <br>
                                         <br>
                                                     
-                                        Product Name:<?php  echo $total_prod[$idx];            ?>  &nbsp;
+                                        Product Name:  $total_prod[$idx]      &nbsp;
                                                 
                                 </h3> 
                                             

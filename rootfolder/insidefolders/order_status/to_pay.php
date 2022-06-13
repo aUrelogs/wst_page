@@ -1,16 +1,16 @@
 <?php 
  
-    include'connection.php';
+    // include 'connection.php';
 
-    $sql = "
-    SELECT
-    *
-    FROM 
-        `check_out_prod` as a
-    LEFT JOIN 
-        `cart` as c ON a.cid = c.id
+    // $sql = "
+    // SELECT
+    // *
+    // FROM 
+    //     `check_out_prod` as a
+    // LEFT JOIN 
+    //     `cart` as c ON a.cid = c.id
 
-    ";
+    // ";
 
 
   
@@ -76,17 +76,8 @@
 
         for ($idx = 0; $idx < count($id); $idx++){
 
-            if(empty($ch_id[$idx])){
 
-                die();
-
-            }else{
-
-                echo $cart_name[$idx];
-            }
-
-           
-
+            echo $cart_name[$idx] . "<br>";
 
 
 
