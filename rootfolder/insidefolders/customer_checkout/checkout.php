@@ -1,13 +1,10 @@
 <?php
 
-@include 'config.php';
+include 'config.php';
 
 if(isset($_POST['order_btn'])){
 
-
-
-   $fname = $_POST['fname'];
-   $lname = $_POST['lname'];
+   $name = $_POST['name'];
    $number = $_POST['number'];
    $email = $_POST['email'];
    $method = $_POST['method'];
@@ -126,10 +123,7 @@ if(isset($_POST['order_btn'])){
             <span>First name</span>
             <input type="text" placeholder="enter your name" name="fname" value = <?php echo $nameSign;?> required>
          </div>
-         <div class="inputBox">
-            <span>Last Name</span>
-            <input type="text" placeholder="enter your name" name="lname" value = <?php echo $nameSign2; ?> required>
-         </div>
+     
          <div class="inputBox">
             <span>Mobile Number</span>
             <input type="text" placeholder="enter your number" name="number" value=  <?php echo $mobile_num; ?> required>
