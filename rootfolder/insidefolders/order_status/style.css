@@ -624,7 +624,7 @@ h3{
 
 main{
    min-height: 15vh;
-   background: linear-gradient(to right top, #0e4fb1, #3c4ec7, #6549d8, #903be5, #bb12eb);
+   /* background: linear-gradient(to right top, #0e4fb1, #3c4ec7, #6549d8, #903be5, #bb12eb); */
    display: flex;
    /* align-items: center;
    justify-content: center; */

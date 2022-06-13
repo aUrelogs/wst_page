@@ -81,8 +81,80 @@
 
         for ($idx = 0; $idx < count($status_id); $idx++){
 
+            
+            if($status[$idx] == 1){
 
-         echo  $status[$idx] . "<br>";
+                echo "
+
+                <main>
+
+                    <section class='glass'>
+        
+                        <div id='products'>
+
+                            <h3>
+                                    Order Number:  $status_id[$idx]
+                                    <br>
+                                    <br>
+                                                
+                                    Names of Product Purchased (Quantity):  &nbsp; $total_prod[$idx]
+                                            
+                            </h3> 
+                                        
+                            <table>
+        
+                                <tr>
+
+                                  
+        
+                                
+                                    <td>
+
+
+                                        Name of Customer: &nbsp; $customer[$idx]       
+                                        <br>
+                                        <br>
+
+                                        Phone Number: &nbsp; $phone[$idx]
+                                        <br>
+                                        <br>
+        
+                                        Total Price:&nbsp;₱&nbsp; $total_price[$idx]
+                                        <br>
+                                        <br>
+                                                        
+                                            <div id='stocks'>
+        
+                                                Status: $status[$idx] &nbsp;
+                                                <br>
+                                                <br>
+                                            </div>
+                                    </td>
+                                </tr>
+        
+                            </table>
+        
+                        </div>
+        
+                    </section>
+        
+                </main>
+        
+                <br>
+            
+            ";
+            break;
+            }
+
+
+            if($status[$idx] == 0){
+
+                echo "You don't have any purchase OR Your order is on processing";
+                break;
+
+            }
+
+         
 
 
 

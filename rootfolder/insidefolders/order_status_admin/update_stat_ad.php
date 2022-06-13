@@ -74,7 +74,7 @@
 
                     <input type="hidden" name="ch_id" value="<?php echo $id; ?>" />
                     
-                    <input type="number" id = "status_up" name= "status_up" value="<?php echo $statusUP ?> " placeholder = "Type Quantity" min="0" max = "2"/>
+                    <input type="number" id = "status_up" name= "status_up" value="<?php echo $statusUP ?> " placeholder = "Type Quantity" min="0" max = "3"/>
 
                     <input type= "submit" value="SUBMIT">
 
@@ -89,10 +89,10 @@
                                 echo "Type: <br>";
 
                                 echo"
-                               
-                                    <li> 0 for to pay <br> </li>
-                                    <li> 1 for to ship <br> </li>
-                                    <li> 2 for to receive <br> </li>
+                                    <li> 0 for Pending <br> </li>
+                                    <li> 1 for to pay <br> </li>
+                                    <li> 2 for to ship <br> </li>
+                                    <li> 3 for to receive <br> </li>
                              
                                 ";
                                 
@@ -101,12 +101,16 @@
                                 
                             
                                 if($statusUP == 0 ){
-                                    echo "&nbsp;To Pay";
+                                    echo "&nbsp; Pending";
                                 } elseif($statusUP == 1){
+                                    echo "&nbsp;To Pay";
+                                }elseif($statusUP == 2){
                                     echo "&nbsp;To Ship";
                                 }else{
                                     echo "&nbsp; To Receive";
                                 }
+                                    
+                                
                                
                             ?>
 

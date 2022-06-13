@@ -90,10 +90,10 @@
 
     </main>
 
-        
-        <p style="color: red;"><b>0 - To Pay</b></p>
-        <p style="color: blue;"><b>1 - To Ship</b></p>
-        <p style="color: green;"><b>2 - To Receive</b></p>
+        <p style="color: red; text-shadow: 0 0 1px black;"><b>0 - Pending</b></p>
+        <p style="color:yellow; text-shadow: 0 0 2px black;"><b>1 - To Pay</b></p>
+        <p style="color: blue; text-shadow: 0 0 1px black;"><b>2 - To Ship</b></p>
+        <p style="color: green; text-shadow: 0 0 1px black;"><b>3 - To Receive</b></p>
 
 
         <br>
