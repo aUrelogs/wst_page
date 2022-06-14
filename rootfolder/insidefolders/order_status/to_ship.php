@@ -72,6 +72,8 @@
 
     <?php include 'header.php';?>
 
+    <br>
+
     <?php
 
 for ($idx = 0; $idx < count($orderID); $idx++){
@@ -87,11 +89,11 @@ for ($idx = 0; $idx < count($orderID); $idx++){
 
                 <div id='products'>
 
-                    <h3>
-                            Order Number:  $status_id[$idx]
-                            <br>
-                            <br>
-                                        
+                   
+                            
+                 
+                    
+                    <h3>  
                             Names of Product Purchased (Quantity):  &nbsp; $total_prod[$idx]
                                     
                     </h3> 
@@ -105,6 +107,13 @@ for ($idx = 0; $idx < count($orderID); $idx++){
                         
                             <td>
 
+                            <br>
+
+                            <div id='stocks'>
+
+                                Track Number:  $status_id[$idx]
+                                <br>
+                                <br>
 
                                 Name of Customer: &nbsp; $customer[$idx]       
                                 <br>
@@ -117,12 +126,7 @@ for ($idx = 0; $idx < count($orderID); $idx++){
                                 Total Price:&nbsp;₱&nbsp; $total_price[$idx]
                                 <br>
                                 <br>
-                                                
-                                    <div id='stocks'>
-
-                                        Status: $status[$idx] &nbsp;
-                                        <br>
-                                        <br>
+                                            
                                     </div>
                             </td>
                         </tr>

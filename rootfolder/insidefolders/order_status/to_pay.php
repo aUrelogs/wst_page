@@ -77,6 +77,8 @@
 
     <?php include 'header.php';?>
 
+    <br>
+
     <?php
 
         for ($idx = 0; $idx < count($orderID); $idx++){
@@ -93,9 +95,7 @@
                         <div id='products'>
 
                             <h3>
-                                    Order Number:  $status_id[$idx]
-                                    <br>
-                                    <br>
+                                 
                                                 
                                     Names of Product Purchased (Quantity):  &nbsp; $total_prod[$idx]
                                             
@@ -110,25 +110,26 @@
                                 
                                     <td>
 
+                                    <div id='stocks'>
+                                    <br>
 
-                                        Name of Customer: &nbsp; $customer[$idx]       
-                                        <br>
-                                        <br>
-
-                                        Phone Number: &nbsp; $phone[$idx]
-                                        <br>
-                                        <br>
-        
-                                        Total Price:&nbsp;₱&nbsp; $total_price[$idx]
-                                        <br>
-                                        <br>
-                                                        
-                                            <div id='stocks'>
-        
-                                                Status: $status[$idx] &nbsp;
-                                                <br>
-                                                <br>
-                                            </div>
+                                    Track Number:  $status_id[$idx]
+                                    <br>
+                                    <br>
+    
+                                    Name of Customer: &nbsp; $customer[$idx]       
+                                    <br>
+                                    <br>
+    
+                                    Phone Number: &nbsp; $phone[$idx]
+                                    <br>
+                                    <br>
+    
+                                    Total Price:&nbsp;₱&nbsp; $total_price[$idx]
+                                    <br>
+                                    <br>
+                                            
+                                    </div>
                                     </td>
                                 </tr>
         

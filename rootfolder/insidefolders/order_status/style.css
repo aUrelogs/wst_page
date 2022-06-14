@@ -31,6 +31,8 @@ body {
    background-size: 100%;
 }
 
+
+
  
 
 html{
@@ -615,9 +617,17 @@ section{
 h3{
  
    font-family: 'Melted Dl';
-   color: #fa3c96;
-   font-size: 30px;
-   text-decoration: underline;
+   color: black;
+   font-size: 25px;
+   text-shadow: 0 0 1px black;
+  
+}
+
+#stocks{       
+   font-family: "Century Gothic";
+   font-size: 12px;
+   color: black;
+
 }
 
 /* --------------- box ------------------- */ 
@@ -626,11 +636,30 @@ main{
    min-height: 15vh;
    /* background: linear-gradient(to right top, #0e4fb1, #3c4ec7, #6549d8, #903be5, #bb12eb); */
    display: flex;
-   /* align-items: center;
-   justify-content: center; */
+   align-items: center;
+   justify-content: center;
  
 
 }
+
+
+.glass{
+        min-height: 16vh;
+        width: 90%;
+        /* background: #ffbf00; */
+        /* background: #0040ff; */
+        background:  #fbbdff;
+        border-radius: 2rem;
+        z-index: 3;        
+    }
+
+    #products{
+        margin: 2%;
+        font-family: "Century Gothic";
+        color: white;
+    }
+
+  
 
 /* --------------- image ------------------- */ 
 
