@@ -1,46 +1,19 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-@font-face {
-   font-family: 'Melted Font';
-   src: url(fonts/MeltedDl-XdLg.ttf);
+:root{
+   --blue:#fa3c96;
+   --red:tomato;
+   --orange:orange;
+   --black:#333;
+   --white:#fff;
+   --bg-color:#eee;
+   --dark-bg:rgba(0,0,0,.7);
+   --box-shadow:0 .5rem 1rem #fa3c96(0,0,0,.1);
+   --border:.1rem solid #fa3c96;
 }
-
-body {
-    background-image: url(images/bgimg.PNG);
-   background-size: 100%;
-}
-
-li, a{
-   font-family: 'Melted Font';
-   font-weight: 500;
-   font-size: 20px;
-   color: #6b3e26;
-   text-decoration: none;
-   cursor: pointer;
-}
-
-
-.logo{
-   cursor: pointer;
-   width: 40%;
-}
-
-.nav_links {
-   list-style: none;
-}
-.nav_links li {
-   display: inline-block;
-   padding: 0px 20px;
-   transition: all 0.3s ease 0s;
-}
-
-
-
-
 
 *{
-   font-family: 'Century Gothic';
+   font-family: 'Century Gothic', sans-serif;
    margin:0; padding:0;
    box-sizing: border-box;
    outline: none; border:none;
@@ -63,7 +36,13 @@ section{
    padding:2rem;
 }
 
-
+.heading{
+   text-align: center;
+   font-size: 3.5rem;
+   text-transform: uppercase;
+   color:var(--black);
+   margin-bottom: 2rem;
+}
 
 .btn,
 .option-btn,
@@ -71,10 +50,9 @@ section{
    display: block;
    width: 100%;
    text-align: center;
-   background-color: #6b3e26;
-   color:var(--white);
+   background-color: var(--blue);
+   color:var(--black);
    font-size: 1.7rem;
-   font-family: 'Melted Font';
    padding:1.2rem 3rem;
    border-radius: .5rem;
    cursor: pointer;
@@ -84,8 +62,7 @@ section{
 .btn:hover,
 .option-btn:hover,
 .delete-btn:hover{
-   background-color: #6b3e26;
-   color: white;
+   background-color: #a6865b;
 }
 
 .option-btn i,
@@ -94,7 +71,7 @@ section{
 }
 
 .option-btn{
-   background-color: #ffcb85;
+   background-color: var(--orange);
 }
 
 .delete-btn{
@@ -103,12 +80,12 @@ section{
 }
 
 .message{
-   background-color: #ffcb85;
+   background-color: var(--blue);
    position: sticky;
    top:0; left:0;
    z-index: 10000;
    border-radius: .5rem;
-   background-color: #fdf5c9;
+   background-color: var(--white);
    padding:1.5rem 2rem;
    margin:0 auto;
    max-width: 1200px;
@@ -120,21 +97,21 @@ section{
 
 .message span{
    font-size: 2rem;
-   color:#6b3e26;
+   color:var(--black);
 }
 
 .message i{
    font-size: 2.5rem;
-   color:#6b3e26;
+   color:var(--black);
    cursor: pointer;
 }
 
 .message i:hover{
-   color:#6b3e26;
+   color:var(--red);
 }
 
 .header{
-   background-color: #fdf5c9;
+   background-color: var(--blue);
    position: sticky;
    top:0; left:0;
    z-index: 1000;
@@ -151,49 +128,48 @@ section{
 .header .flex .logo{
    margin-right: auto;
    font-size: 2.5rem;
-   color: #6b3e26;
+   color:var(--white);
 }
 
 .header .flex .navbar a{
    margin-left: 2rem;
    font-size: 2rem;
-   color:black;
+   color:var(--white);
 }
 
 .header .flex .navbar a:hover{
-   color:#ffc5d9;
+   color:yellow;
 }
 
 .header .flex .cart{
    margin-left: 2rem;
    font-size: 2rem;
-   color:black;
+   color:var(--white);
 }
 
 .header .flex .cart:hover{
-   color:#ffc5d9;
+   color:yellow;
 }
 
 .header .flex .cart span{
    padding:.1rem .5rem;
    border-radius: .5rem;
-   background-color: #6b3e26;
-   color:#ffc5d9;
+   background-color: var(--white);
+   color:var(--blue);
    font-size: 2rem;
 }
 
 #menu-btn{
    margin-left: 2rem;
    font-size: 3rem;
-   font-family: 'Melted Font';
    cursor: pointer;
-   color:#c2f2d0;
+   color:var(--white);
    display: none;
 }
 
 .add-product-form{
    max-width: 50rem;
-   background-color: #fdf5c9;
+   background-color: var(--bg-color);
    border-radius: .5rem;
    padding:2rem;
    margin:0 auto;
@@ -203,7 +179,7 @@ section{
 .add-product-form h3{
    font-size: 2.5rem;
    margin-bottom: 1rem;
-   color:#fdf5c9;
+   color:var(--black);
    text-transform: uppercase;
    text-align: center;
 }
@@ -212,9 +188,9 @@ section{
    text-transform: none;
    padding:1.2rem 1.4rem;
    font-size: 1.7rem;
-   color:#6b3e26;
+   color:var(--black);
    border-radius: .5rem;
-   background-color: #c2f2d0;
+   background-color: var(--white);
    margin:1rem 0;
    width: 100%;
 }
@@ -222,23 +198,19 @@ section{
 .display-product-table table{
    width: 100%;
    text-align: center;
-   border-style:groove;
-   background-color: #ffcb85;
-   
 }
 
 .display-product-table table thead th{
    padding:1.5rem;
    font-size: 2rem;
-   background-color: #6b3e26;
-   color:#fdf5c9;
-   
+   background-color: var(--black);
+   color:var(--white);
 }
 
 .display-product-table table td{
    padding:1.5rem;
    font-size: 2rem;
-   color:#6b3e26;
+   color:var(--black);
 }
 
 .display-product-table table td:first-child{
@@ -246,14 +218,14 @@ section{
 }
 
 .display-product-table table tr:nth-child(even){
-   background-color: #6b3e26;
+   background-color: var(--bg-color);
 }
 
 .display-product-table .empty{
    margin-bottom: 2rem;
    text-align: center;
-   background-color: #ffc5d9;
-   color:#6b3e26;
+   background-color: var(--bg-color);
+   color:var(--black);
    font-size: 2rem;
    padding:1.5rem;
 }
@@ -262,7 +234,7 @@ section{
    position: fixed;
    top:0; left:0;
    z-index: 1100;
-   background-color: #c2f2d0;
+   background-color: var(--dark-bg);
    padding:2rem;
    display: none;
    align-items: center;
@@ -274,18 +246,18 @@ section{
 .edit-form-container form{
    width: 50rem;
    border-radius: .5rem;
-   background-color:#fdf5c9;
+   background-color: var(--white);
    text-align: center;
    padding:2rem;
 }
 
 .edit-form-container form .box{
    width: 100%;
-   background-color: #6b3e26;
+   background-color: var(--bg-color);
    border-radius: .5rem;
    margin:1rem 0;
    font-size: 1.7rem;
-   color:#6b3e26;
+   color:var(--black);
    padding:1.2rem 1.4rem;
    text-transform: none;
 }
@@ -300,8 +272,8 @@ section{
 .products .box-container .box{
    text-align: center;
    padding:2rem;
-   box-shadow: #c2f2d0;
-   border:#ffcb85;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
    border-radius: .5rem;
 }
 
@@ -312,12 +284,12 @@ section{
 .products .box-container .box h3{
    margin:1rem 0;
    font-size: 2.5rem;
-   color:#6b3e26;
+   color:var(--black);
 }
 
 .products .box-container .box .price{
    font-size: 2.5rem;
-   color:#6b3e26;
+   color:var(--black);
 }
 
 .shopping-cart table{
@@ -328,23 +300,22 @@ section{
 .shopping-cart table thead th{
    padding:1.5rem;
    font-size: 2rem;
-   color:black;
+   color:var(--black);
    background-color: #ffc5d9;
-   
 }
 
 .shopping-cart table tr td{
-   border-bottom: #c2f2d0;
+   border-bottom: var(--border);
    padding:1.5rem;
    font-size: 2rem;
-   color: white;
+   color:var(--black);
 }
 
 .shopping-cart table input[type="number"]{
-   border: #ffcb85;
+   border: var(--border);
    padding:1rem 2rem;
    font-size: 2rem;
-   color:#6b3e26;
+   color:var(--black);
    width: 10rem;
 }
 
@@ -352,23 +323,21 @@ section{
    padding:.5rem 1.5rem;
    cursor: pointer;
    font-size: 2rem;
-   background-color: #ffcb85;
-   color: black;
+   background-color:#ffcb85;
+   color:var(--black);
 }
 
 .shopping-cart table input[type="submit"]:hover{
-   background-color: #6b3e26;
-   color: white;
+   background-color: var(--black);
 }
 
 .shopping-cart table .table-bottom{
-   background-color: #ffc5d9;
+   background-color: var(--bg-color);
 }
 
 .shopping-cart .checkout-btn{
    text-align: center;
    margin-top: 1rem;
-   font-size: 10px;
 }
 
 .shopping-cart .checkout-btn a{
@@ -380,10 +349,9 @@ section{
    pointer-events: none;
    opacity: .5;
    user-select: none;
-   background-color: #6b3e26;
-   color:#ffc5d9;
-
+   background-color: var(--red);
 }
+
 .checkout-form form{
    padding:2rem;
    border-radius: .5rem;
@@ -402,15 +370,15 @@ section{
 
 .checkout-form form .flex .inputBox span{
    font-size: 2rem;
-   color:#6b3e26;
+   color:var(--black);
 }
 
 .checkout-form form .flex .inputBox input,
 .checkout-form form .flex .inputBox select{
    width: 100%;
-   background-color: #fdf5c9;
+   background-color: var(--white);
    font-size: 1.7rem;
-   color:#6b3e26;
+   color:var(--black);
    border-radius: .5rem;
    margin:1rem 0;
    padding:1.2rem 1.4rem;
@@ -420,7 +388,7 @@ section{
 
 .display-order{
    max-width: 50rem;
-   background-color: #fdf5c9;
+   background-color: var(--white);
    border-radius: .5rem;
    text-align: center;
    padding:1.5rem;
@@ -436,14 +404,14 @@ section{
    background-color: var(--bg-color);
    padding:.5rem 1.5rem;
    font-size: 2rem;
-   color:#6b3e26;
+   color:var(--black);
    margin:.5rem;
 }
 
 .display-order span.grand-total{
    width: 100%;
    background-color: var(--red);
-   color:#fdf5c9;
+   color:var(--white);
    padding:1rem;
    margin-top: 1rem;
 }
@@ -459,7 +427,7 @@ section{
    align-items: center;
    justify-content: center;
    z-index: 1100;
-   background-color: black;
+   background-color: var(--dark-bg);
    width: 100%;
 }
 
@@ -477,7 +445,7 @@ section{
 
 .order-message-container .message-container{
    width: 50rem;
-   background-color: #fdf5c9;
+   background-color: var(--white);
    border-radius: .5rem;
    padding:2rem;
    text-align: center;
@@ -496,9 +464,9 @@ section{
 }
 
 .order-message-container .message-container .order-detail span{
-   background-color: #fdf5c9;
+   background-color: var(--white);
    border-radius: .5rem;
-   color:#6b3e26;
+   color:var(--black);
    font-size: 2rem;
    display: inline-block;
    padding:1rem 1.5rem;
@@ -507,8 +475,8 @@ section{
 
 .order-message-container .message-container .order-detail span.total{
    display: block;
-   background: #ffc5d9;
-   color:#ffcb85;
+   background: var(--red);
+   color:var(--white);
 }
 
 .order-message-container .message-container .customer-details{
@@ -529,13 +497,27 @@ section{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* media queries  */
 
 @media (max-width:1200px){
 
    .shopping-cart{
       overflow-x: scroll;
-
    }
 
    .shopping-cart table{
@@ -574,7 +556,7 @@ section{
    .header .flex .navbar{
       position: absolute;
       top:99%; left:0; right:0;
-      background-color: #c2f2d0;
+      background-color: var(--blue);
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       transition: .2s linear;
    }
