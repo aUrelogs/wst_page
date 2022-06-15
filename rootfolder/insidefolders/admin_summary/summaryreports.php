@@ -1,8 +1,10 @@
 <?php 
 
     include('connection.php');
-    
- 
+
+   
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,10 +36,14 @@
         BACK TO MAIN</button></a>
         
         <h3>SALE SUMMARY</h3>
+        <?php 
+         
+        ?>
+
         <table class="table table-dark">
             <thead>
                 <tr align="center">
-                <th scope="col">Product ID</th>
+               
                 <th scope="col">Product Name</th>
                 <th scope="col">Product Price</th>
                 <th scope="col">Product Quantity</th>
@@ -46,28 +52,39 @@
             </thead>
             <tbody>
                 <?php 
-                    $sql = "SELECT * FROM `cart`";
-                    $result = mysqli_query($conn, $sql);
+                     $sql = "SELECT * FROM `cart`";
+                     $result = mysqli_query($conn, $sql);
+
+                   
+                    $query = "SELECT SUM(quantity)  as `s_qty` FROM `cart`";
+                    $res = mysqli_query($conn,$query);
+                    $data = mysqli_fetch_array($res);
+
+                    $queryA = "SELECT SUM(price) as `s_prc` FROM `cart`";
+                    $resA = mysqli_query($conn,$queryA);
+                    $dataA = mysqli_fetch_array($resA);
+
+                
                         if($result) {
                             while($row = mysqli_fetch_assoc($result)){
-                                $id = $row['id'];
+                              
                                 $productNAME = $row['name'];
                                 $productPRICE = $row['price'];
                                 $productDESC = $row['quantity'];
-                                $total = $row['price']; //SAMPLE LANG FOR TOTALISATION
+                                $total = $row['price'] * $row['quantity'];
 
                                 echo '<tr align="center">
-                                <th scope="row">'.$id.'</th>
+                             
                                 <td>'.$productNAME.'</td>
                                 <td>'."₱ ".$productPRICE.'</td>
                                 <td>'." ".$productDESC.'</td>
                                 <td>'."₱ ".$total.'</td>
                                 </tr>';
-                            }
+                            } 
                         }
-                    
-                    
-                 
+
+        
+                        
                 ?>
             </tbody>
         </table>
@@ -81,7 +98,7 @@
         <table class="table table-dark">
             <thead>
                 <tr align="center">
-                <th scope="col">Product ID</th>
+                
                 <th scope="col">Product Name</th>
                 <th scope="col">Product Price</th>
                 <th scope="col">Product Quantity</th>
@@ -90,9 +107,30 @@
             </thead>
             <tbody>
                 <?php 
+                   $sql = "SELECT * FROM `cart` ORDER BY quantity DESC LIMIT  5";
                 
+                   $result = mysqli_query($conn, $sql);
                     
                       
+                   if($result) {
+                    while($row = mysqli_fetch_assoc($result)){
+                     
+                        $productNAME = $row['name'];
+                        $productPRICE = $row['price'];
+                        $productDESC = $row['quantity'];
+                        $total = $row['price'] * $row['quantity'];
+
+                        echo '<tr align="center">
+                      
+                        <td>'.$productNAME.'</td>
+                        <td>'."₱ ".$productPRICE.'</td>
+                        <td>'." ".$productDESC.'</td>
+                        <td>'."₱ ".$total.'</td>
+                        </tr>';
+                    }
+                     
+              
+                }
                 ?>
             </tbody>
         </table>
@@ -106,7 +144,7 @@
         <table class="table table-dark">
             <thead>
                 <tr align="center">
-                <th scope="col">Product ID</th>
+            
                 <th scope="col">Product Name</th>
                 <th scope="col">Product Price</th>
                 <th scope="col">Product Quantity</th>
@@ -115,7 +153,30 @@
             </thead>
             <tbody>
                 <?php 
+                  $sql = "SELECT * FROM `cart` ORDER BY quantity ASC LIMIT 5";
                 
+                  $result = mysqli_query($conn, $sql);
+                   
+                     
+                  if($result) {
+                   while($row = mysqli_fetch_assoc($result)){
+                     
+                       $productNAME = $row['name'];
+                       $productPRICE = $row['price'];
+                       $productDESC = $row['quantity'];
+                       $total = $row['price'] * $row['quantity'];
+
+                       echo '<tr align="center">
+                      
+                       <td>'.$productNAME.'</td>
+                       <td>'."₱ ".$productPRICE.'</td>
+                       <td>'." ".$productDESC.'</td>
+                       <td>'."₱ ".$total.'</td>
+                       </tr>';
+                   }
+                    
+             
+               }
                   
                 ?>
             </tbody>

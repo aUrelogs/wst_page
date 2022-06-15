@@ -27,7 +27,7 @@
         </nav>
     </header>
 
-    <div style="margin: 5%;">
+    <div style="margin: 10%;">
         <table align="center">
             <tr>
                 <th><a href="insidefolders/admin_summary/summaryreports.php"><img src="images/report.png" width="60%"></a></th>

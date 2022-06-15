@@ -20,7 +20,7 @@ if(isset($_POST['order_btn'])){
    if(mysqli_num_rows($cart_query) > 0){
       while($product_item = mysqli_fetch_assoc($cart_query)){
          $product_name[] = $product_item['name'] .' ('. $product_item['quantity'] .') ';
-         $product_price = number_format($product_item['price'] * $product_item['quantity']);
+         $product_price = ($product_item['price'] * $product_item['quantity']);
          $price_total += $product_price;
       };
    };
@@ -89,7 +89,7 @@ if(isset($_POST['order_btn'])){
          $grand_total = 0;
          if(mysqli_num_rows($select_cart) > 0){
             while($fetch_cart = mysqli_fetch_assoc($select_cart)){
-            $total_price = number_format($fetch_cart['price'] * $fetch_cart['quantity']);
+            $total_price = ($fetch_cart['price'] * $fetch_cart['quantity']);
             $grand_total = $total += $total_price;
       ?>
       <span><?= $fetch_cart['name']; ?>(<?= $fetch_cart['quantity']; ?>)</span>
@@ -113,6 +113,7 @@ if(isset($_POST['order_btn'])){
          $emailSign = $row['Email_add'];
          $mobile_num = $row['Mobile_Num'];
          $user_add = $row['User_Address'];
+         
          $zipcode = $row['ZipCode'];
         
 
@@ -121,9 +122,8 @@ if(isset($_POST['order_btn'])){
       <div class="flex">
          <div class="inputBox">
             <span>First name</span>
-            <input type="text" placeholder="enter your name" name="fname" value = <?php echo $nameSign;?> required>
+            <input type="text" placeholder="enter your name" name="name" value = "<?php echo $nameSign.' '.$nameSign2; ?>" required>
          </div>
-     
          <div class="inputBox">
             <span>Mobile Number</span>
             <input type="text" placeholder="enter your number" name="number" value=  <?php echo $mobile_num; ?> required>
@@ -143,7 +143,7 @@ if(isset($_POST['order_btn'])){
 
          <div class="inputBox">
             <span>address</span>
-            <input type="text" placeholder="e.g. street name" name="street" value = <?php echo $user_add ?> >
+            <input type="text" placeholder="e.g. street name" name="street" value = "<?php echo $user_add; ?>" >
          </div>
          <div class="inputBox">
             <span>city</span>
@@ -159,7 +159,7 @@ if(isset($_POST['order_btn'])){
          </div>
          <div class="inputBox">
             <span>pin code</span>
-            <input type="text" placeholder="e.g. 123456" name="pin_code" value = <?php $zipcode; ?> required>
+            <input type="text" placeholder="e.g. 123456" name="pin_code" value = "<?php echo $zipcode; ?>" required>
          </div>
       </div>
       <input type="submit" value="order now" name="order_btn" class="btn">
