@@ -8,7 +8,7 @@ if(isset($_POST['order_btn'])){
    $number = $_POST['number'];
    $email = $_POST['email'];
    $method = $_POST['method'];
-   $flat = $_POST['flat'];
+
    $street = $_POST['street'];
    $city = $_POST['city'];
    $state = $_POST['state'];
@@ -26,7 +26,7 @@ if(isset($_POST['order_btn'])){
    };
 
    $total_product = implode(' ',$product_name);
-   $detail_query = mysqli_query($conn, "INSERT INTO `order`(name, number, email, method, flat, street, city, state, country, pin_code, total_products, total_price) VALUES('$name','$number','$email','$method','$flat','$street','$city','$state','$country','$pin_code','$total_product','$price_total')") or die('query failed');
+   $detail_query = mysqli_query($conn, "INSERT INTO `order`(name, number, email, method, street, city, state, country, pin_code, total_products, total_price) VALUES('$name','$number','$email','$method', '$street','$city','$state','$country','$pin_code','$total_product','$price_total')") or die('query failed');
 
    if($cart_query && $detail_query){
       echo "
@@ -38,10 +38,10 @@ if(isset($_POST['order_btn'])){
             <span class='total'> total : ₱ ".$price_total."  </span>
          </div>
          <div class='customer-details'>
-            <p> your name : <span>".$fname.$lname."</span> </p>
+            <p> your name : <span>".$name."</span> </p>
             <p> your number : <span>".$number."</span> </p>
             <p> your email : <span>".$email."</span> </p>
-            <p> your address : <span>".$flat.", ".$street.", ".$city.", ".$state.", ".$country." - ".$pin_code."</span> </p>
+            <p> your address : <span>" .", ".$street.", ".$city.", ".$state.", ".$country." - ".$pin_code."</span> </p>
             <p> your payment mode : <span>".$method."</span> </p>
             <p>(*pay when product arrives*)</p>
          </div>

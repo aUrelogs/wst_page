@@ -36,14 +36,10 @@
         BACK TO MAIN</button></a>
         
         <h3>SALE SUMMARY</h3>
-        <?php 
-         
-        ?>
-
+       
         <table class="table table-dark">
             <thead>
-                <tr align="center">
-               
+            <tr align="center">
                 <th scope="col">Product Name</th>
                 <th scope="col">Product Price</th>
                 <th scope="col">Product Quantity</th>
@@ -54,17 +50,7 @@
                 <?php 
                      $sql = "SELECT * FROM `cart`";
                      $result = mysqli_query($conn, $sql);
-
-                   
-                    $query = "SELECT SUM(quantity)  as `s_qty` FROM `cart`";
-                    $res = mysqli_query($conn,$query);
-                    $data = mysqli_fetch_array($res);
-
-                    $queryA = "SELECT SUM(price) as `s_prc` FROM `cart`";
-                    $resA = mysqli_query($conn,$queryA);
-                    $dataA = mysqli_fetch_array($resA);
-
-                
+                     $grandtotal = 0;
                         if($result) {
                             while($row = mysqli_fetch_assoc($result)){
                               
@@ -73,16 +59,28 @@
                                 $productDESC = $row['quantity'];
                                 $total = $row['price'] * $row['quantity'];
 
+                                $grandtotal += $total;
+
                                 echo '<tr align="center">
                              
                                 <td>'.$productNAME.'</td>
                                 <td>'."₱ ".$productPRICE.'</td>
                                 <td>'." ".$productDESC.'</td>
                                 <td>'."₱ ".$total.'</td>
-                                </tr>';
+                                </tr>'
+                                ;
                             } 
                         }
-
+                        echo '  
+                        <tr align = center>
+                            <td>  </td>
+                            <td>  </td>
+                            <th style = "color: red; "> GRAND TOTAL: </th>
+                            <th style = "color: red; ">'."₱ ".$grandtotal.' </th>
+                        </tr>
+                       
+                      ';
+                        
         
                         
                 ?>
@@ -107,30 +105,39 @@
             </thead>
             <tbody>
                 <?php 
-                   $sql = "SELECT * FROM `cart` ORDER BY quantity DESC LIMIT  5";
-                
-                   $result = mysqli_query($conn, $sql);
-                    
-                      
-                   if($result) {
-                    while($row = mysqli_fetch_assoc($result)){
-                     
-                        $productNAME = $row['name'];
-                        $productPRICE = $row['price'];
-                        $productDESC = $row['quantity'];
-                        $total = $row['price'] * $row['quantity'];
+                     $sql = "SELECT * FROM `cart` ORDER BY quantity DESC LIMIT 5";
+                     $result = mysqli_query($conn, $sql);
+                     $grandtotal = 0;
+                        if($result) {
+                            while($row = mysqli_fetch_assoc($result)){
+                              
+                                $productNAME = $row['name'];
+                                $productPRICE = $row['price'];
+                                $productDESC = $row['quantity'];
+                                $total = $row['price'] * $row['quantity'];
 
-                        echo '<tr align="center">
-                      
-                        <td>'.$productNAME.'</td>
-                        <td>'."₱ ".$productPRICE.'</td>
-                        <td>'." ".$productDESC.'</td>
-                        <td>'."₱ ".$total.'</td>
-                        </tr>';
-                    }
-                     
-              
-                }
+                                $grandtotal += $total;
+
+                                echo '<tr align="center">
+                             
+                                <td>'.$productNAME.'</td>
+                                <td>'."₱ ".$productPRICE.'</td>
+                                <td>'." ".$productDESC.'</td>
+                                <td>'."₱ ".$total.'</td>
+                                </tr>'
+                                ;
+                            } 
+                        }
+                        echo '  
+                        <tr align = center>
+                            <td>  </td>
+                            <td>  </td>
+                            <th style = "color: red; "> GRAND TOTAL: </th>
+                            <th style = "color: red; ">'."₱ ".$grandtotal.' </th>
+                        </tr>
+                       
+                      ';
+                        
                 ?>
             </tbody>
         </table>
@@ -153,30 +160,38 @@
             </thead>
             <tbody>
                 <?php 
-                  $sql = "SELECT * FROM `cart` ORDER BY quantity ASC LIMIT 5";
-                
-                  $result = mysqli_query($conn, $sql);
-                   
-                     
-                  if($result) {
-                   while($row = mysqli_fetch_assoc($result)){
-                     
-                       $productNAME = $row['name'];
-                       $productPRICE = $row['price'];
-                       $productDESC = $row['quantity'];
-                       $total = $row['price'] * $row['quantity'];
+                    $sql = "SELECT * FROM `cart` ORDER BY quantity ASC LIMIT 5";
+                    $result = mysqli_query($conn, $sql);
+                    $grandtotal = 0;
+                       if($result) {
+                           while($row = mysqli_fetch_assoc($result)){
+                             
+                               $productNAME = $row['name'];
+                               $productPRICE = $row['price'];
+                               $productDESC = $row['quantity'];
+                               $total = $row['price'] * $row['quantity'];
 
-                       echo '<tr align="center">
+                               $grandtotal += $total;
+
+                               echo '<tr align="center">
+                            
+                               <td>'.$productNAME.'</td>
+                               <td>'."₱ ".$productPRICE.'</td>
+                               <td>'." ".$productDESC.'</td>
+                               <td>'."₱ ".$total.'</td>
+                               </tr>'
+                               ;
+                           } 
+                       }
+                       echo '  
+                       <tr align = center>
+                           <td>  </td>
+                           <td>  </td>
+                           <th style = "color: red; "> GRAND TOTAL: </th>
+                           <th style = "color: red; ">'."₱ ".$grandtotal.' </th>
+                       </tr>
                       
-                       <td>'.$productNAME.'</td>
-                       <td>'."₱ ".$productPRICE.'</td>
-                       <td>'." ".$productDESC.'</td>
-                       <td>'."₱ ".$total.'</td>
-                       </tr>';
-                   }
-                    
-             
-               }
+                     ';
                   
                 ?>
             </tbody>
