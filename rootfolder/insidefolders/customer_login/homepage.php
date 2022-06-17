@@ -15,8 +15,8 @@
         <img class="logo" src="images_/logoname.png" alt="logo" style="margin-right: 250px;">
         <nav>
             <ul class ="nav_links">
-                <li style="list-style: none; font-family: Century Gothic; font-weight: 500; font-size: 20px; color: #6b3e26; text-decoration: none; cursor: pointer;">
-                <img src="images_/userlogoo.png" class="logo" style="width: 20px;"> Login</li>
+                <li style="list-style: none; font-family: Century Gothic; font-weight: 300; font-size: 10px; color: #6b3e26; text-decoration: none; cursor: pointer;">
+                <a href="http://localhost/wst_page/rootfolder/"><img src="images_/userlogoo.png" class="logo" style="width: 15px;"> Admin Login</a></li>
             </ul>
         </nav>
     </header>
