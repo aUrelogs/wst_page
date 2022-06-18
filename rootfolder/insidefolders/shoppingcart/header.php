@@ -5,7 +5,7 @@
       <a href="#" class="logo">WHAT'S THE SCOOP?</a>
 
       <nav class="navbar">
-         <a href="http://localhost/wst_page/rootfolder/">add products</a>
+         <a href="http://localhost/wst_page/rootfolder/">Admin</a>
          <a href="http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/products.php">view products</a>
       </nav>
 
