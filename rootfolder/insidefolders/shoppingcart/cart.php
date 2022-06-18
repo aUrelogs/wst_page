@@ -72,7 +72,7 @@ if(isset($_GET['delete_all'])){
          <tr>
             <td><img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
             <td><?php echo $fetch_cart['name']; ?></td>
-            <td>P<?php echo number_format($fetch_cart['price']); ?>/-</td>
+            <td>P<?php echo number_format($fetch_cart['price']); ?></td>
             <td>
                <form action="" method="post">
                   <input type="hidden" name="update_quantity_id"  value="<?php echo $fetch_cart['id']; ?>" >
@@ -80,7 +80,7 @@ if(isset($_GET['delete_all'])){
                   <input type="submit" value="update" name="update_update_btn">
                </form>   
             </td>
-            <td>P<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</td>
+            <td>P<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?></td>
             <td><a href="cart.php?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('remove item from cart?')" class="delete-btn"> <i class="fas fa-trash"></i> remove</a></td>
          </tr>
          <?php

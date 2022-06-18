@@ -13,9 +13,6 @@
 
     ";
 
-
-  
-
     $result = $conn->query($sql);
 
   
@@ -36,6 +33,56 @@
     }else{
         echo "0 result";
     }
+
+
+    // $sql = "
+    // SELECT
+    // *
+    // FROM 
+    //     `stocks` as s
+    // LEFT JOIN 
+    //     `cart` as p ON s.id = p.id
+
+    // ";
+
+    // $result = $conn->query($sql);
+
+    // if($result->num_rows > 0){
+
+    //     $total_stocks = 0;
+
+
+    //     $sidx = 0;
+
+    // while($row = $result->fetch_assoc()){
+
+    //     $id[$sidx] = $row["id"];
+    //     // $quantity[$sidx] = $row["quantity"];
+
+      
+
+    //     $total_stocks = ( $row['PRODUCT_QTY'] - $row['quantity']);
+
+    //     $sidx++;
+
+
+
+    // }
+
+
+
+
+
+    // }
+
+    
+
+
+
+
+
+    
+
 
 
 ?>
@@ -85,8 +132,8 @@
 
         
                
-            }else{
-                    echo"
+            }else{    ?>
+
                         
                         <main>
 
@@ -94,7 +141,7 @@
 
                                 <div id='products'>
 
-                                    <h3>Product Name: $pname[$idx] &nbsp;</h3> 
+                                    <h3><?php echo "Product Name: &nbsp;" . $pname[$idx] ?></h3> 
                                     
                                         <table>
 
@@ -106,13 +153,48 @@
                                                     &nbsp;
                                                 </td>
                                                 <td>
-                                                    Product Details: $desc[$idx] &nbsp; 
+                                                    <?php echo "Product Details:&nbsp;". $desc[$idx]; ?>
                                                     <br>
                                                     <br>
                                                     
                                                     <div id='stocks'>
+
+                                                    <?php 
                                                     
-                                                        Available Stock: $prodQTY[$idx] &nbsp; 
+                                                    
+                                                        echo  "Available Stock: &nbsp;" ;
+                                                                       
+                                                    ?>
+                                                    
+                                                    <?php 
+         
+                                                        $total_stock = mysqli_query($conn, "SELECT * FROM `cart` as c LEFT JOIN `stocks` as s ON c.id = s.id;");
+                                                     
+                                                        if(mysqli_num_rows($total_stock) > 0){
+                                                            while($fetch_stocks = mysqli_fetch_assoc( $total_stock)){
+
+                                                            $stock_total = ($fetch_stocks['PRODUCT_QTY'] - $fetch_stocks['quantity']);
+                                                    ?>
+
+
+                                                        <?php  echo $stock_total; ?>
+
+                                                            
+                                                   
+
+
+                                                    <?php 
+                                                    
+                                                            }
+                                                    
+                                                        }
+                                                    ?>
+
+                                                    
+
+                                                    
+                                                    
+                                                    
                                                         <br>
                                                         <br>
 
@@ -130,8 +212,8 @@
                         </main>
    
                         <br>
-                    ";
-
+                    
+    <?php
                 }
 
         }
