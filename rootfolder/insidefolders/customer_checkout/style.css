@@ -137,7 +137,7 @@ nav{
 .header .flex .navbar a{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--dark-bg);
+   color: white;
 }
 
 .header .flex .navbar a:hover{
@@ -147,7 +147,7 @@ nav{
 .header .flex .cart{
    margin-left: 2rem;
    font-size: 2rem;
-   color:var(--dark-bg);
+   color: white;
 }
 
 .header .flex .cart:hover{
