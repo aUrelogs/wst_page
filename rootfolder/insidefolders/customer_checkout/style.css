@@ -6,7 +6,6 @@
    --orange:orange;
    --black:#333;
    --white:#fff;
-   --meow: #fdf5c9;
    --bg-color:#eee;
    --dark-bg:rgba(0,0,0,.7);
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
@@ -112,7 +111,7 @@ section{
 }
 
 .header{
-   background-color: var(--meow);
+   background-color: #fa3c96;;
    position: sticky;
    top:0; left:0;
    z-index: 1000;

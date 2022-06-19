@@ -148,8 +148,18 @@ section{
 
 .header .flex .navbar a{
    margin-left: 2rem;
+<<<<<<< Updated upstream
    font-size: 1.6rem;
    color: black;
+=======
+<<<<<<< HEAD
+   font-size: 2rem;
+   color:var(--white);
+=======
+   font-size: 1.6rem;
+   color: black;
+>>>>>>> 101ee0dc9f72b9122f70221dcbcb7999b223b514
+>>>>>>> Stashed changes
 }
 
 .header .flex .navbar a:hover{
@@ -158,9 +168,20 @@ section{
 
 .header .flex .cart{
    margin-left: 2rem;
+<<<<<<< Updated upstream
    font-size: 1.6rem;
    color: black;
   
+=======
+<<<<<<< HEAD
+   font-size: 2rem;
+   color:var(--white);
+=======
+   font-size: 1.6rem;
+   color: black;
+  
+>>>>>>> 101ee0dc9f72b9122f70221dcbcb7999b223b514
+>>>>>>> Stashed changes
 }
 
 .header .flex .cart:hover{

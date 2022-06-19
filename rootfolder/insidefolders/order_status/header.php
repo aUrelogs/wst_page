@@ -1,9 +1,19 @@
 <header class="header">
 
-   <div class="flex">
+   <div class="flex" >
 
+<<<<<<< Updated upstream
       <a href="http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/products.php" class="logo"><img src="image/logo.png" style="width: 90px;">
       <img class="logo" src="image/logoname.png" alt="logo" style="margin-right: 150px;"></a>
+=======
+<<<<<<< HEAD
+      <a href="#" class="logo"><img src="image/logo.png" style="width: 90px;"></a>
+      <img class="logo" src="image/logoname.png" alt="logo" style="margin-right: 10px;">
+=======
+      <a href="http://localhost/wst_page/rootfolder/insidefolders/customer_pg_menu/products.php" class="logo"><img src="image/logo.png" style="width: 90px;">
+      <img class="logo" src="image/logoname.png" alt="logo" style="margin-right: 150px;"></a>
+>>>>>>> 101ee0dc9f72b9122f70221dcbcb7999b223b514
+>>>>>>> Stashed changes
 
       <nav class="navbar">
          <a href="http://localhost/wst_page/rootfolder/">Admin</a>
