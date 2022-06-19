@@ -1,11 +1,8 @@
 <?php 
  
-    include'connection.php';
-
-
+    include 'connection.php';
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +17,6 @@
 
 <!-- custom css file link  -->
 <link rel="stylesheet" href="style.css">
-
-
-
-
 
 </head>
 <body>
@@ -43,7 +36,7 @@
 
     <div class="to_pay">
         
-        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_pay.php"><h3>To Pay</h3></a>
+        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_pay.php"><div id="to_pay">TO PAY</div></a>
 
     </div>
 
@@ -55,7 +48,7 @@
 
     <div class="to_ship">
 
-        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_ship.php"><h3>To Ship</h3></a>
+        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_ship.php"><div id="to_ship">TO SHIP</div></a>
 
     </div>
 
@@ -67,7 +60,7 @@
     
     <div class="to_receive">
 
-        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_receive.php"><h3>To Receive</h3></a>
+        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_receive.php"><div id="to_receive">TO RECEIVE</div></a>
     
     </div>
     

@@ -12,19 +12,13 @@
 
     ";
 
-
-  
-
     $result = $conn->query($sql);
-
   
     if($result->num_rows > 0){  
-
 
         $idx = 0;
 
         while($row = $result->fetch_assoc()){
-
 
             $status_id[$idx] = $row["cid"];
             $orderID[$idx] = $row["id"];
@@ -35,24 +29,15 @@
             $total_price[$idx] = $row["total_price"];
             $status[$idx]= $row["status"];
 
-            $idx++;
-
-           
-
-
-
-        
+            $idx++;        
 
         }
+
     }else{
         echo "0 result";
     }
 
-
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,15 +47,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WHAT'S THE SCOOP?  | TO PAY</title>
 
-     <!-- font awesome cdn link  -->
+    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<!-- custom css file link  -->
-<link rel="stylesheet" href="style.css">
-
-
-
-
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -79,94 +60,71 @@
 
     <br>
 
+    <div id="title">TO PAY</div>
+
+
     <?php
 
         for ($idx = 0; $idx < count($orderID); $idx++){
 
-            
             if($status[$idx] == 1){
 
                 echo "
 
-                <main>
+                    <main>
 
-                    <section class='glass'>
+                        <section class='glass'>
         
-                        <div id='products'>
+                            <div id='products'>
 
-                            <h3>
-                                 
-                                                
-                                    Names of Product Purchased (Quantity):  &nbsp; $total_prod[$idx]
-                                            
-                            </h3> 
+                                <h3> Names of Product Purchased (Quantity):  &nbsp; $total_prod[$idx] </h3> 
                                         
-                            <table>
+                                <table>
         
-                                <tr>
+                                    <tr>
+                                        <td>
 
-                                  
-        
-                                
-                                    <td>
+                                            <div id='stocks'>
+                                                <br>
 
-                                    <div id='stocks'>
-                                    <br>
-
-                                    Track Number:  $status_id[$idx]
-                                    <br>
-                                    <br>
+                                                Track Number:  $status_id[$idx]
+                                                <br>
+                                                <br>
     
-                                    Name of Customer: &nbsp; $customer[$idx]       
-                                    <br>
-                                    <br>
+                                                Name of Customer: &nbsp; $customer[$idx]       
+                                                <br>
+                                                <br>
     
-                                    Phone Number: &nbsp; $phone[$idx]
-                                    <br>
-                                    <br>
+                                                Phone Number: &nbsp; $phone[$idx]
+                                                <br>
+                                                <br>
     
-                                    Total Price:&nbsp;₱&nbsp; $total_price[$idx]
-                                    <br>
-                                    <br>
+                                                Total Price:&nbsp;₱&nbsp; $total_price[$idx]
+                                                <br>
+                                                <br>
+                                            </div>
                                             
-                                    </div>
-                                    </td>
-                                </tr>
+                                        </td>
+                                    </tr>
         
-                            </table>
+                                </table>
         
-                        </div>
+                            </div>
         
-                    </section>
+                        </section>
         
-                </main>
+                    </main>
         
-                <br>
-            
-            ";
-            
+                <br>";
             }
 
 
             if($status[$idx] == 0){
 
-               
                 break;
 
             }
-
-         
-
-
-
-
-
-
         }
-
-
-
-
 
     ?>
 

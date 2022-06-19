@@ -12,14 +12,9 @@
 
     ";
 
-
-  
-
     $result = $conn->query($sql);
-
   
     if($result->num_rows > 0){  
-
 
         $idx = 0;
 
@@ -36,20 +31,12 @@
 
             $idx++;
 
-
-
-       
-
         }
     }else{
         echo "0 result";
     }
 
-
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,101 +51,77 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
-
-
-
-
-
 </head>
 <body>
 
-    <?php include 'header.php';?>
+    <?php include 'header.php'; ?>
 
-    <br>
-
-    <?php
-
-    for ($idx = 0; $idx < count($orderID); $idx++){
-
-            
-    if($status[$idx] == 3){
-
-        echo "
-
-        <main>
-
-            <section class='glass'>
-
-                <div id='products'>
-
-                    <h3>
-                            Order Number:  $status_id[$idx]
-                            <br>
-                            <br>
-                                        
-                            Names of Product Purchased (Quantity):  &nbsp; $total_prod[$idx]
-                                    
-                    </h3> 
-                                
-                    <table>
-
-                        <tr>
-
-                          
-
-                        
-                            <td>
-
-                            <div id='stocks'>
-
-                                Track Number:  $status_id[$idx]
-                                <br>
-                                <br>
-
-                                Name of Customer: &nbsp; $customer[$idx]       
-                                <br>
-                                <br>
-
-                                Phone Number: &nbsp; $phone[$idx]
-                                <br>
-                                <br>
-
-                                Total Price:&nbsp;₱&nbsp; $total_price[$idx]
-                                <br>
-                                <br>
-                                        
-                                </div>
-                            </td>
-                        </tr>
-
-                    </table>
-
-                </div>
-
-            </section>
-
-        </main>
+        <div id="title">TO RECEIVE</div>
 
         <br>
-    
-    ";
+
+        <?php
+
+            for ($idx = 0; $idx < count($orderID); $idx++){
+
+                if($status[$idx] == 3){
+
+                    echo "
+
+                        <main>
+
+                            <section class='glass'>
+
+                                <div id='products'>
+
+                                    <h3> Names of Product Purchased (Quantity):  &nbsp; $total_prod[$idx] </h3> 
+                                    
+                                    <table>
+
+                                        <tr>
+                                            <td>
+                                                <div id='stocks'>
+                                                    <br>
+
+                                                    Track Number:  $status_id[$idx]
+                                                    <br>
+                                                    <br>
+
+                                                    Name of Customer: &nbsp; $customer[$idx]       
+                                                    <br>
+                                                    <br>
+
+                                                    Phone Number: &nbsp; $phone[$idx]
+                                                    <br>
+                                                    <br>
+
+                                                    Total Price:&nbsp;₱&nbsp; $total_price[$idx]
+                                                    <br>
+                                                    <br>
+                                            
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+
+                            </section>
+
+                        </main>
+
+                    <br>";
    
-    }
+                }
 
 
-    if($status[$idx] == 0){
+                if($status[$idx] == 0){
 
-        break;
+                    break;
 
-    }
-
-
-}
-
-
-
-
-    ?>
+                }
+            }
+        ?>
 
 </body>
 </html>

@@ -126,6 +126,7 @@ section{
 
 .header{
    background-color: var(--blue);
+   /* background-color: #fdf5c9; */
    position: sticky;
    top:0; left:0;
    z-index: 1000;
@@ -147,8 +148,8 @@ section{
 
 .header .flex .navbar a{
    margin-left: 2rem;
-   font-size: 1.3rem;
-   color:var(--white);
+   font-size: 1.6rem;
+   color: black;
 }
 
 .header .flex .navbar a:hover{
@@ -157,12 +158,13 @@ section{
 
 .header .flex .cart{
    margin-left: 2rem;
-   font-size: 1.3rem;
-   color:var(--white);
+   font-size: 1.6rem;
+   color: black;
+  
 }
 
 .header .flex .cart:hover{
-   color:yellow;
+   color: yellow;
 }
 
 .header .flex .cart span{
@@ -170,7 +172,7 @@ section{
    border-radius: .5rem;
    background-color: var(--white);
    color:var(--blue);
-   font-size: 2rem;
+   font-size: 1.5rem;
 }
 
 #menu-btn{
@@ -616,17 +618,17 @@ section{
 
 h3{
  
-   font-family: 'Melted Dl';
-   color: black;
+   font-family: 'Century Gothic';
+   color: orange;
    font-size: 25px;
-   text-shadow: 0 0 1px black;
+   /* text-shadow: 0 0 1px black; */
   
 }
 
 #stocks{       
    font-family: "Century Gothic";
-   font-size: 12px;
-   color: black;
+   font-size: 16px;
+   color: white;
 
 }
 
@@ -646,9 +648,8 @@ main{
 .glass{
         min-height: 16vh;
         width: 90%;
-        /* background: #ffbf00; */
-        /* background: #0040ff; */
-        background:  #fbbdff;
+        /* background-image: linear-gradient(to top, #a84466, #b23e64, #bb3662, #c42d5f, #cd205b); */
+        background-image: linear-gradient(to bottom, #873e23, #993a2b, #ab3437, #bd2c47, #cd205b);
         border-radius: 2rem;
         z-index: 3;        
     }
@@ -676,7 +677,7 @@ main{
    position: absolute;
    margin-top: 16%;
    margin-left: 17%;
-
+   
 }
 
 #set img{
@@ -686,6 +687,13 @@ main{
    margin-top: 0.2%;
    width: 180px;
 
+}
+
+#to_pay{
+
+   font-family: 'Melted Dl';
+   font-size: 25px;
+   color: #fa3c96;
 }
 
 .to_ship{
@@ -705,6 +713,13 @@ main{
 
 }
 
+#to_ship{
+
+   font-family: 'Melted Dl';
+   font-size: 25px;
+   color: #fa3c96;
+}
+
 
 .to_receive{
    position: absolute;
@@ -713,4 +728,10 @@ main{
 
 }
 
+#to_receive{
+
+   font-family: 'Melted Dl';
+   font-size: 25px;
+   color: #fa3c96;
+}
 
