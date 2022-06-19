@@ -6,6 +6,7 @@
     body {
         background-image: url(images/bgimg.PNG);
         background-size: 100%;
+      
     }
 
     header{
@@ -44,8 +45,8 @@
         min-height: 5vh;
         /* background: linear-gradient(to right top, #0e4fb1, #3c4ec7, #6549d8, #903be5, #bb12eb); */
         display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-left: 3%;
+        
     
     }
 
@@ -173,14 +174,32 @@
 
     .glass{
         min-height: 16vh;
-        width: 90%;
+        width: 65%;
         background: #6b3e26;
         border-radius: 2rem;
         z-index: 3;        
     }
 
+    .glass2{
+        position: absolute;
+        min-height: 16vh;
+        width: 30%;
+        background-image: linear-gradient(to right bottom, #6b3e26, #773f21, #843f1b, #903f15, #9d3f0d);
+        border-radius: 2rem;
+        z-index: 3;   
+        margin-left: 68%; 
+      
+        
+    }
+
     #products{
         margin: 2%;
+        font-family: "Century Gothic";
+        color: white;
+    }
+
+    #products2{
+        margin: 5%;
         font-family: "Century Gothic";
         color: white;
     }
@@ -190,6 +209,7 @@
         font-family: 'Melted Dl';
         color: #fa3c96;
         font-size: 45px;
+        margin-left: 27%;
     }
 
     #current_stock{
@@ -204,6 +224,23 @@
     
     }
 
+    #status{
+
+        font-family: "Century Gothic";
+        color: white;
+        margin-left: 18%;
+        font-size: 20px;
+    
+    }
+
+    #latest{
+
+        color: yellow;
+        text-decoration:underline;
+        text-decoration-color: darkblue;
+    }
+
+ 
 
 
 
