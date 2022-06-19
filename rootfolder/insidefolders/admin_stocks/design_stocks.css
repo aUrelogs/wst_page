@@ -184,7 +184,7 @@
         position: absolute;
         min-height: 16vh;
         width: 30%;
-        background-image: linear-gradient(to right top, #6b3e26, #905e3c, #b58053, #daa56b, #ffcb85);
+        background-image: linear-gradient(to right bottom, #6b3e26, #773f21, #843f1b, #903f15, #9d3f0d);
         border-radius: 2rem;
         z-index: 3;   
         margin-left: 68%; 
@@ -227,10 +227,17 @@
     #status{
 
         font-family: "Century Gothic";
-        color: black;
+        color: white;
         margin-left: 18%;
         font-size: 20px;
     
+    }
+
+    #latest{
+
+        color: yellow;
+        text-decoration:underline;
+        text-decoration-color: darkblue;
     }
 
  
