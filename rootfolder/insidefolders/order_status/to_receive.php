@@ -58,8 +58,6 @@
 
         <div id="title">TO RECEIVE</div>
 
-        <br>
-
         <main>
             <a href='http://localhost/wst_page/rootfolder/insidefolders/order_status/stats_main.php'><button class='button1'>BACK TO MAIN</button></a>
         </main>
