@@ -58,9 +58,11 @@
 
     <?php include 'header.php';?>
 
-    <br>
-
     <div id="title">TO SHIP</div>
+
+    <main>
+        <a href='http://localhost/wst_page/rootfolder/insidefolders/order_status/stats_main.php'><button class='button1'>BACK TO MAIN</button></a>
+    </main>
 
     <?php
 
