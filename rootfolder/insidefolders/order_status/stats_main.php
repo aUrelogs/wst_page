@@ -43,7 +43,7 @@
 
     <div class="to_pay">
         
-        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_pay.php"><h3>To Pay</h3></a>
+        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_pay.php"><div id="to_pay">To Pay</div></a>
 
     </div>
 
@@ -55,7 +55,7 @@
 
     <div class="to_ship">
 
-        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_ship.php"><h3>To Ship</h3></a>
+        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_ship.php"><div id="to_ship">To Ship</div></a>
 
     </div>
 
@@ -67,7 +67,7 @@
     
     <div class="to_receive">
 
-        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_receive.php"><h3>To Receive</h3></a>
+        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_receive.php"><div id="to_receive">To Receive</div></a>
     
     </div>
     

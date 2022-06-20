@@ -694,7 +694,7 @@ main{
 #to_pay{
 
    font-family: 'Melted Dl';
-   font-size: 25px;
+   font-size: 30px;
    color: #fa3c96;
 }
 
@@ -718,7 +718,7 @@ main{
 #to_ship{
 
    font-family: 'Melted Dl';
-   font-size: 25px;
+   font-size: 30px;
    color: #fa3c96;
 }
 
@@ -733,7 +733,7 @@ main{
 #to_receive{
 
    font-family: 'Melted Dl';
-   font-size: 25px;
+   font-size: 30px;
    color: #fa3c96;
 }
 
