@@ -119,7 +119,7 @@
 
             if($status[$idx] == 0){
 
-                break;
+           
 
             }
         }

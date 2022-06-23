@@ -15,14 +15,12 @@
 
     if($result->num_rows > 0){
 
-
         $idx = 0;
 
         while($row = $result->fetch_assoc()){
 
           
             $orderID[$idx] = $row["id"];
-            
             $customer[$idx] = $row["name"];
             $phone[$idx] = $row["number"];
             $total_prod[$idx] = $row["total_products"];
@@ -35,9 +33,8 @@
 
         }
 
-
-    }
-
+    } 
+       
     if(isset($_GET['delete'])){
         $delete_id = $_GET['delete'];
         $sql = "DELETE FROM `order` WHERE id = $delete_id ";
@@ -50,6 +47,7 @@
         };
      };
     
+   
 
 ?>
 
@@ -81,8 +79,7 @@
 
     </header>
 
-    
-    
+
     <div id="title">UPDATE ORDER STATUS</div>
    
 
@@ -109,13 +106,11 @@
     
     
     <?php
-
-
+   
             for($idx=0; $idx < count($orderID); $idx++){
-
+                
                 if(empty($orderID[$idx])){        
-
-
+                        
                 }else{
 
                 echo "
@@ -187,6 +182,7 @@
 
             }
 
+     
     ?>
 
     

@@ -2,12 +2,7 @@
  
     include 'connection.php';
 
-    $sql = "
-    SELECT
-    *
-    FROM 
-        `order`
-    ";
+    $sql = " SELECT * FROM  `order`";
 
     $result = $conn->query($sql);
   
@@ -17,6 +12,7 @@
 
         while($row = $result->fetch_assoc()){
 
+        
             $orderID[$idx] = $row["id"];
             
             $customer[$idx] = $row["name"];
@@ -118,8 +114,6 @@
 
 
             if($status[$idx] == 0){
-
-                break;
 
             }
         }

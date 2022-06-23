@@ -6,7 +6,8 @@
     SELECT
     *
     FROM 
-        `order`
+        
+        `order` 
 
     ";
 
@@ -18,7 +19,7 @@
 
         while($row = $result->fetch_assoc()){
 
-           
+     
             $orderID[$idx] = $row["id"];
             
             $customer[$idx] = $row["name"];
@@ -68,45 +69,28 @@
                 if($status[$idx] == 3){
 
                     echo "
-
                         <main>
-
                             <section class='glass'>
-
                                 <div id='products'>
-
                                     <h3> Names of Product Purchased (Quantity):  &nbsp; $total_prod[$idx] </h3> 
-                                    
                                     <table>
-
                                         <tr>
                                             <td>
                                                 <div id='stocks'>
                                                     <br>
-
                                                     Track Number:  $orderID[$idx]
-                                                    <br>
-                                                    <br>
-
+                                                    <br><br>
                                                     Name of Customer: &nbsp; $customer[$idx]       
-                                                    <br>
-                                                    <br>
-
+                                                    <br> <br>
                                                     Phone Number: &nbsp; $phone[$idx]
-                                                    <br>
-                                                    <br>
-
+                                                    <br> <br>
                                                     Total Price:&nbsp;₱&nbsp; $total_price[$idx]
-                                                    <br>
-                                                    <br>
-                                            
+                                                    <br> <br>                                       
                                                 </div>
                                             </td>
                                         </tr>
                                     </table>
-
                                 </div>
-
                             </section>
 
                         </main>
@@ -118,7 +102,7 @@
 
                 if($status[$idx] == 0){
 
-                    break;
+                 
 
                 }
             }
