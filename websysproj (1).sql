@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2022 at 12:52 PM
+-- Generation Time: Jun 23, 2022 at 03:11 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -69,31 +69,6 @@ INSERT INTO `cart` (`id`, `name`, `price`, `image`, `quantity`, `total`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `check_out_prod`
---
-
-CREATE TABLE `check_out_prod` (
-  `cid` int(11) NOT NULL,
-  `id` int(11) NOT NULL,
-  `status` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `check_out_prod`
---
-
-INSERT INTO `check_out_prod` (`cid`, `id`, `status`) VALUES
-(1, 1, 0),
-(2, 2, 0),
-(3, 3, 0),
-(4, 4, 0),
-(5, 5, 0),
-(6, 6, 0),
-(7, 7, 0);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `order`
 --
 
@@ -110,18 +85,19 @@ CREATE TABLE `order` (
   `country` varchar(100) NOT NULL,
   `pin_code` int(10) NOT NULL,
   `total_products` varchar(255) NOT NULL,
-  `total_price` int(255) NOT NULL
+  `total_price` int(255) NOT NULL,
+  `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `order`
 --
 
-INSERT INTO `order` (`id`, `name`, `number`, `email`, `method`, `flat`, `street`, `city`, `state`, `country`, `pin_code`, `total_products`, `total_price`) VALUES
-(1, 'Ma. Mariel More Dagohoy', '+6399945046', 'marielmoredags30@gmail.com', 'cash on delivery', '', '2485 Radium St., San Andres Bukid Manila', 'SANTA ANA', 'NCR - 1st DISTRICT (Manila)', 'Philippines', 10, ' Avocado Macchiatto (1)  Macapuno Caramel (1) ', 140),
-(2, 'Ma. Mariel More Dagohoy', '+6399945046', 'marielmoredags30@gmail.com', 'cash on delivery', '', '2485 Radium St., San Andres Bukid Manila', 'SANTA ANA', 'NCR - 1st DISTRICT (Manila)', 'Philippines', 10, ' Avocado Macchiatto (1)  Macapuno Caramel (1) ', 140),
-(3, 'Ma. Mariel More Dagohoy', '+6399945046', 'marielmoredags30@gmail.com', 'cash on delivery', '', '2485 Radium St., San Andres Bukid Manila', 'SANTA ANA', 'NCR - 1st DISTRICT (Manila)', 'Philippines', 10, ' Avocado Macchiatto (1)  Macapuno Caramel (1) ', 140),
-(4, 'Ma. Mariel More Dagohoy', '+6399945046', 'marielmoredags30@gmail.com', 'cash on delivery', '', '2485 Radium St., San Andres Bukid Manila', 'SANTA ANA', 'NCR - 1st DISTRICT (Manila)', 'Philippines', 10, ' Avocado Macchiatto (1)  Macapuno Caramel (1) ', 140);
+INSERT INTO `order` (`id`, `name`, `number`, `email`, `method`, `flat`, `street`, `city`, `state`, `country`, `pin_code`, `total_products`, `total_price`, `status`) VALUES
+(1, 'Ma. Mariel More Dagohoy', '+6399945046', 'marielmoredags30@gmail.com', 'cash on delivery', '', '2485 Radium St., San Andres Bukid Manila', 'SANTA ANA', 'NCR - 1st DISTRICT (Manila)', 'Philippines', 10, ' Avocado Macchiatto (1)  Macapuno Caramel (1) ', 140, 2),
+(2, 'Ma. Mariel More Dagohoy', '+6399945046', 'marielmoredags30@gmail.com', 'cash on delivery', '', '2485 Radium St., San Andres Bukid Manila', 'SANTA ANA', 'NCR - 1st DISTRICT (Manila)', 'Philippines', 10, ' Avocado Macchiatto (1)  Macapuno Caramel (1) ', 140, 3),
+(3, 'Ma. Mariel More Dagohoy', '+6399945046', 'marielmoredags30@gmail.com', 'cash on delivery', '', '2485 Radium St., San Andres Bukid Manila', 'SANTA ANA', 'NCR - 1st DISTRICT (Manila)', 'Philippines', 10, ' Avocado Macchiatto (1)  Macapuno Caramel (1) ', 140, 1),
+(4, 'Ma. Mariel More Dagohoy', '+6399945046', 'marielmoredags30@gmail.com', 'cash on delivery', '', '2485 Radium St., San Andres Bukid Manila', 'SANTA ANA', 'NCR - 1st DISTRICT (Manila)', 'Philippines', 10, ' Avocado Macchiatto (1)  Macapuno Caramel (1) ', 140, 0);
 
 -- --------------------------------------------------------
 
@@ -244,13 +220,6 @@ ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `check_out_prod`
---
-ALTER TABLE `check_out_prod`
-  ADD PRIMARY KEY (`cid`),
-  ADD KEY `id` (`id`);
-
---
 -- Indexes for table `order`
 --
 ALTER TABLE `order`
@@ -292,16 +261,10 @@ ALTER TABLE `cart`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `check_out_prod`
---
-ALTER TABLE `check_out_prod`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `products`
