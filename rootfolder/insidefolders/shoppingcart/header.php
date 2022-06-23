@@ -2,7 +2,9 @@
 
    <div class="flex">
 
-      <a href="#" class="logo">WHAT'S THE SCOOP?</a>
+   <a href="http://localhost/wst_page/"><img src="images_/logo.png" style="width: 90px;"></a>
+   <img class="logo" src="images_/logoname.png" alt="logo" style="margin-right: 150px;">
+
 
       <nav class="navbar">
          <a href="http://localhost/wst_page/rootfolder/">Admin</a>

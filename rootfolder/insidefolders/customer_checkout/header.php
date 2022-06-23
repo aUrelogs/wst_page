@@ -2,7 +2,7 @@
 
    <div class="flex">
 
-   <div><img src="images/logo.png" style="width: 100px;"><img src="images/logoname.png" alt="logo"></div>
+   <div><a href="http://localhost/wst_page/"><img src="images/logo.png" style="width: 100px;"><img src="images/logoname.png" alt="logo"></a></div>
    
       <nav class="navbar">
          <a href="http://localhost/wst_page/rootfolder/">Admin</a>

@@ -11,7 +11,7 @@
    background-size: 100%;">
 
 <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; background-color: #fdf5c9;">
-    <img src="images_/logo.png" class="logo" style="width: 100px;">
+<a href="http://localhost/wst_page/"><img src="images_/logo.png" class="logo" style="width: 100px;"></a>
         <img class="logo" src="images_/logoname.png" alt="logo" style="margin-right: 250px;">
         <nav>
             <ul class ="nav_links">
