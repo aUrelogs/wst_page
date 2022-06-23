@@ -18,7 +18,7 @@
     $id = $_POST["ch_id"];
     $newStat= $_POST["status_up"];
 
-    $sql = "UPDATE `check_out_prod` SET `status` = '$newStat' WHERE `cid` = $id;";
+    $sql = "UPDATE `order` SET `status` = '$newStat' WHERE `id` = $id;";
 
         
 

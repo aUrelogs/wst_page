@@ -6,10 +6,7 @@
     SELECT
     *
     FROM 
-        `check_out_prod` as a
-    LEFT JOIN 
-        `order` as c ON a.id = c.id
-
+        `order`
     ";
 
     $result = $conn->query($sql);
@@ -20,7 +17,6 @@
 
         while($row = $result->fetch_assoc()){
 
-            $status_id[$idx] = $row["cid"];
             $orderID[$idx] = $row["id"];
             
             $customer[$idx] = $row["name"];
@@ -88,7 +84,7 @@
 
                                             <div id='stocks'>
 
-                                                Track Number:  $status_id[$idx]
+                                                Track Number:  $orderID[$idx]
                                                 <br>
                                                 <br>
 

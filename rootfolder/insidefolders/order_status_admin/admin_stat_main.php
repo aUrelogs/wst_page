@@ -7,10 +7,7 @@
     SELECT
     *
     FROM 
-        `check_out_prod` as c
-    LEFT JOIN 
-        `order` as o ON c.id = o.id
-
+        `order`
     ";
 
 
@@ -23,7 +20,7 @@
 
         while($row = $result->fetch_assoc()){
 
-            $status_id[$idx] = $row["cid"];
+          
             $orderID[$idx] = $row["id"];
             
             $customer[$idx] = $row["name"];
@@ -114,7 +111,7 @@
     <?php
 
 
-            for($idx=0; $idx < count($status_id); $idx++){
+            for($idx=0; $idx < count($orderID); $idx++){
 
                 if(empty($orderID[$idx])){        
 
@@ -130,7 +127,7 @@
                             <div id='products'>
 
                                 <h3>
-                                        Order Number:  $status_id[$idx]
+                                        Order Number:  $orderID[$idx]
                                         <br>
                                         <br>
                                                     
@@ -145,8 +142,8 @@
                                       
             
                                         <td>
-                                            <a href='update_stat_ad.php?id= $status_id[$idx] '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
-                                            <a href='admin_stat_main.php?delete=$status_id[$idx]' class='button3'> DONE ORDER </a>
+                                            <a href='update_stat_ad.php?id= $orderID[$idx] '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
+                                            <a href='admin_stat_main.php?delete=$orderID[$idx]' class='button3'> DONE ORDER </a>
                                             &nbsp;
                                         </td>
                                         <td>
