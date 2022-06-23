@@ -62,7 +62,7 @@
 
     </header>
 
-    <div id="title">MODIFY QUANTITY</div>
+    <div id="title">MODIFY ORDER STATUS</div>
 
     <main>
         
@@ -74,7 +74,7 @@
 
                     <input type="hidden" name="ch_id" value="<?php echo $id; ?>" />
                     
-                    <input type="number" id = "status_up" name= "status_up" value="<?php echo $statusUP ?> " placeholder = "Type Quantity" min="0" max = "3"/>
+                    <input type="number" id = "status_up" name= "status_up" value="<?php echo $statusUP ?> " placeholder = "Input type data" min="0" max = "3"/>
 
                     <input type= "submit" value="SUBMIT">
 
