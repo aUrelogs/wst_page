@@ -14,7 +14,7 @@
 
    
 
-    $sql = "SELECT * FROM `check_out_prod` WHERE `cid` = $id;";
+    $sql = "SELECT * FROM `order` WHERE `id` = $id;";
 
     $result = $conn->query($sql);
 
