@@ -41,6 +41,17 @@
 
     }
 
+    if(isset($_GET['delete'])){
+        $delete_id = $_GET['delete'];
+        $sql = "DELETE FROM `order` WHERE id = $delete_id ";
+        $delete_query = mysqli_query($conn, $sql);
+        
+        if($delete_query){
+           header('location:admin_stat_main.php');
+        }else{
+           header('location:admin_stat_main.php');
+        };
+     };
     
 
 ?>
@@ -134,8 +145,8 @@
                                       
             
                                         <td>
-                                            <a href='update_stat_ad.php? id= $status_id[$idx] '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
-                                            <a href='http://localhost/wst_page/rootfolder/insidefolders/order_status/stats_main.php'><button type= 'btn' class='button3'>LIVE VIEW</button></a>
+                                            <a href='update_stat_ad.php?id= $status_id[$idx] '><button type= 'btn' class='button2'>UPDATE STATUS</button></a> 
+                                            <a href='admin_stat_main.php?delete=$status_id[$idx]' class='button3'> DONE ORDER </a>
                                             &nbsp;
                                         </td>
                                         <td>
