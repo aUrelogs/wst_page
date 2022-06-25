@@ -8,7 +8,6 @@ if(isset($_POST['order_btn'])){
    $number = $_POST['number'];
    $email = $_POST['email'];
    $method = $_POST['method'];
-
    $street = $_POST['street'];
    $city = $_POST['city'];
    $state = $_POST['state'];
@@ -108,58 +107,79 @@ if(isset($_POST['order_btn'])){
          $result = mysqli_query($conn, $sql);
          $row = mysqli_fetch_assoc($result);
 
-         $nameSign = $row['First_Name'];
-         $nameSign2 = $row['Last_name'];
-         $emailSign = $row['Email_add'];
-         $mobile_num = $row['Mobile_Num'];
-         $user_add = $row['User_Address'];
-         
-         $zipcode = $row['ZipCode'];
-        
+         $nameSign = "";
+         if(isset($row['First_Name'])){
+            $nameSign = $row['First_Name'];
+         }
 
+         $nameSign2 = "";
+         if(isset($row['Last_name'])){
+            $nameSign2 = $row['Last_name'];
+         }
+         
+         $emailSign = "";
+         if(isset($row['Email_add'])){
+            $emailSign = $row['Email_add'];
+         }
+         
+         $mobile_num = "";
+         if(isset($row['Mobile_Num'])){
+            $mobile_num = $row['Mobile_Num'];
+         }
+        
+         $user_add = "";
+         if(isset($row['User_Address'])){
+            $user_add  = $row['User_Address'];
+         }
+
+         $zipcode ="";
+         if(isset($row['ZipCode'])){
+            $zipcode = $row['ZipCode'];
+         }
+ 
       ?>
 
       <div class="flex">
          <div class="inputBox">
             <span>First name</span>
-            <input type="text" placeholder="enter your name" name="name" value = "<?php echo $nameSign.' '.$nameSign2; ?>" required>
+            <input type="text" placeholder="Full Name" name="name" required value = "<?php echo $nameSign.' '.$nameSign2; ?>" >
          </div>
          <div class="inputBox">
             <span>Mobile Number</span>
-            <input type="text" placeholder="enter your number" name="number" value=  <?php echo $mobile_num; ?> required>
+            <input type="text" placeholder="Mobile Number" name="number" required value=  <?php echo $mobile_num; ?> >
          </div>
          <div class="inputBox">
             <span>your email</span>
-            <input type="email" placeholder="enter your email" name="email"  value=<?php echo $emailSign; ?> required>
+            <input type="email" placeholder="Email" name="email" required value=<?php echo $emailSign; ?> >
          </div>
          <div class="inputBox">
             <span>payment method</span>
             <select name="method">
-               <option value="cash on delivery" selected>Cash on Delivery</option>
-               <option value="credit cart">Credit Card</option>
-               <option value="paypal">Visa / Paypal</option>
+               <option value="Cash on Delivery" selected>Cash on Delivery</option>
+               <option value="Credit Card">Credit Card</option>
+               <option value="PayPal/Visa">Visa / Paypal</option>
             </select>
          </div>
 
          <div class="inputBox">
             <span>address</span>
-            <input type="text" placeholder="e.g. street name" name="street" value = "<?php echo $user_add; ?>" >
+            <input type="text" placeholder="Full / Exact Address" name="street" value = "<?php echo $user_add; ?>" >
          </div>
          <div class="inputBox">
             <span>city</span>
-            <input type="text" placeholder="e.g. mumbai" name="city" required>
+            <input type="text" placeholder="e.g. Manila" name="city" required>
          </div>
          <div class="inputBox">
-            <span>state</span>
-            <input type="text" placeholder="e.g. maharashtra" name="state" required>
+            <span>province</span>
+            <input type="text" placeholder="e.g Metro Manila" name="state" required>
          </div>
          <div class="inputBox">
             <span>country</span>
-            <input type="text" placeholder="e.g. india" name="country" required>
+            <input type="text" placeholder="e.g. Philippines" name="country" required>
          </div>
          <div class="inputBox">
-            <span>pin code</span>
-            <input type="text" placeholder="e.g. 123456" name="pin_code" value = "<?php echo $zipcode; ?>" required>
+            <span>Zip Code</span>
+            <input type="text" placeholder="e.g. 1017" name="pin_code" value = "<?php echo $zipcode; ?>" required>
          </div>
       </div>
       <input type="submit" value="order now" name="order_btn" class="btn">

@@ -1,6 +1,6 @@
 <?php 
  
-    include 'connection.php';
+    include('connection.php');
 
 
 
@@ -18,8 +18,8 @@
      <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="style.css">
+<!-- custom css file link  -->
+<link rel="stylesheet" href="style.css">
 
 
 
@@ -43,7 +43,7 @@
 
     <div class="to_pay">
         
-        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_pay.php"><div id="to_pay">To Pay</div></a>
+        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_pay.php"><h3>To Pay</h3></a>
 
     </div>
 
@@ -55,7 +55,7 @@
 
     <div class="to_ship">
 
-        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_ship.php"><div id="to_ship">To Ship</div></a>
+        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_ship.php"><h3>To Ship</h3></a>
 
     </div>
 
@@ -67,7 +67,7 @@
     
     <div class="to_receive">
 
-        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_receive.php"><div id="to_receive">To Receive</div></a>
+        <a href="http://localhost/wst_page/rootfolder/insidefolders/order_status/to_receive.php"><h3>To Receive</h3></a>
     
     </div>
     
