@@ -10,6 +10,7 @@
 <body style=" background-image: url(images_/bgimg.PNG);
    background-size: 100%;">
 
+
 <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; background-color: #fdf5c9;">
 <a href="http://localhost/wst_page/"><img src="images_/logo.png" class="logo" style="width: 100px;"></a>
         <img class="logo" src="images_/logoname.png" alt="logo" style="margin-right: 250px;">
@@ -20,10 +21,10 @@
             </ul>
         </nav>
     </header>
-
-    <img src = "images_/icecreamslides.gif" style="padding: 60px">
+<div style="margin: 70px">
+<img src = "images_/icecreamslides.gif" style="padding: 60px">
         <form action="login.php" method="post">
-            <div class="content">
+            <div class="">
                     <div class="form">
                         <h2>Login Here</h2>
                         <input type="email" name="Loginemail" placeholder="Enter Email">
@@ -35,6 +36,8 @@
                    </div>
             </div>
         </form>
+</div>
+    
         
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 

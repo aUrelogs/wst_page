@@ -14,12 +14,11 @@
     $result = $conn->query($sql);
 
     if($result->num_rows > 0){
-
+       
         $idx = 0;
 
         while($row = $result->fetch_assoc()){
 
-          
             $orderID[$idx] = $row["id"];
             $customer[$idx] = $row["name"];
             $phone[$idx] = $row["number"];
@@ -34,7 +33,7 @@
         }
 
     } 
-       
+   
     if(isset($_GET['delete'])){
         $delete_id = $_GET['delete'];
         $sql = "DELETE FROM `order` WHERE id = $delete_id ";
@@ -47,7 +46,6 @@
         };
      };
     
-   
 
 ?>
 
@@ -106,13 +104,13 @@
     
     
     <?php
-   
+          
+            if(empty($orderID)){        
+                echo "<b><font color='red'>NO RECORD FOUND </font></b>";     
+            }
+         
             for($idx=0; $idx < count($orderID); $idx++){
-                
-                if(empty($orderID[$idx])){        
-                        
-                }else{
-
+             
                 echo "
 
                     <main>
@@ -180,7 +178,7 @@
 
                 }
 
-            }
+            
 
      
     ?>
