@@ -75,9 +75,9 @@ if(isset($message)){
          <div class="box">
             <img src="uploaded_img/<?php echo $fetch_product['image']; ?>" alt="">
             <h3><?php echo $fetch_product['name']; ?></h3>
-            <div class="price">Php <?php echo $fetch_product['price']; ?></div>
+            <div class="price">Php <?php echo $fetch_product['price'];?></div>
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
-            <div><font size="3"><?php echo "-"; echo $fetch_product['product_desc']; ?></font></div>
+            <div><font size="3"><?php echo $fetch_product['product_desc']; ?></font></div>
             <div><font size = "3"> <?php echo "Available Quantity:&nbsp;" . $fetch_product['PRODUCT_QTY']; ?></font></div>
             <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
