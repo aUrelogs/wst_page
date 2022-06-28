@@ -66,7 +66,7 @@ if(isset($message)){
 
       <?php
       
-      $select_products = mysqli_query($conn, "SELECT * FROM `products` as p LEFT JOIN `stocks` as s ON p.id = s.id");
+      $select_products = mysqli_query($conn, "SELECT * FROM `products`;");
       if(mysqli_num_rows($select_products) > 0){
          while($fetch_product = mysqli_fetch_assoc($select_products)){
       ?>

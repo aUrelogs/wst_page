@@ -1,45 +1,40 @@
 <?php
 
-    include 'connection.php';
+include 'connection.php';
 
-    $id = "-1";
+$id = "-1";
 
-    if(!isset($_GET['id'])){
-        header('Location: stocks.php');
-        exit();
-    }
+if (!isset($_GET['id'])) {
+    header('Location: stocks.php');
+    exit();
+}
 
-    $id = $_GET['id'];
-    $productQuant = "";
+$id = $_GET['id'];
+$productQuant = "";
 
-    //-------------------------------------------------------------------------//
-    $sql = "
+//-------------------------------------------------------------------------//
+$sql = "
     SELECT
     *
     FROM 
-        `stocks` as s
-
-    LEFT JOIN 
-        `products` as p ON s.id = p.id
+        `products` 
 
     ";
-    //-------------------------------------------------------------------------//
+//-------------------------------------------------------------------------//
 
-    $sql = "SELECT * FROM `stocks` WHERE `sid` = $id;";
+$sql = "SELECT * FROM `products` WHERE `id` = $id;";
 
-    $result = $conn->query($sql);
+$result = $conn->query($sql);
 
-    if($result->num_rows > 0){
-        
-        while($row = $result->fetch_assoc()){
-            
-            $productQuant = $row["PRODUCT_QTY"];
+if ($result->num_rows > 0) {
 
-        }
+    while ($row = $result->fetch_assoc()) {
 
-    }else{
-        echo "0 result";
+        $productQuant = $row["PRODUCT_QTY"];
     }
+} else {
+    echo "0 result";
+}
 
 
 
@@ -48,16 +43,18 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="design_edit_stocks.css">
-    
-        <title>Edit Quantity</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="design_edit_stocks.css">
+
+    <title>Edit Quantity</title>
 
 </head>
+
 <body style="margin: 0px">
 
     <header>
@@ -66,7 +63,7 @@
         <img class="logo" src="images/logoname.png" alt="logo" style="margin-right: 250px;">
 
         <nav>
-            <ul class ="nav_links">
+            <ul class="nav_links">
                 <li> <img src="images/userlogoo.png" class="logo" style="width: 20px;"> | <a href="http://localhost/wst_page/rootfolder/index.php">Admin Log Out</a></li>
             </ul>
 
@@ -79,7 +76,7 @@
     </div>
 
     <main>
-        
+
         <div class="glass">
 
             <div id="products">
@@ -87,32 +84,32 @@
                 <form action="save_stocks.php" method="post">
 
                     <input type="hidden" name="stock_id" value="<?php echo $id; ?>" />
-                    
-                    <input type="number" id = "product_stocks" name= "product_stocks" value="<?php echo $productQuant ?> " placeholder = "Type Quantity" min="0"/>
 
-                    <input type= "submit" value="SUBMIT">
+                    <input type="number" id="product_stocks" name="product_stocks" value="<?php echo $productQuant ?> " placeholder="Type Quantity" min="0" />
+
+                    <input type="submit" value="SUBMIT">
 
                     <br>
 
-                       <div id="current">
+                    <div id="current">
 
-                            <br>
+                        <br>
 
-                            <?php
+                        <?php
 
-                                echo "Current:" . "&nbsp;" . $productQuant;
-                            
-                                if($productQuant == 0 ){
-                                    echo "&nbsp;No stock";
-                                } elseif($productQuant == 1){
-                                    echo "&nbsp;Piece";
-                                }else{
-                                    echo "&nbsp;Pieces";
-                                }
-                               
-                            ?>
+                        echo "Current:" . "&nbsp;" . $productQuant;
 
-                        </div>
+                        if ($productQuant == 0) {
+                            echo "&nbsp;No stock";
+                        } elseif ($productQuant == 1) {
+                            echo "&nbsp;Piece";
+                        } else {
+                            echo "&nbsp;Pieces";
+                        }
+
+                        ?>
+
+                    </div>
 
                 </form>
 
@@ -129,28 +126,5 @@
     </main>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
