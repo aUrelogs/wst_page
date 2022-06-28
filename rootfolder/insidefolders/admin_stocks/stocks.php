@@ -6,9 +6,9 @@
     SELECT
     *
     FROM 
-        `stocks` as s
-    LEFT JOIN 
-        `products` as p ON s.id = p.id
+        `products`
+
+      
 
     ";
 
@@ -21,7 +21,7 @@
 
         while($row = $result->fetch_assoc()){
 
-            $stockid[$idx] = $row["sid"];
+            $id[$idx] = $row["id"];
             $prodQTY[$idx] = $row["PRODUCT_QTY"];
             $pname[$idx] = $row["name"];
             $desc[$idx] = $row["product_desc"];
@@ -82,7 +82,7 @@
 
             <?php
 
-                $total_stock = mysqli_query($conn, "SELECT * FROM `cart` as c LEFT JOIN `stocks` as s ON c.id = s.id;");
+                $total_stock = mysqli_query($conn, "SELECT * FROM `cart` as c LEFT JOIN `products` as s ON c.id = s.id;");
                                                                                     
                 if(mysqli_num_rows($total_stock) > 0){
                     while($fetch_stocks = mysqli_fetch_assoc( $total_stock)){
@@ -99,7 +99,17 @@
                         <td>
                             <div id="latest">      
                                 <?php    
-                                    echo  "<b>" . $stock_total = ($fetch_stocks['PRODUCT_QTY'] - $fetch_stocks['quantity']) . "</b>" . "<br>" ;  
+                                    $stock_total = ($fetch_stocks['PRODUCT_QTY'] - $fetch_stocks['quantity']);
+
+                                    if($stock_total > 0){
+
+                                        echo $stock_total;
+
+                                    }else {
+                                        echo "The stock is currently zero";
+                                    }
+
+                                    
                                 ?>
                             </div>
                         </td>
@@ -113,7 +123,7 @@
     </div>
 
     <?php        
-        for($idx=0; $idx < count($stockid); $idx++){
+        for($idx=0; $idx < count($id); $idx++){
 
             if(empty($pname[$idx])){
 
@@ -132,7 +142,7 @@
 
                                         <tr>
                                             <td>
-                                                <a href='edit_stock.php? id=$stockid[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
+                                                <a href='edit_stock.php? id=$id[$idx]'><button type= 'btn' class='button2'>EDIT</button></a> 
                                                 <a href='http://localhost/wst_page/rootfolder/insidefolders/admin_product/admin.php'><button type= 'btn' class='button3'>PRODUCTS</button></a>
                                                 &nbsp;
                                             </td>
