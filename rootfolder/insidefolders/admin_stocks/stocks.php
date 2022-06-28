@@ -71,16 +71,16 @@
 
     <br>
 
-    <div class="glass2">
+    <!-- <div class="glass2">
         <div id="products2">
             <div id="status">
                 <b>CURRENT STOCKS STATUS</b>
                 <br>
                 <br>
 
-            </div>
+            </div> -->
 
-            <?php
+            <!-- <?php
 
                 $total_stock = mysqli_query($conn, "SELECT * FROM `cart` as c LEFT JOIN `products` as s ON c.id = s.id;");
                                                                                     
@@ -120,7 +120,7 @@
                 }//end of if 
             ?>
         </div>
-    </div>
+    </div> -->
 
     <?php        
         for($idx=0; $idx < count($id); $idx++){

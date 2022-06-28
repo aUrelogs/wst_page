@@ -1,8 +1,8 @@
-<?php 
- 
-    include 'connection.php';
+<?php
 
-    $sql = "
+include 'connection.php';
+
+$sql = "
     SELECT
     *
     FROM 
@@ -11,64 +11,72 @@
 
     ";
 
-    $result = $conn->query($sql);
-  
-    if($result->num_rows > 0){  
+$result = $conn->query($sql);
 
-        $idx = 0;
+if ($result->num_rows > 0) {
 
-        while($row = $result->fetch_assoc()){
+    $idx = 0;
 
-     
-            $orderID[$idx] = $row["id"];
-            
-            $customer[$idx] = $row["name"];
-            $phone[$idx] = $row["number"];
-            $total_prod[$idx] = $row["total_products"];
-            $total_price[$idx] = $row["total_price"];
-            $status[$idx]= $row["status"];
+    while ($row = $result->fetch_assoc()) {
 
-            $idx++;
 
-        }
-    }else{
-        echo "0 result";
+        $orderID[$idx] = $row["id"];
+
+        $customer[$idx] = $row["name"];
+        $phone[$idx] = $row["number"];
+        $total_prod[$idx] = $row["total_products"];
+        $total_price[$idx] = $row["total_price"];
+        $status[$idx] = $row["status"];
+
+        $idx++;
     }
+} else {
+    // echo "0 result";
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WHAT'S THE SCOOP? | TO RECEIVE</title>
 
-     <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <?php include 'header.php'; ?>
 
-        <div id="title">TO RECEIVE</div>
+    <div id="title">TO RECEIVE</div>
 
-        <main>
-            <a href='http://localhost/wst_page/rootfolder/insidefolders/order_status/stats_main.php'><button class='button1'>BACK TO MAIN</button></a>
-        </main>
+    <main>
+        <a href='http://localhost/wst_page/rootfolder/insidefolders/order_status/stats_main.php'><button class='button1'>BACK TO MAIN</button></a>
+    </main>
 
 
-        <?php
+    <?php
 
-            for ($idx = 0; $idx < count($orderID); $idx++){
+    if(empty($orderID)){
 
-                if($status[$idx] == 3){
+    }else{
 
-                    echo "
+
+    
+
+    for ($idx = 0; $idx < count($orderID); $idx++) {
+
+        if ($status[$idx] == 3) {
+
+            echo "
                         <main>
                             <section class='glass'>
                                 <div id='products'>
@@ -96,17 +104,16 @@
                         </main>
 
                     <br>";
-   
-                }
+        }
 
 
-                if($status[$idx] == 0){
+        if ($status[$idx] == 0) {
+        }
+    }
 
-                 
-
-                }
-            }
-        ?>
+}
+    ?>
 
 </body>
+
 </html>

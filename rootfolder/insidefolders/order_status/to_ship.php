@@ -1,43 +1,42 @@
-<?php 
- 
-    include 'connection.php';
+<?php
 
-    $sql = " SELECT * FROM  `order`";
+include 'connection.php';
 
-    $result = $conn->query($sql);
-  
-    if($result->num_rows > 0){  
+$sql = " SELECT * FROM  `order`";
 
-        $idx = 0;
+$result = $conn->query($sql);
 
-        while($row = $result->fetch_assoc()){
+if ($result->num_rows > 0) {
 
-        
-            $orderID[$idx] = $row["id"];
-            
-            $customer[$idx] = $row["name"];
-            $phone[$idx] = $row["number"];
-            $total_prod[$idx] = $row["total_products"];
-            $total_price[$idx] = $row["total_price"];
-            $status[$idx]= $row["status"];
+    $idx = 0;
 
-            $idx++;
+    while ($row = $result->fetch_assoc()) {
 
-        }
 
-    }else{
-        echo "0 result";
+        $orderID[$idx] = $row["id"];
+
+        $customer[$idx] = $row["name"];
+        $phone[$idx] = $row["number"];
+        $total_prod[$idx] = $row["total_products"];
+        $total_price[$idx] = $row["total_price"];
+        $status[$idx] = $row["status"];
+
+        $idx++;
     }
+} else {
+    // echo "0 result";
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHAT'S THE SCOOP?  | TO SHIP</title>
+    <title>WHAT'S THE SCOOP? | TO SHIP</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -46,9 +45,10 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-    <?php include 'header.php';?>
+    <?php include 'header.php'; ?>
 
     <div id="title">TO SHIP</div>
 
@@ -58,9 +58,14 @@
 
     <?php
 
-        for ($idx = 0; $idx < count($orderID); $idx++){
+    if (empty($orderID)) {
+    } else {
 
-            if($status[$idx] == 2){
+
+
+        for ($idx = 0; $idx < count($orderID); $idx++) {
+
+            if ($status[$idx] == 2) {
 
                 echo "
 
@@ -109,16 +114,16 @@
                     </main>
 
                 <br>";
-   
             }
 
 
-            if($status[$idx] == 0){
-
+            if ($status[$idx] == 0) {
             }
         }
+    }
 
     ?>
 
 </body>
+
 </html>

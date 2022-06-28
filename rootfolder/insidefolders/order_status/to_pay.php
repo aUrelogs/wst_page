@@ -1,58 +1,58 @@
-<?php 
- 
-    include 'connection.php';
+<?php
 
-    $sql = "
+include 'connection.php';
+
+$sql = "
     SELECT
     *
     FROM 
         `order` 
     ";
 
-    $result = $conn->query($sql);
-  
-    if($result->num_rows > 0){  
+$result = $conn->query($sql);
 
-        $idx = 0;
+if ($result->num_rows > 0) {
 
-        while($row = $result->fetch_assoc()){
+    $idx = 0;
 
-            $orderID[$idx] = $row["id"];
-            
-            $customer[$idx] = $row["name"];
-            $phone[$idx] = $row["number"];
-            $total_prod[$idx] = $row["total_products"];
-            $total_price[$idx] = $row["total_price"];
-            $status[$idx]= $row["status"];
+    while ($row = $result->fetch_assoc()) {
 
-            $idx++;        
+        $orderID[$idx] = $row["id"];
 
-        }
+        $customer[$idx] = $row["name"];
+        $phone[$idx] = $row["number"];
+        $total_prod[$idx] = $row["total_products"];
+        $total_price[$idx] = $row["total_price"];
+        $status[$idx] = $row["status"];
 
-    }else{
-        echo "0 result";
+        $idx++;
     }
+} else {
+    // echo "0 result";
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHAT'S THE SCOOP?  | TO PAY</title>
+    <title>WHAT'S THE SCOOP? | TO PAY</title>
 
     <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-    <?php include 'header.php';?>
+    <?php include 'header.php'; ?>
 
     <div id="title">TO PAY</div>
 
@@ -63,11 +63,16 @@
 
     <?php
 
-        for ($idx = 0; $idx < count($orderID); $idx++){
+    if(empty($orderID)){
 
-            if($status[$idx] == 1){
 
-                echo "
+    }else{
+
+    for ($idx = 0; $idx < count($orderID); $idx++) {
+
+        if ($status[$idx] == 1) {
+
+            echo "
 
                     <main>
 
@@ -114,17 +119,19 @@
                     </main>
         
                 <br>";
-            }
-
-
-            if($status[$idx] == 0){
-
-           
-
-            }
         }
+
+
+        if ($status[$idx] == 0) {
+
+            break;
+        }
+    }
+
+}
 
     ?>
 
 </body>
+
 </html>
