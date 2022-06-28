@@ -107,7 +107,9 @@ if (isset($_GET['delete'])) {
 
 
         if (empty($orderID)) {
-            echo "<b><font color='red'>NO RECORD FOUND </font></b>";
+            echo "<div style='color: RED; margin: 50px; background-color: #fdf5c9; border: solid; padding:1.5rem; text-align:center; font-size:25px;'>
+           NO ORDER RECORD FOUND
+            </div>";
         }else{
 
             

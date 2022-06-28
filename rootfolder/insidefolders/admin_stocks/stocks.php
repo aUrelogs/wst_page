@@ -31,7 +31,7 @@
         }
 
     }else{
-        echo "0 result";
+       
     }
 
 ?>
@@ -122,12 +122,15 @@
         </div>
     </div> -->
 
-    <?php        
+    <?php    
+        if(empty($pname)){
+            echo "<div style='color: RED; margin: 50px; background-color: #fdf5c9; border: solid; padding:1.5rem; text-align:center; font-size:25px;'>
+            NO PRODUCTS CURRENTLY ADDED TO BE MODIFIED
+            </div>";
+        }else{    
         for($idx=0; $idx < count($id); $idx++){
 
-            if(empty($pname[$idx])){
-
-            }else{
+        
                     echo "
 
                         <main>
